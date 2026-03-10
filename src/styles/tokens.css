@@ -1,0 +1,37 @@
+:root {
+  --bg: #07070A;
+  --surface: #0D0D14;
+  --surface2: #121225;
+  --text: #F4F5FF;
+  --muted: rgba(244, 245, 255, 0.72);
+  --primary: #766BFF;
+  --accent: #A79FFF;
+  --success: #39D98A;
+  --warning: #FFB020;
+
+  --border: rgba(244, 245, 255, 0.10);
+  --border-strong: rgba(118, 107, 255, 0.35);
+
+  --r-card: 18px;
+  --r-pill: 999px;
+  --r-modal: 24px;
+
+  --sh-card: 0 1px 0 rgba(255,255,255,0.04), 0 12px 30px rgba(0,0,0,0.55);
+  --sh-elevate: 0 2px 0 rgba(255,255,255,0.05), 0 18px 60px rgba(0,0,0,0.60);
+  --sh-inset: inset 0 1px 0 rgba(255,255,255,0.06);
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --spacing-section-v: 112px;
+  --spacing-section-v-mobile: 64px;
+  --max-width: 1200px;
+  --gutter: 24px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-section-v: 64px;
+    --spacing-section-v-mobile: 48px;
+  }
+}
