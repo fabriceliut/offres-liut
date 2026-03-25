@@ -14,16 +14,16 @@ const fadeUp: Variants = {
 
 const IA_POINTS = [
   {
-    icon: '\u26A1',
-    text: "Automatiser les t\u00e2ches r\u00e9p\u00e9titives qui mangent le temps de vos \u00e9quipes \u2014 tris, r\u00e9sum\u00e9s, reporting, relances.",
+    icon: '⚡',
+    text: "Automatiser les tâches répétitives qui mangent le temps de vos équipes — tris, résumés, reporting, relances.",
   },
   {
-    icon: '\uD83D\uDCCA',
-    text: "Augmenter vos d\u00e9cisions avec des donn\u00e9es en temps r\u00e9el. Moins d\u2019intuition, plus de lucidit\u00e9.",
+    icon: '📊',
+    text: "Augmenter vos décisions avec des données en temps réel. Moins d'intuition, plus de lucidité.",
   },
   {
-    icon: '\uD83D\uDD12',
-    text: "S\u00e9curiser vos flux. L\u2019IA int\u00e9gr\u00e9e proprement, c\u2019est un coffre-fort. Bricol\u00e9e, c\u2019est une passoire.",
+    icon: '🔒',
+    text: "Sécuriser vos flux. L'IA intégrée proprement, c'est un coffre-fort. Bricolée, c'est une passoire.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function IASection() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="03C \u2014 L\u2019acc\u00e9l\u00e9rateur" />
+            <IndexLabel text="03C — L'accélérateur" />
           </motion.div>
 
           <motion.h2

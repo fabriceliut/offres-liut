@@ -11,6 +11,11 @@ const NAV_ITEMS = [
   { label: 'Témoignages', id: 'temoignages' },
 ];
 
+const OFFER_LINKS = [
+  { label: 'Offre Dirigeant', to: '/entrepreneurs' },
+  { label: 'Intégration IA', to: '/ia' },
+];
+
 const SECTION_IDS = NAV_ITEMS.map(n => n.id);
 
 export default function Header() {
@@ -121,6 +126,21 @@ export default function Header() {
                   {item.label}
                 </button>
               ))}
+              <span className="mx-1" style={{ color: 'var(--border)' }} aria-hidden="true">|</span>
+              {OFFER_LINKS.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="px-3 py-1.5 text-sm transition-colors duration-150"
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 500,
+                    color: 'var(--muted)',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           ) : (
             <nav className="hidden md:flex items-center gap-1" aria-label="Navigation">
@@ -211,8 +231,26 @@ export default function Header() {
                         {item.label}
                       </button>
                     ))}
+                    <div className="my-2" style={{ borderTop: '1px solid var(--border)' }} />
+                    {OFFER_LINKS.map((link) => (
+                      <Link
+                        key={link.to}
+                        to={link.to}
+                        onClick={() => setMenuOpen(false)}
+                        className="text-left px-3 py-2.5 rounded-lg transition-colors duration-150"
+                        style={{
+                          fontFamily: 'var(--font-heading)',
+                          fontWeight: 500,
+                          fontSize: '0.95rem',
+                          color: 'var(--primary)',
+                        }}
+                      >
+                        {link.label} →
+                      </Link>
+                    ))}
                   </>
                 ) : (
+                  <>
                   <Link
                     to="/"
                     onClick={() => setMenuOpen(false)}
@@ -226,6 +264,24 @@ export default function Header() {
                   >
                     ← Retour à l'accueil
                   </Link>
+                  <div className="my-2" style={{ borderTop: '1px solid var(--border)' }} />
+                  {OFFER_LINKS.map((link) => (
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      onClick={() => setMenuOpen(false)}
+                      className="text-left px-3 py-2.5 rounded-lg transition-colors duration-150"
+                      style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: 500,
+                        fontSize: '0.95rem',
+                        color: 'var(--primary)',
+                      }}
+                    >
+                      {link.label} →
+                    </Link>
+                  ))}
+                  </>
                 )}
                 <div className="pt-2 pb-2">
                   <a
