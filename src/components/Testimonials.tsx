@@ -37,7 +37,7 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="DOSSIER 05 — Retours terrain" />
+          <IndexLabel text="05 — Retours terrain" />
         </motion.div>
 
         <motion.h2

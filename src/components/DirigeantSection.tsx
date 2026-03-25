@@ -50,7 +50,7 @@ export default function DirigeantSection() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="DOSSIER 03B — Pour le dirigeant" />
+            <IndexLabel text="03B — Pour le dirigeant" />
           </motion.div>
 
           <motion.h2
@@ -117,17 +117,17 @@ export default function DirigeantSection() {
               Un accompagnement dédié pour construire votre système d'organisation personnel sur-mesure.
               Moins de charge mentale, plus de temps, focus sur l'essentiel.
             </p>
-            <div className="flex flex-wrap gap-6 justify-center mb-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>-50%</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>charge mentale</div>
               </div>
-              <div style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
+              <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
               <div className="text-center">
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>+30%</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>temps gagné/semaine</div>
               </div>
-              <div style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
+              <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
               <div className="text-center">
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--success)' }}>13 000€</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>investissement</div>
@@ -138,7 +138,8 @@ export default function DirigeantSection() {
               className="btn-primary"
               style={{ fontSize: '0.95rem', padding: '14px 28px' }}
             >
-              Découvrir l'offre Organisation Personnelle
+              <span className="hidden sm:inline">Découvrir l'offre Organisation Personnelle</span>
+              <span className="sm:hidden">Offre Organisation Personnelle</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

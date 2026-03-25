@@ -191,7 +191,7 @@ export default function OfferEntrepreneurs() {
               style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}
             >
               <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>L'investissement qui se rembourse</h2>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
+              <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
                 13 000€
               </div>
               <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>

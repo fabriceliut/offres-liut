@@ -52,7 +52,7 @@ export default function Situations() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="DOSSIER 03 — Situations" />
+          <IndexLabel text="03 — Situations" />
         </motion.div>
 
         <motion.h2

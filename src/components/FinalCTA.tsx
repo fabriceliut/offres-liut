@@ -22,7 +22,7 @@ export default function FinalCTA() {
           className="max-w-2xl mx-auto text-center"
         >
           <div className="mb-6 flex justify-center">
-            <span className="index-label">DOSSIER 06 — Commençons</span>
+            <span className="index-label">06 — Commençons</span>
           </div>
 
           <h2 className="mb-5" style={{ color: 'var(--text)' }}>
@@ -38,7 +38,7 @@ export default function FinalCTA() {
 
           {/* ROI reminder */}
           <div
-            className="mb-10 p-5 rounded-2xl inline-flex gap-6 flex-wrap justify-center"
+            className="mb-10 p-5 rounded-2xl flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center"
             style={{
               background: 'var(--surface2)',
               border: '1px solid var(--border-strong)',
@@ -50,14 +50,14 @@ export default function FinalCTA() {
               </div>
               <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>d'économies annuelles</div>
             </div>
-            <div style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
+            <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
             <div className="text-center">
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)' }}>
                 15 000€
               </div>
               <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>d'investissement</div>
             </div>
-            <div style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
+            <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
             <div className="text-center">
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--success)' }}>
                 ROI+

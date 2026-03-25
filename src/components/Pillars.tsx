@@ -72,7 +72,7 @@ export default function Pillars() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="DOSSIER 02 — Les piliers" />
+          <IndexLabel text="02 — Les piliers" />
         </motion.div>
 
         <motion.h2

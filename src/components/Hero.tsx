@@ -67,18 +67,9 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mb-6 flex flex-wrap items-center gap-3"
+            className="mb-6"
           >
-            <span className="index-label">DOSSIER 00 — Pour les PMI</span>
-            <span style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '0.72rem',
-              fontWeight: 500,
-              color: 'var(--muted)',
-              letterSpacing: '0.04em',
-            }}>
-              Fabrice Liut — Associé Stratégique &amp; Opérationnel
-            </span>
+            <span className="index-label">Fabrice Liut — Associé Stratégique & Opérationnel</span>
           </motion.div>
 
           {/* H1 */}

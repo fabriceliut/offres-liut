@@ -170,9 +170,9 @@ export default function OfferEntreprises() {
                 6 mois d'accompagnement pour booster votre efficience, fluidifier votre organisation et augmenter votre rentabilité.
               </motion.p>
 
-              <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="flex justify-center gap-4">
+              <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
                 {STATS.map((stat, i) => (
-                  <div key={i} className="card-base p-4" style={{ background: 'var(--surface)', textAlign: 'center', minWidth: '140px' }}>
+                  <div key={i} className="card-base p-4" style={{ background: 'var(--surface)', textAlign: 'center' }}>
                     <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 700, color: 'var(--primary)', letterSpacing: '-0.03em' }}>
                       {stat.value}
                     </div>
@@ -207,7 +207,7 @@ export default function OfferEntreprises() {
 
               <div className="mb-10 p-8 rounded-2xl text-center" style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}>
                 <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>Le retour sur investissement</h2>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.2rem, 4vw, 2rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
                   22 500€ → +17 500€ dès l'année 1
                 </div>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
@@ -254,9 +254,9 @@ export default function OfferEntreprises() {
                       <span>Accompagnement Fabrice Liut</span>
                       <span style={{ fontWeight: 600, color: 'var(--text)' }}>15 000€</span>
                     </div>
-                    <div className="flex justify-between pb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
+                    <div className="flex justify-between gap-2 pb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
                       <span>Temps interne (10 pers. × 10h + dirigeant 25h)</span>
-                      <span style={{ fontWeight: 600, color: 'var(--text)' }}>~7 500€</span>
+                      <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>~7 500€</span>
                     </div>
                     <div className="flex justify-between pt-1" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }}>
                       <span>INVESTISSEMENT TOTAL</span>

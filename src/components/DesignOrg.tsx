@@ -40,7 +40,7 @@ export default function DesignOrg() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="DOSSIER 01 — La méthode" />
+            <IndexLabel text="01 — La méthode" />
           </motion.div>
 
           <motion.h2
