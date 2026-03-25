@@ -67,6 +67,14 @@ export default function Footer() {
             >
               Offre Dirigeant
             </Link>
+            <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
+            <Link
+              to="/ia"
+              className="transition-colors duration-150"
+              style={{ color: 'var(--muted)', fontSize: '0.82rem', fontFamily: 'var(--font-heading)' }}
+            >
+              Intégration IA
+            </Link>
           </div>
         </div>
       </Container>
