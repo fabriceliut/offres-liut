@@ -23,7 +23,7 @@ export default function ProofBand() {
             Déjà accompagné
           </div>
           {[
-            'PME industrielles',
+            'PME & PMI',
             'Équipes de direction',
             'Transformations réussies',
           ].map((item, i) => (

@@ -60,7 +60,7 @@ export default function Testimonials() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Des PME industrielles qui ont transformé leur organisation.
+          Des PME et PMI qui ont transformé leur organisation.
           Des résultats mesurables, des équipes qui ont porté le changement.
         </motion.p>
 

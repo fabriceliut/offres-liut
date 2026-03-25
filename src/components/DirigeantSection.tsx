@@ -14,20 +14,20 @@ const fadeUp: Variants = {
 
 const PAIN_POINTS = [
   {
-    icon: '🧠',
-    text: "Charge mentale débordante : vous jonglez avec trop d'informations, de projets et de décisions",
+    icon: '🔥',
+    text: "Tout repose sur vous : sans vous, l'entreprise ralentit. Vous êtes sur le chemin critique de chaque décision.",
   },
   {
     icon: '⏱',
-    text: 'Vous perdez un temps fou à chercher vos documents, vos notes, vos infos',
+    text: "Noyé dans l'opérationnel : vous passez 70% de votre temps à éteindre des feux au lieu de piloter la stratégie",
   },
   {
-    icon: '🔄',
-    text: 'Vous avez essayé 10 outils différents — rien ne tient sur la durée',
+    icon: '📊',
+    text: "Pas de vue d'ensemble : vos infos sont éparpillées entre emails, carnets, fichiers et WhatsApp",
   },
   {
     icon: '🎯',
-    text: "Vous n'arrivez pas à vous concentrer sur ce qui compte vraiment : développer votre activité",
+    text: "Délégation difficile : vos collaborateurs n'ont pas les bonnes infos au bon moment, alors vous reprenez la main",
   },
 ];
 
@@ -76,8 +76,8 @@ export default function DirigeantSection() {
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
             Au-delà de transformer l'organisation de votre entreprise, il y a votre propre
-            système personnel. Celui qui vous permet de garder le cap, de décider vite,
-            et de ne rien laisser filer.
+            système de pilotage. Celui qui vous permet de garder la vue d'ensemble, de décider vite,
+            et de déléguer sans perdre le contrôle.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -111,21 +111,21 @@ export default function DirigeantSection() {
             }}
           >
             <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.15rem' }}>
-              Sortir du chaos en <span style={{ color: 'var(--primary)' }}>6 mois</span>
+              Reprendre le contrôle en <span style={{ color: 'var(--primary)' }}>6 mois</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Un accompagnement dédié pour construire votre système d'organisation personnel sur-mesure.
-              Moins de charge mentale, plus de temps, focus sur l'essentiel.
+              Un accompagnement dédié pour structurer votre pilotage de dirigeant.
+              Moins de temps dans l'opérationnel, plus de temps sur la stratégie et le développement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>-50%</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>charge mentale</div>
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>6-8h</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>récupérées/semaine</div>
               </div>
               <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
               <div className="text-center">
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>+30%</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>temps gagné/semaine</div>
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>360°</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>vision en temps réel</div>
               </div>
               <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
               <div className="text-center">
@@ -138,8 +138,8 @@ export default function DirigeantSection() {
               className="btn-primary"
               style={{ fontSize: '0.95rem', padding: '14px 28px' }}
             >
-              <span className="hidden sm:inline">Découvrir l'offre Organisation Personnelle</span>
-              <span className="sm:hidden">Offre Organisation Personnelle</span>
+              <span className="hidden sm:inline">Découvrir l'offre Pilotage Dirigeant</span>
+              <span className="sm:hidden">Offre Pilotage Dirigeant</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

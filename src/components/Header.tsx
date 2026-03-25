@@ -64,7 +64,7 @@ export default function Header() {
                 letterSpacing: '-0.03em',
                 color: 'var(--text)',
               }}>
-                LIUT<span style={{ color: 'var(--primary)' }}>.</span>PMI
+                liut<span style={{ color: 'var(--primary)' }}>.</span>offres
               </span>
             </button>
           ) : (
@@ -87,7 +87,7 @@ export default function Header() {
                 letterSpacing: '-0.03em',
                 color: 'var(--text)',
               }}>
-                LIUT<span style={{ color: 'var(--primary)' }}>.</span>PMI
+                liut<span style={{ color: 'var(--primary)' }}>.</span>offres
               </span>
             </Link>
           )}

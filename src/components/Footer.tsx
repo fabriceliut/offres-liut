@@ -26,11 +26,21 @@ export default function Footer() {
               fontSize: '0.85rem',
               color: 'var(--muted)',
             }}>
-              © {year} Fabrice Liut — Design Organisationnel pour PMI
+              © {year} Fabrice Liut — Design Organisationnel pour PME & PMI
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4">
+            <a
+              href="https://liut.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-150"
+              style={{ color: 'var(--muted)', fontSize: '0.82rem', fontFamily: 'var(--font-heading)' }}
+            >
+              liut.me
+            </a>
+            <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
             <a
               href="https://www.linkedin.com/in/liut/"
               target="_blank"
@@ -55,12 +65,8 @@ export default function Footer() {
               className="transition-colors duration-150"
               style={{ color: 'var(--muted)', fontSize: '0.82rem', fontFamily: 'var(--font-heading)' }}
             >
-              Offre Dirigeants
+              Offre Dirigeant
             </Link>
-            <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
-            <span style={{ color: 'var(--muted)', fontSize: '0.78rem' }}>
-              Mentions légales disponibles sur demande
-            </span>
           </div>
         </div>
       </Container>

@@ -16,35 +16,28 @@ const fadeUp: Variants = {
 };
 
 const PAIN_POINTS = [
-  "Vous jonglez avec une montagne d'informations, de ressources et de projets en même temps",
-  'Vous perdez un temps fou à chercher vos documents, vos notes, vos infos',
-  'Vous avez essayé 10 outils différents, rien ne tient sur la durée',
-  'Vous vous sentez submergé·e, la charge mentale est énorme',
-  'Vous savez que ça vous empêche de vous concentrer sur ce qui compte vraiment : développer votre activité',
+  "Sans vous, rien n'avance. Vous \u00eates le goulot d'\u00e9tranglement de votre propre entreprise.",
+  "Vous passez 70% de votre temps dans l'op\u00e9rationnel au lieu de piloter la strat\u00e9gie et le d\u00e9veloppement.",
+  "Vos informations sont \u00e9parpill\u00e9es : emails, carnets, fichiers, WhatsApp. Impossible d'avoir une vue d'ensemble.",
+  "D\u00e9l\u00e9guer est compliqu\u00e9 : vos collaborateurs n'ont pas les bonnes infos, alors vous reprenez la main.",
+  "Le reporting vous prend des heures \u2014 et il est d\u00e9j\u00e0 obsol\u00e8te quand vous le finissez.",
 ];
 
 const BENEFITS = [
-  { value: '-50%', label: 'de charge mentale' },
-  { value: '+30%', label: 'de temps gagné/semaine' },
-  { value: '100%', label: 'focus sur vos vraies priorités' },
+  { value: '6-8h', label: "r\u00e9cup\u00e9r\u00e9es par semaine sur l'op\u00e9rationnel" },
+  { value: '360\u00b0', label: "vue d'ensemble en temps r\u00e9el sur votre activit\u00e9" },
+  { value: '\u00d72', label: "capacit\u00e9 de d\u00e9l\u00e9gation effective" },
 ];
 
 const PROGRAM_STEPS = [
-  { title: 'État des lieux', desc: "On regarde tout : vos outils actuels, vos flux d'information, vos points de blocage. Sans filtre." },
-  { title: 'Définition & Priorisation', desc: 'Les bonnes questions pour identifier vos besoins réels, les plus précieux. On priorise ce qui compte vraiment.' },
-  { title: 'Design du système', desc: "On dessine ensemble votre système d'organisation idéal. Structure, logique, workflows. Tout sur papier d'abord." },
-  { title: 'Mise en place sur Notion', desc: 'Je construis votre système sur Notion. Bases de données, templates, automatisations. La grosse partie technique, je la fais.' },
-  { title: 'Formation & Bonnes pratiques', desc: 'Je vous forme à Notion et aux bonnes pratiques : gestion de la connaissance, des ressources, des projets. Vous devenez autonome.' },
-  { title: 'Itérations & Suivi', desc: 'On ajuste le système selon votre usage réel. Ce qui marche, on garde. Ce qui coince, on améliore.' },
-  { title: 'Délégation facilitée', desc: "Recommandations pour déléguer facilement. Votre système est prêt pour accueillir d'autres personnes." },
-  { title: 'Coaching organisation', desc: "Au-delà de l'outil, on travaille vos habitudes, votre façon de gérer votre temps et vos priorités." },
-];
-
-const FUTURE_BENEFITS = [
-  'Embaucher vos premiers collaborateurs',
-  'Déléguer efficacement sans tout réexpliquer',
-  'Scaler votre activité sans perdre le contrôle',
-  'Gérer plusieurs projets complexes simultanément',
+  { title: "Audit de votre pilotage", desc: "On cartographie votre r\u00e9alit\u00e9 : comment circule l'information, o\u00f9 vous perdez du temps, ce qui d\u00e9pend trop de vous. Sans filtre." },
+  { title: "Priorisation des leviers", desc: "On identifie les 20% de changements qui vont lib\u00e9rer 80% de votre charge. On priorise par impact et facilit\u00e9." },
+  { title: "Design du cockpit", desc: "On dessine ensemble votre syst\u00e8me de pilotage id\u00e9al : suivi projets, d\u00e9cisions, \u00e9quipes, indicateurs. Sur papier d'abord." },
+  { title: "Construction sur Notion", desc: "Je construis votre cockpit sur Notion. Tableaux de bord, suivi de projets, syst\u00e8me de d\u00e9l\u00e9gation, bases de connaissances. Je fais le gros du technique." },
+  { title: "Mise en route & formation", desc: "On bascule vers votre nouveau syst\u00e8me. Je vous forme et je forme vos managers proches pour que le syst\u00e8me vive au quotidien." },
+  { title: "It\u00e9rations terrain", desc: "On ajuste selon l'usage r\u00e9el. Ce qui marche, on garde. Ce qui coince, on simplifie. Le syst\u00e8me s'adapte \u00e0 vous, pas l'inverse." },
+  { title: "Structuration de la d\u00e9l\u00e9gation", desc: "On met en place les flux pour que vos collaborateurs aient l'info sans vous solliciter. Votre pr\u00e9sence devient strat\u00e9gique, pas op\u00e9rationnelle." },
+  { title: "P\u00e9rennisation", desc: "On s'assure que le syst\u00e8me tient sans moi. Vous \u00eates autonome. Votre entreprise peut tourner m\u00eame quand vous n'\u00eates pas l\u00e0." },
 ];
 
 export default function OfferEntrepreneurs() {
@@ -81,17 +74,17 @@ export default function OfferEntrepreneurs() {
           <Container className="relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible" className="mb-6">
-                <IndexLabel text="PROGRAMME — Organisation Personnelle" />
+                <IndexLabel text="PROGRAMME — Pilotage Dirigeant" />
               </motion.div>
 
               <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible" className="mb-5" style={{ color: 'var(--text)' }}>
-                Vous êtes débordé·e.
+                Vous dirigez une PME.
                 <br />
-                <span style={{ color: 'var(--primary)' }}>Votre organisation est un chaos.</span>
+                <span style={{ color: 'var(--primary)' }}>Votre organisation repose trop sur vous.</span>
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4" style={{ color: 'var(--primary)', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
-                Il est temps d'en sortir. Définitivement.
+                {"Il est temps de reprendre le contr\u00f4le \u2014 sans tout porter seul."}
               </motion.p>
             </div>
           </Container>
@@ -110,12 +103,12 @@ export default function OfferEntrepreneurs() {
                 style={{ borderLeft: '3px solid #ef5350' }}
               >
                 <h2 className="mb-5" style={{ color: '#ef5350', fontSize: '1.3rem' }}>
-                  📊 Votre situation maintenant
+                  {"📊 Ce que vous vivez au quotidien"}
                 </h2>
                 <ul className="flex flex-col gap-3">
                   {PAIN_POINTS.map((point, i) => (
                     <li key={i} className="flex items-start gap-3" style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.65 }}>
-                      <span style={{ color: '#ef5350', fontWeight: 700, flexShrink: 0 }}>✗</span>
+                      <span style={{ color: '#ef5350', fontWeight: 700, flexShrink: 0 }}>{"✗"}</span>
                       {point}
                     </li>
                   ))}
@@ -130,7 +123,7 @@ export default function OfferEntrepreneurs() {
                 className="text-center py-6"
                 style={{ color: 'var(--primary)', fontSize: '2rem' }}
               >
-                ↓
+                {"↓"}
               </motion.div>
 
               <motion.div
@@ -142,13 +135,17 @@ export default function OfferEntrepreneurs() {
                 style={{ borderLeft: '3px solid var(--success)' }}
               >
                 <h2 className="mb-5" style={{ color: 'var(--success)', fontSize: '1.3rem' }}>
-                  ✓ Ce que je vous propose
+                  {"✓ Ce que je vous propose"}
                 </h2>
                 <p className="mb-4" style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}>
-                  Un accompagnement intensif sur <span style={{ color: 'var(--primary)', fontWeight: 600 }}>6 mois</span> pour sortir du chaos, installer un système d'organisation qui tient, et reprendre le contrôle.
+                  {"Un accompagnement sur "}
+                  <span style={{ color: 'var(--primary)', fontWeight: 600 }}>6 mois</span>
+                  {" pour structurer votre pilotage de dirigeant. On construit ensemble votre cockpit de direction : le syst\u00e8me qui vous donne la vue d'ensemble, fluidifie la d\u00e9l\u00e9gation, et vous lib\u00e8re du temps op\u00e9rationnel."}
                 </p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-                  Je construis avec vous un système sur-mesure sur <strong style={{ color: 'var(--text)' }}>Notion</strong>, adapté à votre façon de travailler. Je fais la grosse partie du boulot au départ, puis progressivement vous prenez le relais jusqu'à être complètement autonome.
+                  {"Le tout sur "}
+                  <strong style={{ color: 'var(--text)' }}>Notion</strong>
+                  {", construit sur-mesure pour votre entreprise. Je fais la partie technique, vous validez et pilotez. Et vos managers proches sont form\u00e9s pour que le syst\u00e8me vive sans moi."}
                 </p>
               </motion.div>
             </div>
@@ -179,8 +176,55 @@ export default function OfferEntrepreneurs() {
           </Container>
         </section>
 
-        {/* Prix */}
+        {/* Ce que vous obtenez */}
         <section style={{ paddingTop: '48px', paddingBottom: 'var(--spacing-section-v)' }}>
+          <Container>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5 }}
+              className="max-w-2xl mx-auto"
+            >
+              <div className="mb-4">
+                <IndexLabel text="LIVRABLES — Ce que vous obtenez" />
+              </div>
+              <h2 className="mb-8" style={{ color: 'var(--text)' }}>
+                {"Votre cockpit de "}
+                <span style={{ color: 'var(--primary)' }}>direction</span>
+              </h2>
+
+              <div className="flex flex-col gap-4">
+                {[
+                  { title: "Tableau de bord strat\u00e9gique", desc: "Vue en temps r\u00e9el sur vos projets, vos indicateurs cl\u00e9s, et l'avancement de vos \u00e9quipes. Plus besoin de demander o\u00f9 on en est." },
+                  { title: "Syst\u00e8me de d\u00e9l\u00e9gation structur\u00e9", desc: "Chaque t\u00e2che d\u00e9l\u00e9gu\u00e9e a un responsable, un d\u00e9lai, un suivi. Vos collaborateurs savent quoi faire sans vous solliciter." },
+                  { title: "Base de connaissances centralis\u00e9e", desc: "Process, d\u00e9cisions, comptes-rendus, contacts cl\u00e9s : tout est au m\u00eame endroit. Finie la perte d'information." },
+                  { title: "Gestion de projets simplifi\u00e9e", desc: "Suivi de vos chantiers en cours avec les jalons et les d\u00e9pendances. Vous voyez d'un coup d'\u0153il ce qui avance et ce qui bloque." },
+                  { title: "Reporting automatis\u00e9", desc: "Les indicateurs se mettent \u00e0 jour automatiquement. Le reporting mensuel qui prenait 2 jours se fait en temps r\u00e9el." },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ delay: i * 0.06, duration: 0.4 }}
+                    className="flex items-start gap-3 p-4 rounded-xl"
+                    style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
+                  >
+                    <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>{"→"}</span>
+                    <div>
+                      <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{item.title}</span>
+                      <p style={{ color: 'var(--muted)', fontSize: '0.875rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </Container>
+        </section>
+
+        {/* Prix */}
+        <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -190,20 +234,20 @@ export default function OfferEntrepreneurs() {
               className="max-w-2xl mx-auto text-center p-8 rounded-2xl"
               style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}
             >
-              <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>L'investissement qui se rembourse</h2>
+              <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>{"L'investissement"}</h2>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
-                13 000€
+                {"13 000\u20ac"}
               </div>
               <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-                Payable en 3 fois, à chaque étape validée ensemble
-                <br />selon la progression mesurée et les bénéfices constatés
+                {"10 jours de travail effectif sur 6 mois"}
+                <br />{"Payable en 3 fois, \u00e0 chaque \u00e9tape valid\u00e9e ensemble"}
               </p>
             </motion.div>
           </Container>
         </section>
 
         {/* ROI */}
-        <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+        <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -213,103 +257,55 @@ export default function OfferEntrepreneurs() {
               className="max-w-2xl mx-auto"
             >
               <div className="mb-4">
-                <IndexLabel text="ROI — Calcul transparent et réaliste" />
+                <IndexLabel text="ROI — Sans blabla" />
               </div>
-              <h2 className="mb-8" style={{ color: 'var(--text)' }}>
-                Le calcul du ROI <span style={{ color: 'var(--primary)' }}>(transparent)</span>
+              <h2 className="mb-6" style={{ color: 'var(--text)' }}>
+                {"Est-ce que \u00e7a "}
+                <span style={{ color: 'var(--primary)' }}>vaut le coup ?</span>
               </h2>
+
+              <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}>
+                {"Je ne vais pas vous promettre des chiffres magiques. Voici ce que rapportent concr\u00e8tement les dirigeants que j'accompagne :"}
+              </p>
 
               <div className="card-base p-6" style={{ background: 'var(--surface2)' }}>
                 <div className="mb-6 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>🕐 Gain 1 : Temps libéré (+30%)</div>
+                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>{"🕐 Temps r\u00e9cup\u00e9r\u00e9"}</div>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                    Si vous travaillez 40h/semaine, 30% de temps libéré = <strong style={{ color: 'var(--text)' }}>12h/semaine récupérées</strong>
-                    <br />→ 48h/mois → 576h/an
-                    <br />→ À votre taux horaire de ~100€/h : <strong style={{ color: 'var(--success)' }}>~57 600€ de valeur/an</strong>
+                    {"En moyenne "}
+                    <strong style={{ color: 'var(--text)' }}>{"6 \u00e0 8 heures par semaine"}</strong>
+                    {" r\u00e9cup\u00e9r\u00e9es sur l'op\u00e9rationnel."}
+                    <br />{"Ce temps, vous le r\u00e9investissez dans le d\u00e9veloppement commercial, la strat\u00e9gie, ou vos \u00e9quipes."}
                   </p>
                 </div>
 
                 <div className="mb-6 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>🧠 Gain 2 : Efficacité (+30%)</div>
+                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>{"📊 Meilleures d\u00e9cisions"}</div>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                    Charge mentale réduite de 50% = vous êtes 30% plus efficace sur votre temps de travail
-                    <br />→ Meilleure prise de décision, plus de focus sur ce qui rapporte
-                    <br />→ Conversion en CA ou qualité : <strong style={{ color: 'var(--success)' }}>~20 000€ de valeur/an (conservateur)</strong>
+                    {"Avec une vue d'ensemble claire, vous d\u00e9cidez plus vite et mieux."}
+                    <br /><strong style={{ color: 'var(--text)' }}>{"Combien vous co\u00fbte une d\u00e9cision retard\u00e9e d'une semaine ?"}</strong>
+                    {" Un recrutement qui tra\u00eene, un investissement repouss\u00e9, un client mal suivi ?"}
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl" style={{ background: 'var(--surface)', borderTop: '2px solid var(--primary)' }}>
-                  <div className="flex flex-col gap-2">
-                    <div className="flex justify-between" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>
-                      <span>Temps libéré (valeur)</span>
-                      <span>57 600€/an</span>
-                    </div>
-                    <div className="flex justify-between" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>
-                      <span>Efficacité gagnée (valeur)</span>
-                      <span>20 000€/an</span>
-                    </div>
-                    <div className="flex justify-between pt-2" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--success)', borderTop: '1px solid var(--border)' }}>
-                      <span>VALEUR TOTALE ANNÉE 1</span>
-                      <span>77 600€</span>
-                    </div>
-                    <div className="flex justify-between" style={{ fontSize: '0.875rem', color: 'var(--muted)', opacity: 0.8 }}>
-                      <span>Investissement</span>
-                      <span>− 13 000€</span>
-                    </div>
-                    <div className="flex justify-between pt-2" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--success)', borderTop: '2px solid var(--success)' }}>
-                      <span>GAIN NET ANNÉE 1</span>
-                      <span>+64 600€</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 p-4 rounded-xl text-center" style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}>
-                  <p style={{ color: 'var(--primary)', fontWeight: 600, fontSize: '0.9rem' }}>
-                    En comptant conservateur (50% des gains réalisés dès la première année)
-                  </p>
-                  <p style={{ color: 'var(--text)', fontSize: '1rem', fontWeight: 600, margin: '8px 0' }}>
-                    Votre investissement est remboursé en ~18 mois
-                  </p>
-                  <p style={{ color: 'var(--muted)', fontSize: '0.82rem' }}>
-                    Ensuite : 60 000€+ de gains nets qui s'accumulent chaque année
+                <div className="mb-6 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>{"🤝 D\u00e9l\u00e9gation qui fonctionne"}</div>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
+                    {"Vos managers et collaborateurs ont l'info dont ils ont besoin. Moins de sollicitations, moins d'allers-retours."}
+                    <br />{"Votre entreprise "}
+                    <strong style={{ color: 'var(--text)' }}>{"tourne quand vous n'\u00eates pas l\u00e0"}</strong>.
                   </p>
                 </div>
-              </div>
-            </motion.div>
-          </Container>
-        </section>
 
-        {/* Starting Pack */}
-        <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: '48px' }}>
-          <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6 }}
-              className="max-w-2xl mx-auto"
-            >
-              <div className="card-base p-6" style={{ borderLeft: '3px solid var(--primary)' }}>
-                <h3 className="mb-4" style={{ color: 'var(--primary)', fontSize: '1.2rem' }}>
-                  🚀 C'est un Starting Pack pour votre avenir
-                </h3>
-                <p className="mb-5" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-                  Ce système d'organisation n'est pas juste pour vous aujourd'hui. C'est <strong style={{ color: 'var(--text)' }}>la base</strong> qui va vous servir quand vous allez :
-                </p>
-                <ul className="flex flex-col gap-2 mb-5">
-                  {FUTURE_BENEFITS.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2" style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.65 }}>
-                      <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>→</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="p-4 rounded-xl text-center" style={{ background: 'var(--surface)', border: '1px solid var(--border-strong)' }}>
-                  <p style={{ color: 'var(--primary)', fontWeight: 600, fontSize: '0.9rem' }}>
-                    Les bénéfices se cumulent année après année
+                <div className="p-4 rounded-xl text-center" style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}>
+                  <p style={{ color: 'var(--text)', fontSize: '1rem', fontWeight: 600, marginBottom: '8px' }}>
+                    Exemple concret
                   </p>
-                  <p style={{ color: 'var(--muted)', fontSize: '0.82rem', marginTop: '4px' }}>
-                    C'est un investissement pour toutes vos futures années d'entrepreneuriat
+                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
+                    {"Un dirigeant qui r\u00e9cup\u00e8re 6h/semaine et les r\u00e9oriente vers le d\u00e9veloppement commercial :"}
+                    <br />{"sur un pipe de 500k\u20ac, "}
+                    <strong style={{ color: 'var(--success)' }}>{"+10% de conversion = 50 000\u20ac de CA additionnel"}</strong>.
+                    <br />{"L'investissement de 13 000\u20ac est rembours\u00e9 sur un seul contrat de plus."}
                   </p>
                 </div>
               </div>
@@ -318,7 +314,7 @@ export default function OfferEntrepreneurs() {
         </section>
 
         {/* Programme */}
-        <section style={{ paddingTop: '48px', paddingBottom: 'var(--spacing-section-v)' }}>
+        <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -331,21 +327,22 @@ export default function OfferEntrepreneurs() {
                 <IndexLabel text="PARCOURS — 10 jours sur 6 mois" />
               </div>
               <h2 className="mb-5" style={{ color: 'var(--text)' }}>
-                Le parcours sur <span style={{ color: 'var(--primary)' }}>6 mois</span>
+                {"Le parcours sur "}
+                <span style={{ color: 'var(--primary)' }}>6 mois</span>
               </h2>
 
               {/* Format */}
-              <div className="card-base p-5 mb-8" style={{ background: 'var(--surface)' }}>
-                <h3 className="mb-4" style={{ color: 'var(--primary)', fontSize: '1rem' }}>Format flexible adapté à votre rythme</h3>
+              <div className="card-base p-5 mb-8" style={{ background: 'var(--surface2)' }}>
+                <h3 className="mb-4" style={{ color: 'var(--primary)', fontSize: '1rem' }}>{"Format adapt\u00e9 \u00e0 votre agenda de dirigeant"}</h3>
                 <div className="flex flex-col gap-3">
                   <div style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
-                    <strong style={{ color: 'var(--text)' }}>Sessions de 1h à distance</strong> — Pour avancer régulièrement, ajuster, itérer
+                    <strong style={{ color: 'var(--text)' }}>{"Sessions de 1 \u00e0 2h"}</strong>{" \u2014 En pr\u00e9sentiel ou \u00e0 distance, selon votre planning"}
                   </div>
                   <div style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65, borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
-                    <strong style={{ color: 'var(--text)' }}>Workshops 1/2 journée</strong> — Pour les grosses mises en place, les décisions structurantes
+                    <strong style={{ color: 'var(--text)' }}>{"Workshops demi-journ\u00e9e"}</strong>{" \u2014 Pour les mises en place structurantes et la formation de vos managers"}
                   </div>
                   <div style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65, borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
-                    <strong style={{ color: 'var(--text)' }}>Travail asynchrone</strong> — Je construis, vous validez, on affine
+                    <strong style={{ color: 'var(--text)' }}>Travail asynchrone</strong>{" \u2014 Je construis le syst\u00e8me, vous validez, on affine"}
                   </div>
                 </div>
               </div>
@@ -375,7 +372,7 @@ export default function OfferEntrepreneurs() {
         </section>
 
         {/* Pourquoi Notion */}
-        <section style={{ paddingTop: '48px', paddingBottom: 'var(--spacing-section-v)' }}>
+        <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -388,8 +385,17 @@ export default function OfferEntrepreneurs() {
                 <IndexLabel text="OUTIL — Pourquoi Notion" />
               </div>
               <div className="card-base p-5" style={{ borderLeft: '3px solid var(--primary)' }}>
+                <p className="mb-4" style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>
+                  {"Notion est l'outil le plus adapt\u00e9 pour construire un cockpit de direction sur-mesure. Il est "}
+                  <strong style={{ color: 'var(--text)' }}>flexible</strong>
+                  {" (on construit exactement ce dont vous avez besoin), "}
+                  <strong style={{ color: 'var(--text)' }}>{"\u00e9volutif"}</strong>
+                  {" (le syst\u00e8me grandit avec votre entreprise), et "}
+                  <strong style={{ color: 'var(--text)' }}>partageable</strong>
+                  {" (vos managers y acc\u00e8dent facilement)."}
+                </p>
                 <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                  Notion est <strong style={{ color: 'var(--text)' }}>évolutif</strong>. Votre système grandit avec vous. Vous commencez seul·e, vous pourrez facilement intégrer d'autres personnes au fur et à mesure de votre développement. C'est flexible, puissant, et surtout : ça reste simple à utiliser au quotidien quand c'est bien conçu.
+                  {"Pas besoin d'\u00eatre technique. Quand c'est bien con\u00e7u, c'est aussi simple qu'un tableur \u2014 mais infiniment plus puissant."}
                 </p>
               </div>
             </motion.div>
@@ -407,15 +413,12 @@ export default function OfferEntrepreneurs() {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-4" style={{ color: 'var(--text)' }}>
-                Alors, <span style={{ color: 'var(--primary)' }}>on y va ?</span>
+                {"Pr\u00eat \u00e0 "}
+                <span style={{ color: 'var(--primary)' }}>reprendre le contrôle ?</span>
               </h2>
-              <p className="mb-3" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                Vous êtes dans le chaos maintenant.
-                <br />Je peux vous en sortir en 6 mois.
-                <br />Ça coûte 13 000€.
-              </p>
-              <p className="mb-8" style={{ color: 'var(--primary)', fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1.3rem' }}>
-                Go ou No Go ?
+              <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
+                {"45 minutes pour comprendre votre situation et voir si on peut travailler ensemble."}
+                <br />{"Pas de pitch. Pas de vente. Une vraie conversation entre dirigeants."}
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -425,14 +428,14 @@ export default function OfferEntrepreneurs() {
                   className="btn-primary"
                   style={{ fontSize: '1rem', padding: '16px 32px' }}
                 >
-                  Réserver 45 min pour en parler
+                  {"R\u00e9server 45 min"}
                 </a>
                 <Link to="/" className="btn-secondary" style={{ fontSize: '1rem', padding: '15px 28px' }}>
-                  ← Retour à l'accueil
+                  {"← Retour \u00e0 l'accueil"}
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                Premier échange gratuit. On valide ensemble que ça colle avant de se lancer.
+                {"Premier \u00e9change gratuit. On valide ensemble que \u00e7a colle avant de se lancer."}
               </p>
             </motion.div>
           </Container>

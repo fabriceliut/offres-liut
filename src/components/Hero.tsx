@@ -96,7 +96,7 @@ export default function Hero() {
             className="text-lg mb-10 max-w-xl"
             style={{ color: 'var(--muted)' }}
           >
-            Pour les dirigeants de PME industrielles (10–90 salariés) qui veulent
+            Pour les dirigeants de PME & PMI (10–90 salariés) qui veulent
             transformer leur organisation sans perdre leur âme — ni leur budget.
             Le Design Organisationnel comme levier stratégique.
           </motion.p>
