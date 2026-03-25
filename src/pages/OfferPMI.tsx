@@ -5,6 +5,7 @@ import DesignOrg from '../components/DesignOrg';
 import Pillars from '../components/Pillars';
 import Situations from '../components/Situations';
 import DirigeantSection from '../components/DirigeantSection';
+import IASection from '../components/IASection';
 import HowWeWork from '../components/HowWeWork';
 import Testimonials from '../components/Testimonials';
 import FinalCTA from '../components/FinalCTA';
@@ -21,6 +22,7 @@ export default function OfferPMI() {
         <Pillars />
         <Situations />
         <DirigeantSection />
+        <IASection />
         <HowWeWork />
         <Testimonials />
         <FinalCTA />
