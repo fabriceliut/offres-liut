@@ -58,7 +58,7 @@ export default function IASection() {
             className="mb-4"
             style={{ color: 'var(--text)' }}
           >
-            Et l&apos;IA dans tout \u00e7a ?{' '}
+            Et l'IA dans tout ça ?{' '}
             <span style={{ color: 'var(--primary)' }}>Aux bons endroits, pas partout.</span>
           </motion.h2>
 
@@ -71,9 +71,9 @@ export default function IASection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Une organisation bien structur\u00e9e, c&apos;est la fondation.
-            L&apos;IA, c&apos;est l&apos;acc\u00e9l\u00e9rateur \u2014 mais seulement l\u00e0 o\u00f9 elle cr\u00e9e de la valeur.
-            Pas de gadget, pas d&apos;usine \u00e0 gaz. Du chirurgical.
+            Une organisation bien structurée, c'est la fondation.
+            L'IA, c'est l'accélérateur — mais seulement là où elle crée de la valeur.
+            Pas de gadget, pas d'usine à gaz. Du chirurgical.
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-10">
@@ -107,21 +107,21 @@ export default function IASection() {
             }}
           >
             <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.15rem' }}>
-              L&apos;IA comme <span style={{ color: 'var(--primary)' }}>levier, pas comme gadget</span>
+              L'IA comme <span style={{ color: 'var(--primary)' }}>levier, pas comme gadget</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Je diagnostique vos flux, j&apos;int\u00e8gre l&apos;IA l\u00e0 o\u00f9 \u00e7a rapporte,
-              et je forme vos \u00e9quipes pour qu&apos;elles se l&apos;approprient. Le tout, s\u00e9curis\u00e9.
+              Je diagnostique vos flux, j'intègre l'IA là où ça rapporte,
+              et je forme vos équipes pour qu'elles se l'approprient. Le tout, sécurisé.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>1-2h</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>gagn\u00e9es par jour / personne</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>gagnées par jour / personne</div>
               </div>
               <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
               <div className="text-center">
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>0</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>migration n\u00e9cessaire</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>migration nécessaire</div>
               </div>
               <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
               <div className="text-center">
@@ -134,8 +134,8 @@ export default function IASection() {
               className="btn-primary"
               style={{ fontSize: '0.95rem', padding: '14px 28px' }}
             >
-              <span className="hidden sm:inline">D\u00e9couvrir l&apos;offre Int\u00e9gration IA</span>
-              <span className="sm:hidden">Offre Int\u00e9gration IA</span>
+              <span className="hidden sm:inline">Découvrir l'offre Intégration IA</span>
+              <span className="sm:hidden">Offre Intégration IA</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
