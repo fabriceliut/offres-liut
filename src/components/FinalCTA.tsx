@@ -31,9 +31,8 @@ export default function FinalCTA() {
           </h2>
 
           <p className="mb-10" style={{ color: 'var(--muted)', fontSize: '1rem' }}>
-            Commencez par 45 min pour voir si c'est fait pour vous.
-            Pas de pitch. Pas de devis non sollicité.
-            Une vraie conversation sur votre situation.
+            45 min pour comprendre votre situation et voir si je peux vous aider.
+            Pas de pitch. Pas de vente. Une vraie conversation.
           </p>
 
           {/* ROI reminder */}
@@ -80,7 +79,7 @@ export default function FinalCTA() {
                 <path d="M6 2V5M12 2V5" stroke="white" strokeWidth="1.4" strokeLinecap="round"/>
                 <path d="M2.5 8h13" stroke="white" strokeWidth="1.4"/>
               </svg>
-              Réserver 45 min
+              Prendre 45 min
             </a>
             <Link
               to="/entreprises"

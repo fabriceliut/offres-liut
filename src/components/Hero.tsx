@@ -69,7 +69,7 @@ export default function Hero() {
             animate="visible"
             className="mb-6"
           >
-            <span className="index-label">Fabrice Liut — Associé Stratégique & Opérationnel</span>
+            <span className="index-label">Fabrice Liut — Associé Opérationnel & Stratégique</span>
           </motion.div>
 
           {/* H1 */}
@@ -120,7 +120,7 @@ export default function Hero() {
                 <path d="M5 1.5V4.5M11 1.5V4.5" stroke="white" strokeWidth="1.3" strokeLinecap="round"/>
                 <path d="M2 7h12" stroke="white" strokeWidth="1.3"/>
               </svg>
-              Réserver 45 min
+              Prendre 45 min
             </a>
             <Link
               to="/entreprises"

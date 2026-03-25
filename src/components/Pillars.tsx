@@ -6,7 +6,7 @@ const PILLARS = [
   {
     num: '01',
     title: 'Immersion terrain',
-    desc: "Je passe du temps dans votre usine, avec vos équipes, à comprendre le flux réel — pas le flux théorique du dernier audit. Ce que je vois, vous ne le voyez plus.",
+    desc: "Je passe du temps dans votre usine, avec vos équipes. Je regarde comment ça tourne vraiment — pas le flux théorique du dernier audit. Ce que je vois, vous ne le voyez plus.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
@@ -17,8 +17,8 @@ const PILLARS = [
   },
   {
     num: '02',
-    title: 'Analyse systémique',
-    desc: "On ne traite pas les symptômes, on remonte aux causes. Cartographie des flux, identification des goulots, des zones de friction silencieuse et des ressources sous-exploitées.",
+    title: 'On remonte aux causes',
+    desc: "Pas les symptômes. Les vraies causes. Je cartographie vos flux, je trouve les goulots, les frictions silencieuses, les ressources que vous sous-exploitez.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="5" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -30,8 +30,8 @@ const PILLARS = [
   },
   {
     num: '03',
-    title: 'Co-construction',
-    desc: "Les solutions sont conçues avec vos équipes, pas pour elles. Ateliers structurés, prototypage rapide, tests en conditions réelles. L'appropriation est intégrée au process.",
+    title: 'Avec vos équipes, pas pour elles',
+    desc: "Les solutions sont construites avec ceux qui vont les utiliser. Ateliers, prototypage rapide, tests terrain. Si vos équipes ne se les approprient pas, ça ne sert à rien.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="10" width="7" height="7" rx="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -83,8 +83,8 @@ export default function Pillars() {
           className="mb-4"
           style={{ color: 'var(--text)' }}
         >
-          3 piliers,{' '}
-          <span style={{ color: 'var(--primary)' }}>une méthode cohérente</span>
+          Comment je me rends{' '}
+          <span style={{ color: 'var(--primary)' }}>utile</span>
         </motion.h2>
 
         <motion.p
@@ -95,8 +95,8 @@ export default function Pillars() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Chaque mission suit le même fil conducteur — du terrain à la solution,
-          de l'observation à l'action, du diagnostic à l'appropriation.
+          Chaque mission suit le même fil. Du terrain à la solution,
+          de l'observation à l'action. Pas de grand plan théorique.
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-5">

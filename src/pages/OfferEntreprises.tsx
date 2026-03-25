@@ -538,7 +538,7 @@ export default function OfferEntreprises() {
                 <span style={{ color: 'var(--primary)' }}>votre efficience ?</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)' }}>
-                Commençons par 45 minutes pour faire connaissance et valider qu'on peut travailler ensemble.
+                45 min pour comprendre votre contexte et voir si on peut travailler ensemble.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -548,14 +548,14 @@ export default function OfferEntreprises() {
                   className="btn-primary"
                   style={{ fontSize: '1rem', padding: '16px 32px' }}
                 >
-                  Réserver les 45 minutes
+                  Prendre 45 min
                 </a>
                 <Link to="/" className="btn-secondary" style={{ fontSize: '1rem', padding: '15px 28px' }}>
                   ← Retour à l'accueil
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                Pas d'engagement. Juste un échange pour voir si ça colle.
+                Pas sûr(e) ? Pas grave. On parle, on voit si ça colle.
               </p>
             </motion.div>
           </Container>

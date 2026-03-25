@@ -265,47 +265,40 @@ export default function OfferEntrepreneurs() {
               </h2>
 
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}>
-                {"Je ne vais pas vous promettre des chiffres magiques. Voici ce que rapportent concr\u00e8tement les dirigeants que j'accompagne :"}
+                {"Je ne promets pas de formule magique. Je préfère regarder vos chiffres, poser des hypothèses simples et rester prudent."}
               </p>
 
               <div className="card-base p-6" style={{ background: 'var(--surface2)' }}>
-                <div className="mb-6 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>{"🕐 Temps r\u00e9cup\u00e9r\u00e9"}</div>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                    {"En moyenne "}
-                    <strong style={{ color: 'var(--text)' }}>{"6 \u00e0 8 heures par semaine"}</strong>
-                    {" r\u00e9cup\u00e9r\u00e9es sur l'op\u00e9rationnel."}
-                    <br />{"Ce temps, vous le r\u00e9investissez dans le d\u00e9veloppement commercial, la strat\u00e9gie, ou vos \u00e9quipes."}
-                  </p>
-                </div>
-
-                <div className="mb-6 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>{"📊 Meilleures d\u00e9cisions"}</div>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                    {"Avec une vue d'ensemble claire, vous d\u00e9cidez plus vite et mieux."}
-                    <br /><strong style={{ color: 'var(--text)' }}>{"Combien vous co\u00fbte une d\u00e9cision retard\u00e9e d'une semaine ?"}</strong>
-                    {" Un recrutement qui tra\u00eene, un investissement repouss\u00e9, un client mal suivi ?"}
-                  </p>
-                </div>
-
-                <div className="mb-6 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '1rem', marginBottom: '8px' }}>{"🤝 D\u00e9l\u00e9gation qui fonctionne"}</div>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                    {"Vos managers et collaborateurs ont l'info dont ils ont besoin. Moins de sollicitations, moins d'allers-retours."}
-                    <br />{"Votre entreprise "}
-                    <strong style={{ color: 'var(--text)' }}>{"tourne quand vous n'\u00eates pas l\u00e0"}</strong>.
-                  </p>
+                <div className="flex flex-col gap-4 mb-6">
+                  <div className="flex items-start gap-3 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                    <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>{"🕐"}</span>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
+                      <strong style={{ color: 'var(--text)' }}>{"6 à 8h/semaine récupérées"}</strong>{" sur l'opérationnel. Réinvesties dans le commercial, la stratégie, ou vos équipes."}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                    <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>{"📊"}</span>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
+                      <strong style={{ color: 'var(--text)' }}>{"Des décisions plus rapides."}</strong>{" Vue d'ensemble claire = moins d'hésitation. Combien vous coûte une décision retardée d'une semaine ?"}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                    <span style={{ fontSize: '1.1rem', flexShrink: 0 }}>{"🤝"}</span>
+                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
+                      <strong style={{ color: 'var(--text)' }}>{"Votre entreprise tourne sans vous."}</strong>{" Vos managers ont l'info, vos équipes avancent. Moins de sollicitations, moins d'allers-retours."}
+                    </p>
+                  </div>
                 </div>
 
                 <div className="p-4 rounded-xl text-center" style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}>
                   <p style={{ color: 'var(--text)', fontSize: '1rem', fontWeight: 600, marginBottom: '8px' }}>
-                    Exemple concret
+                    {"Exemple concret"}
                   </p>
                   <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                    {"Un dirigeant qui r\u00e9cup\u00e8re 6h/semaine et les r\u00e9oriente vers le d\u00e9veloppement commercial :"}
-                    <br />{"sur un pipe de 500k\u20ac, "}
-                    <strong style={{ color: 'var(--success)' }}>{"+10% de conversion = 50 000\u20ac de CA additionnel"}</strong>.
-                    <br />{"L'investissement de 13 000\u20ac est rembours\u00e9 sur un seul contrat de plus."}
+                    {"Un dirigeant récupère 6h/semaine → les réoriente vers le commercial."}
+                    <br />{"Sur un pipe de 500k€, "}
+                    <strong style={{ color: 'var(--success)' }}>{"+10% de conversion = 50 000€ de CA additionnel"}</strong>{"."}
+                    <br />{"L'investissement de 13 000€ est remboursé sur un seul contrat de plus."}
                   </p>
                 </div>
               </div>
@@ -417,8 +410,8 @@ export default function OfferEntrepreneurs() {
                 <span style={{ color: 'var(--primary)' }}>reprendre le contrôle ?</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                {"45 minutes pour comprendre votre situation et voir si on peut travailler ensemble."}
-                <br />{"Pas de pitch. Pas de vente. Une vraie conversation entre dirigeants."}
+                {"45 min pour comprendre votre situation et voir si je peux vous aider."}
+                <br />{"Pas de pitch. Pas de vente. Une vraie conversation."}
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -428,14 +421,14 @@ export default function OfferEntrepreneurs() {
                   className="btn-primary"
                   style={{ fontSize: '1rem', padding: '16px 32px' }}
                 >
-                  {"R\u00e9server 45 min"}
+                  {"Prendre 45 min"}
                 </a>
                 <Link to="/" className="btn-secondary" style={{ fontSize: '1rem', padding: '15px 28px' }}>
                   {"← Retour \u00e0 l'accueil"}
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                {"Premier \u00e9change gratuit. On valide ensemble que \u00e7a colle avant de se lancer."}
+                {"Pas s\u00fbr(e) ? Pas grave. On parle, on voit si \u00e7a colle."}
               </p>
             </motion.div>
           </Container>

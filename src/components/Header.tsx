@@ -143,7 +143,7 @@ export default function Header() {
               className="btn-primary"
               style={{ padding: '10px 20px', fontSize: '0.82rem' }}
             >
-              Réserver 45 min
+              Prendre 45 min
             </a>
           </div>
 
@@ -235,7 +235,7 @@ export default function Header() {
                     className="btn-primary w-full justify-center"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Réserver 45 min
+                    Prendre 45 min
                   </a>
                 </div>
               </nav>
