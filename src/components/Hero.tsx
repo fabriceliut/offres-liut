@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Container from './Container';
 
 const fadeUp: Variants = {
@@ -66,9 +67,18 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mb-6"
+            className="mb-6 flex flex-wrap items-center gap-3"
           >
             <span className="index-label">DOSSIER 00 — Pour les PMI</span>
+            <span style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '0.72rem',
+              fontWeight: 500,
+              color: 'var(--muted)',
+              letterSpacing: '0.04em',
+            }}>
+              Fabrice Liut — Associé Stratégique &amp; Opérationnel
+            </span>
           </motion.div>
 
           {/* H1 */}
@@ -121,17 +131,15 @@ export default function Hero() {
               </svg>
               Réserver 45 min
             </a>
-            <a
-              href="https://liut-offres.pages.dev/entreprises"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/entreprises"
               className="btn-secondary"
             >
               Découvrir le programme
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Stats */}

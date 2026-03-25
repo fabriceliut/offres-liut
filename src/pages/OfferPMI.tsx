@@ -4,6 +4,7 @@ import ProofBand from '../components/ProofBand';
 import DesignOrg from '../components/DesignOrg';
 import Pillars from '../components/Pillars';
 import Situations from '../components/Situations';
+import DirigeantSection from '../components/DirigeantSection';
 import HowWeWork from '../components/HowWeWork';
 import Testimonials from '../components/Testimonials';
 import FinalCTA from '../components/FinalCTA';
@@ -19,6 +20,7 @@ export default function OfferPMI() {
         <DesignOrg />
         <Pillars />
         <Situations />
+        <DirigeantSection />
         <HowWeWork />
         <Testimonials />
         <FinalCTA />

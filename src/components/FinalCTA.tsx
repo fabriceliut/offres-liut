@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Container from './Container';
 
 export default function FinalCTA() {
@@ -81,10 +82,8 @@ export default function FinalCTA() {
               </svg>
               Réserver 45 min
             </a>
-            <a
-              href="https://liut-offres.pages.dev/entreprises"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/entreprises"
               className="btn-secondary"
               style={{ fontSize: '1rem', padding: '15px 28px' }}
             >
@@ -92,7 +91,7 @@ export default function FinalCTA() {
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9.5 4.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* LinkedIn link */}

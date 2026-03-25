@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from './Container';
 
 export default function Footer() {
@@ -41,15 +42,21 @@ export default function Footer() {
               LinkedIn
             </a>
             <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
-            <a
-              href="https://liut-offres.pages.dev/entreprises"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/entreprises"
               className="transition-colors duration-150"
               style={{ color: 'var(--muted)', fontSize: '0.82rem', fontFamily: 'var(--font-heading)' }}
             >
-              Toutes les offres
-            </a>
+              Offre Entreprises
+            </Link>
+            <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
+            <Link
+              to="/entrepreneurs"
+              className="transition-colors duration-150"
+              style={{ color: 'var(--muted)', fontSize: '0.82rem', fontFamily: 'var(--font-heading)' }}
+            >
+              Offre Dirigeants
+            </Link>
             <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
             <span style={{ color: 'var(--muted)', fontSize: '0.78rem' }}>
               Mentions légales disponibles sur demande

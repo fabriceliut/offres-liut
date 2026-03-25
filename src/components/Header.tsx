@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import Container from './Container';
 import { useActiveSection, scrollToSection } from '../lib/anchors';
 
@@ -15,7 +16,9 @@ const SECTION_IDS = NAV_ITEMS.map(n => n.id);
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const activeSection = useActiveSection(SECTION_IDS);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/' || location.pathname === '';
+  const activeSection = useActiveSection(isHomePage ? SECTION_IDS : []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -41,58 +44,95 @@ export default function Header() {
       <Container>
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 focus-visible:outline-none"
-            aria-label="Retour en haut"
-          >
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="4" y="8" width="18" height="14" rx="2" fill="none" stroke="#766BFF" strokeWidth="1.5"/>
-              <rect x="8" y="5" width="18" height="14" rx="2" fill="none" stroke="rgba(118,107,255,0.35)" strokeWidth="1.5"/>
-              <line x1="8" y1="13" x2="18" y2="13" stroke="#766BFF" strokeWidth="1.5" strokeLinecap="round"/>
-              <line x1="8" y1="16.5" x2="15" y2="16.5" stroke="rgba(118,107,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
-              <circle cx="23" cy="23" r="2.5" fill="#766BFF"/>
-            </svg>
-            <span style={{
-              fontFamily: 'var(--font-heading)',
-              fontWeight: 700,
-              fontSize: '1rem',
-              letterSpacing: '-0.03em',
-              color: 'var(--text)',
-            }}>
-              LIUT<span style={{ color: 'var(--primary)' }}>.</span>PMI
-            </span>
-          </button>
+          {isHomePage ? (
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex items-center gap-2 focus-visible:outline-none"
+              aria-label="Retour en haut"
+            >
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="4" y="8" width="18" height="14" rx="2" fill="none" stroke="#766BFF" strokeWidth="1.5"/>
+                <rect x="8" y="5" width="18" height="14" rx="2" fill="none" stroke="rgba(118,107,255,0.35)" strokeWidth="1.5"/>
+                <line x1="8" y1="13" x2="18" y2="13" stroke="#766BFF" strokeWidth="1.5" strokeLinecap="round"/>
+                <line x1="8" y1="16.5" x2="15" y2="16.5" stroke="rgba(118,107,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
+                <circle cx="23" cy="23" r="2.5" fill="#766BFF"/>
+              </svg>
+              <span style={{
+                fontFamily: 'var(--font-heading)',
+                fontWeight: 700,
+                fontSize: '1rem',
+                letterSpacing: '-0.03em',
+                color: 'var(--text)',
+              }}>
+                LIUT<span style={{ color: 'var(--primary)' }}>.</span>PMI
+              </span>
+            </button>
+          ) : (
+            <Link
+              to="/"
+              className="flex items-center gap-2 focus-visible:outline-none"
+              aria-label="Retour à l'accueil"
+            >
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="4" y="8" width="18" height="14" rx="2" fill="none" stroke="#766BFF" strokeWidth="1.5"/>
+                <rect x="8" y="5" width="18" height="14" rx="2" fill="none" stroke="rgba(118,107,255,0.35)" strokeWidth="1.5"/>
+                <line x1="8" y1="13" x2="18" y2="13" stroke="#766BFF" strokeWidth="1.5" strokeLinecap="round"/>
+                <line x1="8" y1="16.5" x2="15" y2="16.5" stroke="rgba(118,107,255,0.5)" strokeWidth="1.5" strokeLinecap="round"/>
+                <circle cx="23" cy="23" r="2.5" fill="#766BFF"/>
+              </svg>
+              <span style={{
+                fontFamily: 'var(--font-heading)',
+                fontWeight: 700,
+                fontSize: '1rem',
+                letterSpacing: '-0.03em',
+                color: 'var(--text)',
+              }}>
+                LIUT<span style={{ color: 'var(--primary)' }}>.</span>PMI
+              </span>
+            </Link>
+          )}
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1" aria-label="Navigation principale">
-            {NAV_ITEMS.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="relative px-3 py-1.5 text-sm transition-colors duration-150"
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontWeight: 500,
-                  color: activeSection === item.id ? 'var(--text)' : 'var(--muted)',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
+          {isHomePage ? (
+            <nav className="hidden md:flex items-center gap-1" aria-label="Navigation principale">
+              {NAV_ITEMS.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="relative px-3 py-1.5 text-sm transition-colors duration-150"
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 500,
+                    color: activeSection === item.id ? 'var(--text)' : 'var(--muted)',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {activeSection === item.id && (
+                    <motion.span
+                      layoutId="navIndicator"
+                      className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 rounded-full"
+                      style={{ background: 'var(--primary)' }}
+                      transition={{ type: 'spring', stiffness: 500, damping: 40 }}
+                      aria-hidden="true"
+                    />
+                  )}
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          ) : (
+            <nav className="hidden md:flex items-center gap-1" aria-label="Navigation">
+              <Link
+                to="/"
+                className="px-3 py-1.5 text-sm transition-colors duration-150"
+                style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, color: 'var(--muted)' }}
               >
-                {activeSection === item.id && (
-                  <motion.span
-                    layoutId="navIndicator"
-                    className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 rounded-full"
-                    style={{ background: 'var(--primary)' }}
-                    transition={{ type: 'spring', stiffness: 500, damping: 40 }}
-                    aria-hidden="true"
-                  />
-                )}
-                {item.label}
-              </button>
-            ))}
-          </nav>
+                ← Accueil
+              </Link>
+            </nav>
+          )}
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
@@ -151,24 +191,42 @@ export default function Header() {
           >
             <Container>
               <nav className="py-4 flex flex-col gap-2" aria-label="Menu mobile">
-                {NAV_ITEMS.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => { scrollToSection(item.id); setMenuOpen(false); }}
+                {isHomePage ? (
+                  <>
+                    {NAV_ITEMS.map((item) => (
+                      <button
+                        key={item.id}
+                        onClick={() => { scrollToSection(item.id); setMenuOpen(false); }}
+                        className="text-left px-3 py-2.5 rounded-lg transition-colors duration-150"
+                        style={{
+                          fontFamily: 'var(--font-heading)',
+                          fontWeight: 500,
+                          fontSize: '0.95rem',
+                          color: activeSection === item.id ? 'var(--primary)' : 'var(--text)',
+                          background: activeSection === item.id ? 'rgba(118,107,255,0.1)' : 'transparent',
+                          border: 'none',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </>
+                ) : (
+                  <Link
+                    to="/"
+                    onClick={() => setMenuOpen(false)}
                     className="text-left px-3 py-2.5 rounded-lg transition-colors duration-150"
                     style={{
                       fontFamily: 'var(--font-heading)',
                       fontWeight: 500,
                       fontSize: '0.95rem',
-                      color: activeSection === item.id ? 'var(--primary)' : 'var(--text)',
-                      background: activeSection === item.id ? 'rgba(118,107,255,0.1)' : 'transparent',
-                      border: 'none',
-                      cursor: 'pointer',
+                      color: 'var(--text)',
                     }}
                   >
-                    {item.label}
-                  </button>
-                ))}
+                    ← Retour à l'accueil
+                  </Link>
+                )}
                 <div className="pt-2 pb-2">
                   <a
                     href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
