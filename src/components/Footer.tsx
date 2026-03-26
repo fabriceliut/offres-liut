@@ -26,7 +26,7 @@ export default function Footer() {
               fontSize: '0.85rem',
               color: 'var(--muted)',
             }}>
-              © {year} Fabrice Liut — Design Organisationnel pour PME & PMI
+              © {year} Fabrice Liut
             </span>
           </div>
 
