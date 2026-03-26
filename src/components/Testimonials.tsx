@@ -60,7 +60,7 @@ export default function Testimonials() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Des retours de dirigeants que j'ai accompagnés.
+          Des retours de dirigeants accompagnés.
           Des résultats mesurés, des équipes qui ont porté le changement.
         </motion.p>
 

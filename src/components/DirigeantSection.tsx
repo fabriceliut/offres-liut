@@ -77,7 +77,7 @@ export default function DirigeantSection() {
           >
             Au-delà de l'organisation de l'entreprise, il y a le système de pilotage du dirigeant.
             Celui qui permet de garder la vue d'ensemble, de décider vite, et de déléguer.
-            C'est un sujet sur lequel j'ai beaucoup travaillé.
+            Ça se structure.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -115,7 +115,7 @@ export default function DirigeantSection() {
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
               Un accompagnement dédié pour structurer votre pilotage de dirigeant,
-              basé sur ce que j'ai vu fonctionner dans des dizaines de PME.
+              Un format éprouvé dans des dizaines de PME.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">

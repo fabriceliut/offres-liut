@@ -14,7 +14,7 @@ const fadeUp: Variants = {
 const DIFFERENTIATIONS = [
   {
     label: 'Design Organisationnel',
-    desc: "On part de votre réalité terrain, on co-construit avec vos équipes, et on vise des solutions qui tiennent dans le temps. C'est ce que j'ai observé fonctionner le mieux.",
+    desc: "On part de votre réalité terrain, on co-construit avec vos équipes, et on vise des solutions qui tiennent dans le temps.",
     accent: true,
   },
   {

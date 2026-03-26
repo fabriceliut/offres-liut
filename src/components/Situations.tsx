@@ -75,7 +75,7 @@ export default function Situations() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Des situations que j'ai rencontrées régulièrement au fil des missions.
+          Des situations fréquentes dans les PME en croissance.
           Si l'une d'elles résonne, on a probablement quelque chose à explorer ensemble.
         </motion.p>
 

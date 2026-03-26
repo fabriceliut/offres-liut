@@ -167,8 +167,8 @@ export default function OfferEntreprises() {
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
-                Un programme de 6 mois, éprouvé sur des dizaines de structures.
-                Voici comment ça se passe, et les résultats que j'ai observés.
+                Un programme de 6 mois. Voici comment ça se passe,
+                ce que ça implique, et les résultats concrets obtenus.
               </motion.p>
 
               <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">

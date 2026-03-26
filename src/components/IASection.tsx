@@ -73,7 +73,7 @@ export default function IASection() {
           >
             Une organisation bien structurée, c'est la fondation.
             L'IA peut être un accélérateur — mais seulement là où elle crée de la valeur.
-            C'est ce que j'ai appris en intégrant l'IA dans des dizaines de structures.
+            Pas de gadget, pas d'usine à gaz. Du chirurgical.
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-10">
@@ -110,7 +110,7 @@ export default function IASection() {
               L'IA comme <span style={{ color: 'var(--primary)' }}>levier concret</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Je diagnostique vos flux, j'intègre l'IA là où j'ai observé qu'elle rapporte,
+              Je diagnostique vos flux, j'intègre l'IA là où elle rapporte vraiment,
               et je forme vos équipes pour qu'elles se l'approprient.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">

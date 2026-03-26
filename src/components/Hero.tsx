@@ -96,7 +96,7 @@ export default function Hero() {
           >
             Depuis plus de 15 ans, j'accompagne les dirigeants de PME & PMI
             (10–90 salariés) dans la transformation de leur organisation.
-            Voici ce que je propose, et les résultats que j'ai observés.
+            Voici ce que je propose — et les résultats concrets obtenus.
           </motion.p>
 
           {/* CTAs */}

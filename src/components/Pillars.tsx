@@ -95,7 +95,7 @@ export default function Pillars() {
           style={{ color: 'var(--muted)' }}
         >
           Chaque mission suit le même fil. Du terrain à la solution,
-          de l'observation à l'action. C'est ce que j'ai vu fonctionner.
+          de l'observation à l'action.
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-5">
