@@ -17,7 +17,7 @@ const PILLARS = [
   },
   {
     num: '02',
-    title: 'On cherche ce qui coincé',
+    title: 'On cherche ce qui coince',
     desc: "Je cartographie vos flux, je trouve les goulots, les frictions silencieuses. On ne reste pas sur les symptômes — on remonte aux causes.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">

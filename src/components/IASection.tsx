@@ -99,7 +99,7 @@ export default function IASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.5 }}
-            className="card-base p-8 text-center"
+            className="card-base p-6 sm:p-8 text-center"
             style={{
               borderColor: 'var(--border-strong)',
               background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%)',

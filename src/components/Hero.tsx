@@ -94,7 +94,7 @@ export default function Hero() {
             className="text-lg mb-10 max-w-xl"
             style={{ color: 'var(--muted)' }}
           >
-            Basé à Lyon, je viens sur place, j'écoute ce qui coincé,
+            Basé à Lyon, je viens sur place, j'écoute ce qui coince,
             et on avance ensemble. Vous me dites ce qui bloque.
             J'observe, je mets en place. On teste, on ajuste, on continue.
           </motion.p>

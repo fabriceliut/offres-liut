@@ -31,7 +31,7 @@ export default function FinalCTA() {
           </h2>
 
           <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem' }}>
-            Vous posez le contexte. On identifie ce qui coincé vraiment.
+            Vous posez le contexte. On identifie ce qui coince vraiment.
             Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.
           </p>
 

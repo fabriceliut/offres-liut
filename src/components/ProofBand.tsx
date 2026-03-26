@@ -17,7 +17,7 @@ export default function ProofBand() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-8 text-center"
+          className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-center"
         >
           <div style={{ color: 'var(--muted)', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-heading)', fontWeight: 500 }}>
             Déjà accompagné

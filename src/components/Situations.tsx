@@ -11,7 +11,7 @@ const SITUATIONS = [
   },
   {
     num: '02',
-    title: 'La communication coincé entre les équipes',
+    title: 'La communication coince entre les équipes',
     desc: "Les informations se perdent, les décisions traînent, les équipes travaillent en silo. Tout le monde s'active mais le système perd de l'énergie.",
     signal: "Emails sans réponse, réunions qui n'aboutissent pas, turn-over en hausse",
   },

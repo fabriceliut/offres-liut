@@ -66,7 +66,7 @@ export default function DesignOrg() {
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
             J'appelle ça le Design Organisationnel. En pratique : je regarde comment
-            votre entreprise fonctionne vraiment, et on ajuste ce qui coincé — avec vos équipes,
+            votre entreprise fonctionne vraiment, et on ajuste ce qui coince — avec vos équipes,
             pas dans un rapport que personne ne lit.
           </motion.p>
 

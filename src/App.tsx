@@ -1,12 +1,22 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import OfferPMI from './pages/OfferPMI';
 import OfferEntreprises from './pages/OfferEntreprises';
 import OfferEntrepreneurs from './pages/OfferEntrepreneurs';
 import OfferIA from './pages/OfferIA';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<OfferPMI />} />
         <Route path="/entreprises" element={<OfferEntreprises />} />

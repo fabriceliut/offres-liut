@@ -6,7 +6,7 @@ const STEPS = [
   {
     num: '01',
     title: '45 min pour poser le contexte',
-    desc: "Vous posez le contexte. On identifie ce qui coincé vraiment. Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.",
+    desc: "Vous posez le contexte. On identifie ce qui coince vraiment. Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.",
     duration: '45 min',
   },
   {
@@ -71,18 +71,6 @@ export default function HowWeWork() {
         </motion.p>
 
         <div className="relative">
-          {/* Connecting line desktop */}
-          <div
-            aria-hidden="true"
-            className="hidden md:block absolute top-8 left-0 right-0 h-px"
-            style={{
-              background: 'linear-gradient(90deg, transparent, var(--border-strong), transparent)',
-              top: '32px',
-              left: '16.67%',
-              right: '16.67%',
-            }}
-          />
-
           <div className="grid md:grid-cols-3 gap-6">
             {STEPS.map((step, i) => (
               <motion.div

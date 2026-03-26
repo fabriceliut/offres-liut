@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -82,10 +81,6 @@ const STEPS = [
 ];
 
 export default function OfferIA() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       <Header />
