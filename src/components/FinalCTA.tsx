@@ -26,42 +26,33 @@ export default function FinalCTA() {
           </div>
 
           <h2 className="mb-5" style={{ color: 'var(--text)' }}>
-            Ça vous parle ?{' '}
-            <span style={{ color: 'var(--primary)' }}>Échangeons.</span>
+            On prend{' '}
+            <span style={{ color: 'var(--primary)' }}>45 minutes ensemble ?</span>
           </h2>
 
-          <p className="mb-10" style={{ color: 'var(--muted)', fontSize: '1rem' }}>
-            45 min pour comprendre votre situation et voir ensemble si je peux vous aider.
-            Pas de pitch. Pas d'engagement. On discute, et on décide après.
+          <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem' }}>
+            Vous posez le contexte. On identifie ce qui coincé vraiment.
+            Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.
           </p>
 
-          {/* ROI reminder */}
+          {/* Two conditions */}
           <div
-            className="mb-10 p-5 rounded-2xl flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center"
+            className="mb-10 p-5 rounded-2xl text-left max-w-md mx-auto"
             style={{
               background: 'var(--surface2)',
               border: '1px solid var(--border-strong)',
             }}
           >
-            <div className="text-center">
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>
-                40 000€
-              </div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>d'économies observées/an</div>
+            <p className="mb-3" style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)' }}>
+              Deux conditions pour que ça fonctionne bien :
+            </p>
+            <div className="flex items-start gap-2 mb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
+              <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>→</span>
+              Vous gardez le lead sur votre entreprise
             </div>
-            <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
-            <div className="text-center">
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--text)' }}>
-                15 000€
-              </div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>d'investissement</div>
-            </div>
-            <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
-            <div className="text-center">
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--success)' }}>
-                ROI+
-              </div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>dès la 1ère année</div>
+            <div className="flex items-start gap-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
+              <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>→</span>
+              Vous êtes prêt à arrêter ce qui ne marche plus
             </div>
           </div>
 

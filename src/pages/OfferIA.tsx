@@ -19,65 +19,65 @@ const TRAPS = [
   {
     icon: '🔧',
     title: 'Le bricolage interne',
-    desc: "On teste des outils dans son coin, on perd un temps infini à configurer des prompts qui ne durent pas. On finit par abandonner par manque de structure.",
+    desc: "On teste des outils dans son coin, on perd du temps à configurer des prompts qui ne tiennent pas. On finit par abandonner.",
   },
   {
     icon: '✨',
-    title: "Le syndrome de l'objet brillant",
-    desc: "On installe de l'IA partout par peur de rater le train. On crée des usines à gaz qui complexifient le travail au lieu de l'alléger.",
+    title: "L'objet brillant",
+    desc: "On met de l'IA partout par peur de rater le train. On complexifie le travail au lieu de l'alléger.",
   },
 ];
 
 const WHY_ME = [
   {
     icon: '⚡',
-    title: "40h d'essais → 1h de diagnostic",
-    desc: "Là où beaucoup passent des dizaines d'heures à tester des solutions incertaines, mon expérience me permet d'identifier rapidement le maillon faible et d'y injecter la bonne solution.",
+    title: '40h d\'essais → 1h de diagnostic',
+    desc: "Là où beaucoup passent des semaines à tester, j'identifie vite le maillon faible et j'y injecte la bonne solution.",
   },
   {
     icon: '🔄',
-    title: "Veille permanente",
-    desc: "L'IA évolue plus vite que tout. Je reste en veille permanente. Dès qu'une évolution concerne votre secteur, je l'adapte à votre structure.",
+    title: 'Veille permanente',
+    desc: "L'IA bouge plus vite que tout. Dès qu'une évolution concerne votre secteur, je l'adapte à votre structure.",
   },
   {
     icon: '🔒',
-    title: "Sécurité & Souveraineté",
-    desc: "Bricoler seul, c'est souvent exposer ses données sans le savoir. Je sécurise vos flux pour que l'IA soit intégrée proprement.",
+    title: 'Sécurité',
+    desc: "Bricoler seul, c'est souvent exposer ses données sans le savoir. Je sécurise vos flux.",
   },
 ];
 
 const PERFORMANCE = [
-  { title: 'Fin des tâches répétitives', desc: "Automatisation intelligente des tâches à faible valeur ajoutée. Vos équipes se concentrent sur ce qui compte." },
-  { title: 'Décisions augmentées', desc: "Analyse de vos données en temps réel pour des choix plus lucides, plus rapides." },
-  { title: 'Workflows autonomes', desc: "Des flux qui tournent pendant que vous dormez. Moins d'interventions manuelles, plus de fiabilité." },
+  { title: 'Fin des tâches répétitives', desc: "Automatisation des tâches à faible valeur. Vos équipes se concentrent sur ce qui compte." },
+  { title: 'Décisions augmentées', desc: "Analyse de vos données en temps réel. Moins d'intuition, plus de lucidité." },
+  { title: 'Workflows autonomes', desc: "Des flux qui tournent tout seuls. Moins d'interventions manuelles." },
 ];
 
 const QVT = [
-  { title: 'Moins de charge mentale', desc: "L'IA gère le bruit — tris, résumés, rappels — pour que vos équipes se concentrent sur leur zone de génie." },
-  { title: "Moins d'erreurs", desc: "Moins de stress lié aux oublis ou aux tâches fastidieuses. Les machines sont meilleures que nous pour ça." },
-  { title: '1 à 2h récupérées par jour', desc: "C'est du répit et de la créativité rendus à vos collaborateurs. Chaque jour." },
+  { title: 'Moins de charge mentale', desc: "L'IA gère le bruit — tris, résumés, rappels. Vos équipes se concentrent sur leur zone de génie." },
+  { title: "Moins d'erreurs", desc: "Moins de stress lié aux oublis. Les machines sont meilleures que nous pour ça." },
+  { title: '1 à 2h récupérées par jour', desc: "Du répit et de la créativité rendus à vos collaborateurs. Chaque jour." },
 ];
 
 const STEPS = [
   {
     num: '01',
     title: 'Diagnostic "Flux & Valeur"',
-    desc: "Analyse de votre quotidien pour identifier les points de friction où l'IA apportera un ROI immédiat. On ne touche qu'à ce qui a de la valeur.",
+    desc: "J'analyse votre quotidien pour trouver où l'IA apporte un ROI immédiat. On ne touche qu'à ce qui a de la valeur.",
   },
   {
     num: '02',
     title: 'Intégration sur-mesure',
-    desc: "Mise en place de solutions (LLMs, Agents, Automatisations) connectées à vos outils actuels. Pas de migration, pas de révolution — une greffe chirurgicale.",
+    desc: "Mise en place de solutions connectées à vos outils actuels. Pas de migration, pas de révolution.",
   },
   {
     num: '03',
-    title: 'Acculturation des équipes',
-    desc: "Je ne pose pas des outils et je pars. Je forme vos collaborateurs pour qu'ils s'approprient cette nouvelle puissance. Sinon, ça ne sert à rien.",
+    title: 'Formation des équipes',
+    desc: "Je ne pose pas des outils et je pars. Je forme vos collaborateurs pour qu'ils s'en servent au quotidien.",
   },
   {
     num: '04',
-    title: 'Accompagnement "Évolution"',
-    desc: "Collaboration continue pour ajuster vos systèmes aux dernières percées. L'IA bouge vite. Votre intégration suit le rythme.",
+    title: 'Suivi & évolution',
+    desc: "L'IA bouge vite. On ajuste vos systèmes au fil des avancées. Votre intégration reste à jour.",
   },
 ];
 
@@ -229,7 +229,7 @@ export default function OfferIA() {
                 style={{ color: 'var(--text)' }}
               >
                 Je ne vends pas un outil.{' '}
-              <span style={{ color: 'var(--primary)' }}>Je partage une méthode éprouvée.</span>
+              <span style={{ color: 'var(--primary)' }}>Je vous montre où ça crée de la valeur.</span>
               </motion.h2>
 
               <div className="flex flex-col gap-4">
@@ -398,12 +398,12 @@ export default function OfferIA() {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-4" style={{ color: 'var(--text)' }}>
-                Ça vous parle ?{' '}
-                <span style={{ color: 'var(--primary)' }}>Échangeons.</span>
+                On en discute ?{' '}
+                <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
               </h2>
               <p className="mb-3" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                45 min pour analyser ensemble vos flux et voir si l'IA peut vous être utile.
-                On discute, et on décide après.
+                Vous me dites ce qui vous prend du temps. Je vous dis où l'IA peut aider.
+                On décide après.
               </p>
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.7, fontStyle: 'italic', opacity: 0.8 }}>
                 L'objectif n'est pas de mettre de l'IA partout. C'est de la mettre là où elle change vraiment la donne pour vous.
@@ -423,7 +423,7 @@ export default function OfferIA() {
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                Pas sûr(e) ? Pas grave. On échange, on voit si ça colle. Et si ce n'est pas le bon moment, on se le dit.
+                Pas sûr ? Pas grave. On échange, on voit si ça colle. Si ce n'est pas le bon moment, on se le dit.
               </p>
             </motion.div>
           </Container>

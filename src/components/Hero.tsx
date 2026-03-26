@@ -13,9 +13,9 @@ const fadeUp: Variants = {
 
 const STATS = [
   { value: '+150', label: 'organisations accompagnées' },
-  { value: '+15 ans', label: "d'expérience terrain" },
-  { value: '40 000€', label: "d'économies observées/an" },
+  { value: '+15 ans', label: 'de terrain' },
   { value: '10–90', label: 'salariés' },
+  { value: 'x4,5', label: 'retour moyen observé' },
 ];
 
 export default function Hero() {
@@ -81,8 +81,8 @@ export default function Hero() {
             style={{ color: 'var(--text)' }}
             className="mb-6"
           >
-            Design Organisationnel{' '}
-            <span style={{ color: 'var(--primary)' }}>pour PME & PMI</span>
+            J'accompagne des dirigeants de PME & PMI{' '}
+            <span style={{ color: 'var(--primary)' }}>dans la structuration de leur entreprise.</span>
           </motion.h1>
 
           {/* Subtext */}
@@ -94,9 +94,9 @@ export default function Hero() {
             className="text-lg mb-10 max-w-xl"
             style={{ color: 'var(--muted)' }}
           >
-            Depuis plus de 15 ans, j'accompagne les dirigeants de PME & PMI
-            (10–90 salariés) dans la transformation de leur organisation.
-            Voici ce que je propose — et les résultats concrets obtenus.
+            Basé à Lyon, je viens sur place, j'écoute ce qui coincé,
+            et on avance ensemble. Vous me dites ce qui bloque.
+            J'observe, je mets en place. On teste, on ajuste, on continue.
           </motion.p>
 
           {/* CTAs */}

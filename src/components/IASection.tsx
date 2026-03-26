@@ -15,11 +15,11 @@ const fadeUp: Variants = {
 const IA_POINTS = [
   {
     icon: '⚡',
-    text: "Automatiser les tâches répétitives qui mangent le temps de vos équipes — tris, résumés, reporting, relances.",
+    text: "Automatiser ce qui mange le temps de vos équipes — tris, résumés, reporting, relances.",
   },
   {
     icon: '📊',
-    text: "Augmenter vos décisions avec des données en temps réel. Moins d'intuition, plus de lucidité.",
+    text: "Prendre des décisions avec des données en temps réel. Moins d'intuition, plus de lucidité.",
   },
   {
     icon: '🔒',
@@ -71,9 +71,8 @@ export default function IASection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Une organisation bien structurée, c'est la fondation.
-            L'IA peut être un accélérateur — mais seulement là où elle crée de la valeur.
-            Pas de gadget, pas d'usine à gaz. Du chirurgical.
+            L'IA peut accélérer ce qui est déjà bien structuré.
+            Pas de gadget. Du chirurgical. On ne touche qu'à ce qui crée de la valeur.
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-10">
@@ -107,11 +106,11 @@ export default function IASection() {
             }}
           >
             <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.15rem' }}>
-              L'IA comme <span style={{ color: 'var(--primary)' }}>levier concret</span>
+              L'IA comme <span style={{ color: 'var(--primary)' }}>accélérateur concret</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Je diagnostique vos flux, j'intègre l'IA là où elle rapporte vraiment,
-              et je forme vos équipes pour qu'elles se l'approprient.
+              Je regarde vos flux, j'intègre l'IA là où ça rapporte vraiment,
+              et je forme vos équipes pour qu'elles s'en servent au quotidien.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">

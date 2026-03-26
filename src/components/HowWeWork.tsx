@@ -5,21 +5,21 @@ import IndexLabel from './IndexLabel';
 const STEPS = [
   {
     num: '01',
-    title: '45 min pour clarifier',
-    desc: "Un appel pour comprendre votre situation, vérifier qu'on est alignés, et voir si ma méthode correspond à votre contexte. On parle, et on décide ensuite si on continue. Ou pas.",
-    duration: '45 min — gratuit',
+    title: '45 min pour poser le contexte',
+    desc: "Vous posez le contexte. On identifie ce qui coincé vraiment. Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.",
+    duration: '45 min',
   },
   {
     num: '02',
-    title: 'Diagnostic express',
-    desc: "2 à 3 jours d'immersion pour cartographier votre organisation, identifier les points de levier, et vous remettre un état des lieux précis avec des priorités claires.",
+    title: 'Je viens, j\u2019observe',
+    desc: "2 à 3 jours sur place pour comprendre vos flux de l'intérieur. Interviews, observation terrain, cartographie de l'existant. Un état des lieux précis.",
     duration: '2–3 jours',
   },
   {
     num: '03',
-    title: 'Mission co-construite',
-    desc: "On travaille ensemble sur les priorités identifiées. Ateliers, prototypes, déploiements progressifs. Vous gardez la maîtrise, vos équipes s'approprient les changements.",
-    duration: '3–6 mois selon complexité',
+    title: 'On teste, on ajuste, on continue',
+    desc: "On co-construit les ajustements. Pas un plan figé — des changements concrets qu'on teste et qu'on améliore au fil de l'eau. Vous gardez le lead.",
+    duration: '3–6 mois',
   },
 ];
 
@@ -54,8 +54,8 @@ export default function HowWeWork() {
           className="mb-4"
           style={{ color: 'var(--text)' }}
         >
-          Comment on travaille{' '}
-          <span style={{ color: 'var(--primary)' }}>ensemble</span>
+          Comment ça{' '}
+          <span style={{ color: 'var(--primary)' }}>démarre</span>
         </motion.h2>
 
         <motion.p
@@ -66,8 +66,8 @@ export default function HowWeWork() {
           className="mb-14 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Une progression logique, éprouvée sur plus de 150 missions,
-          qui s'adapte à votre rythme et votre réalité.
+          Pas de programme packagé. On avance pas à pas,
+          en commençant toujours par comprendre.
         </motion.p>
 
         <div className="relative">

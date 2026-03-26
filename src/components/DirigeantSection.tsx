@@ -15,19 +15,19 @@ const fadeUp: Variants = {
 const PAIN_POINTS = [
   {
     icon: '🔥',
-    text: "Tout repose sur vous : sans vous, l'entreprise ralentit. Vous êtes sur le chemin critique de chaque décision.",
+    text: "Sans vous, rien n'avance. Vous êtes sur le chemin critique de chaque décision.",
   },
   {
     icon: '⏱',
-    text: "Noyé dans l'opérationnel : vous passez 70% de votre temps à éteindre des feux au lieu de piloter la stratégie",
+    text: "70% de votre temps part dans l'opérationnel. Le reste, c'est des urgences.",
   },
   {
     icon: '📊',
-    text: "Pas de vue d'ensemble : vos infos sont éparpillées entre emails, carnets, fichiers et WhatsApp",
+    text: "Vos infos sont éparpillées entre emails, carnets, fichiers et WhatsApp. Pas de vue d'ensemble.",
   },
   {
     icon: '🎯',
-    text: "Délégation difficile : vos collaborateurs n'ont pas les bonnes infos au bon moment, alors vous reprenez la main",
+    text: "Déléguer est compliqué. Vos collaborateurs n'ont pas les bonnes infos, alors vous reprenez la main.",
   },
 ];
 
@@ -62,8 +62,8 @@ export default function DirigeantSection() {
             className="mb-4"
             style={{ color: 'var(--text)' }}
           >
-            Et vous, dirigeant ?{' '}
-            <span style={{ color: 'var(--primary)' }}>C'est une situation que j'observe souvent.</span>
+            C'est une situation{' '}
+            <span style={{ color: 'var(--primary)' }}>que je vois souvent.</span>
           </motion.h2>
 
           <motion.p
@@ -75,9 +75,8 @@ export default function DirigeantSection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Au-delà de l'organisation de l'entreprise, il y a le système de pilotage du dirigeant.
-            Celui qui permet de garder la vue d'ensemble, de décider vite, et de déléguer.
-            Ça se structure.
+            Au-delà de l'organisation, il y a votre système de pilotage.
+            Celui qui vous permet de voir clair, décider vite, et déléguer. Ça se structure.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -111,11 +110,11 @@ export default function DirigeantSection() {
             }}
           >
             <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.15rem' }}>
-              Reprendre le contrôle en <span style={{ color: 'var(--primary)' }}>6 mois</span>
+              On structure votre pilotage en <span style={{ color: 'var(--primary)' }}>6 mois</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Un accompagnement dédié pour structurer votre pilotage de dirigeant,
-              Un format éprouvé dans des dizaines de PME.
+              Je construis votre cockpit de direction sur Notion. Vue d'ensemble, délégation, reporting.
+              Vous gardez le lead. Je fais le technique.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">

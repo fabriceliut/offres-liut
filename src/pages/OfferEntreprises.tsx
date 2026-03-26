@@ -17,54 +17,53 @@ const fadeUp: Variants = {
 
 const STATS = [
   { value: '10 jours', label: 'de travail effectif' },
-  { value: '22 500€', label: 'investissement total*' },
-  { value: '+17 500€', label: 'ROI net année 1**' },
+  { value: '6 mois', label: "d'accompagnement terrain" },
+  { value: 'x4,5', label: 'retour moyen observé' },
 ];
 
 const TIMELINE = [
   {
     phase: 'Phase 1',
-    title: 'Observation & Diagnostic',
+    title: 'Je viens, j\'observe',
     days: 'Jours 1–2',
     items: [
-      'Immersion complète dans votre organisation',
-      'Interviews individuelles et collectives avec vos équipes',
-      'Analyse terrain des process et flux de travail',
-      'Identification des freins cachés et des talents sous-exploités',
+      'Immersion sur le terrain avec vos équipes',
+      'Interviews individuelles et collectives',
+      'Analyse des process et des flux réels',
+      'Identification de ce qui coînce et de ce qui marche déjà',
     ],
   },
   {
     phase: 'Phase 2',
-    title: "Priorisation & Plan d'Action",
+    title: 'On priorise ensemble',
     days: 'Jours 3–4',
     items: [
-      "Co-construction du plan d'action avec vous",
-      'Priorisation step-by-step : quick wins + moyen terme',
-      'Définition des indicateurs de mesure',
-      'Lancement des premières actions concrètes',
+      'Co-construction du plan d\'action avec vous',
+      'Quick wins + chantiers moyen terme',
+      'Définition des indicateurs simples',
+      'Lancement des premières actions',
     ],
   },
   {
     phase: 'Phase 3',
-    title: 'Itérations & Pilotage',
+    title: 'On teste, on ajuste, on continue',
     days: 'Jours 5–8',
     items: [
-      'Accompagnement terrain de la mise en œuvre',
-      'Ajustements en temps réel selon les retours',
+      'Accompagnement terrain de la mise en place',
+      'Ajustements en temps réel',
       'Points de pilotage réguliers',
-      'Mesure de la progression sur les indicateurs clés',
       'Formation des équipes aux nouveaux process',
     ],
   },
   {
     phase: 'Phase 4',
-    title: 'Bilan & Validation',
+    title: 'Bilan & autonomie',
     days: 'Jours 9–10',
     items: [
-      'Constat des changements installés',
-      'Calcul précis des gains réalisés',
-      "Validation de l'atteinte de l'objectif minimum",
-      'Ajustements finaux pour pérenniser',
+      'Constat de ce qui a changé',
+      'Mesure des gains réalisés',
+      'Ajustements pour pérenniser',
+      'Vous êtes autonome. L\'entreprise tourne.',
     ],
   },
 ];
@@ -72,56 +71,52 @@ const TIMELINE = [
 const CASE_STUDIES = [
   {
     icon: '📐',
-    title: 'Agence de communication — 14 personnes',
+    title: 'PME de services — 30 personnes',
     before: [
-      '12h/semaine perdues en réunions floues',
-      'Validation client : 2-3 semaines',
-      'Retards projet : 40% des dossiers',
-      'Turnover : 3 départs/an',
-      'Heures sup non facturées : ~80h/mois',
+      'Coordination entre équipes floue',
+      'Heures perdues en allers-retours',
+      'Reporting manuel et obsolète',
+      'Direction sur-sollicitée en permanence',
     ],
     after: [
-      'Réunions divisées par 2, avec ordre du jour',
-      'Validation client : 3-5 jours',
-      'Retards projet : 8%',
-      'Zéro départ, +2 embauches',
-      '60h/mois récupérées et facturées',
+      '+3 185 heures récupérées par an',
+      'Coordination simplifiée entre les équipes',
+      'Reporting automatisé, en temps réel',
+      'Direction libérée de l\'opérationnel',
     ],
-    investment: '24 500€',
-    gain: '52 000€',
-    roi: '+27 500€',
-    detail: 'Temps facturé + réduction turnover + meilleure rentabilité projet',
+    investment: '15 000€',
+    gain: '67 500€',
+    roi: 'x4,5',
+    detail: 'Temps récupéré + réduction coordination + meilleure rentabilité',
   },
   {
     icon: '⚙️',
-    title: 'PME industrielle — 40 personnes',
+    title: 'PME IT — 90 personnes',
     before: [
-      'Taux de panne machines : 18%',
-      'Stock dormant : 180k€',
-      'Délai de livraison : 6 semaines',
-      'Communication ateliers/bureau : emails perdus',
-      'Reporting manuel : 2 jours/mois',
+      'Rôles mal définis entre les équipes',
+      'Délais de livraison en augmentation',
+      'Turn-over en hausse',
+      'Temps facturable en baisse',
     ],
     after: [
-      'Maintenance préventive : pannes à 6%',
-      'Stock optimisé : 95k€ libérés',
-      'Délai de livraison : 3,5 semaines',
-      'Tableau de bord partagé temps réel',
-      'Reporting auto : 4h/mois',
+      '+12% de temps facturable',
+      '−12% sur les délais de livraison',
+      'Turn-over en baisse',
+      'Rôles clarifiés, fonctionnement fluide',
     ],
-    investment: '40 500€',
-    gain: '127 000€',
-    roi: '+86 500€',
-    detail: 'Réduction pannes + stock libéré + gain productivité + amélioration marges',
+    investment: '18 000€',
+    gain: 'Multi-levier',
+    roi: 'ROI < 6 mois',
+    detail: 'Temps facturable + réduction délais + baisse turn-over',
   },
 ];
 
 const REASONS = [
-  { title: 'Approche terrain', desc: 'Je suis avec vous et vos équipes, en prise directe avec le réel' },
-  { title: 'Actions concrètes', desc: 'On lance des quick wins dès les premières semaines' },
-  { title: 'Mesure continue', desc: 'Chaque action est suivie, chaque gain est mesuré' },
-  { title: 'Adaptabilité', desc: 'On ajuste en temps réel selon ce qui marche' },
-  { title: 'Autonomie', desc: "L'objectif : que ça tienne sans moi. J'ai toujours fonctionné comme ça." },
+  { title: 'Terrain', desc: 'Je viens sur place, avec vos équipes. Pas de diagnostic à distance.' },
+  { title: 'Concret', desc: 'On lance des actions dès les premières semaines.' },
+  { title: 'Mesuré', desc: 'Chaque action est suivie, chaque gain est vérifié.' },
+  { title: 'Adapté', desc: 'On ajuste en temps réel selon ce qui marche.' },
+  { title: 'Autonomie', desc: "L'objectif : que ça tienne sans moi."},
 ];
 
 export default function OfferEntreprises() {
@@ -162,13 +157,13 @@ export default function OfferEntreprises() {
               </motion.div>
 
               <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible" className="mb-5" style={{ color: 'var(--text)' }}>
-                10 jours de travail,{' '}
+                10 jours sur le terrain,{' '}
                 <span style={{ color: 'var(--primary)' }}>des résultats mesurés</span>
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
-                Un programme de 6 mois. Voici comment ça se passe,
-                ce que ça implique, et les résultats concrets obtenus.
+                Un accompagnement de 6 mois. Voici comment ça se passe,
+                ce que ça implique, et ce que ça donne concrètement.
               </motion.p>
 
               <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
@@ -185,8 +180,7 @@ export default function OfferEntreprises() {
               </motion.div>
 
               <motion.p custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-6" style={{ fontSize: '0.78rem', color: 'var(--muted)', opacity: 0.6 }}>
-                *Accompagnement 15k€ + temps interne ~7,5k€ pour une entreprise de 10 salariés<br />
-                **40 000€ d'économies − 22 500€ investissement = ROI net positif dès l'année 1
+                *Retour moyen observé sur les missions de structuration d'entreprises de 10 à 90 salariés
               </motion.p>
             </div>
           </Container>
@@ -207,26 +201,26 @@ export default function OfferEntreprises() {
               </div>
 
               <div className="mb-10 p-8 rounded-2xl text-center" style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}>
-                <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>Le retour sur investissement observé</h2>
+                <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>Ce que ça donne, concrètement</h2>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.2rem, 4vw, 2rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
-                  22 500€ → +17 500€ dès l'année 1
+                  Retour moyen observé : x4,5
                 </div>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
-                  Pour une entreprise de 10 personnes : investissement total de 22 500€
-                  <br />(accompagnement + temps interne) pour 40 000€ d'économies.
+                  PME de services, 30 personnes : +3 185 heures récupérées par an.
+                  <br />PME IT, 90 personnes : +12% de temps facturable, −12% de délais.
                 </p>
                 <p style={{ color: 'var(--success)', fontSize: '0.95rem', fontWeight: 600, marginTop: '12px' }}>
-                  Les années suivantes : 40 000€ de gains récurrents sans coût additionnel.
+                  BDR Therma : un process terrain passé de 48h à 20 minutes.
                 </p>
               </div>
 
               {/* Investment breakdown */}
               <div className="card-base p-6" style={{ background: 'var(--surface2)' }}>
                 <h3 className="mb-5" style={{ color: 'var(--text)', fontSize: '1.1rem' }}>
-                  Votre investissement total (vraiment complet)
+                  Ce que ça implique pour vous
                 </h3>
                 <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-                  Soyons clairs sur le temps que ça vous demande. Parce qu'une transformation, ça mobilise aussi vos équipes.
+                  Soyons clairs sur le temps que ça demande. Une structuration, ça mobilise aussi vos équipes.
                 </p>
 
                 <div className="mb-5 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
@@ -298,10 +292,11 @@ export default function OfferEntreprises() {
                 Comment <span style={{ color: 'var(--primary)' }}>ça marche ?</span>
               </h2>
               <p className="mb-4" style={{ color: 'var(--muted)' }}>
-                On commence par <span style={{ color: 'var(--primary)', fontWeight: 600 }}>45 minutes d'échange</span> pour comprendre votre contexte, voir si ma méthode est adaptée, et décider ensemble de la suite.
+                On commence par <span style={{ color: 'var(--primary)', fontWeight: 600 }}>45 minutes d'échange</span> pour comprendre votre contexte.
+                Vous me dites ce qui bloque. Je vous dis ce que je ferais, et si je suis la bonne personne.
               </p>
               <p style={{ color: 'var(--muted)' }}>
-                Si on décide de se lancer, on attaque concrètement. Pas de paperasse inutile.
+                Si on décide d'avancer, on attaque. Pas de paperasse inutile.
               </p>
             </motion.div>
           </Container>
@@ -535,11 +530,11 @@ export default function OfferEntreprises() {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-5" style={{ color: 'var(--text)' }}>
-                Ça vous parle ?{' '}
-                <span style={{ color: 'var(--primary)' }}>On en discute.</span>
+                On en discute ?{' '}
+                <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)' }}>
-                45 min pour comprendre votre contexte et voir ensemble si cet accompagnement est adapté.
+                Vous posez le contexte. On identifie ce qui coînce. Je vous dis ce que je ferais.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -556,7 +551,7 @@ export default function OfferEntreprises() {
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                Pas sûr(e) ? Pas grave. On échange, on voit si ça colle. Et si ce n'est pas le bon moment, on se le dit.
+                Pas sûr ? Pas grave. On échange, on voit si ça colle. Si ce n'est pas le bon moment, on se le dit.
               </p>
             </motion.div>
           </Container>

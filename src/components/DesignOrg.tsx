@@ -13,13 +13,13 @@ const fadeUp: Variants = {
 
 const DIFFERENTIATIONS = [
   {
-    label: 'Design Organisationnel',
-    desc: "On part de votre réalité terrain, on co-construit avec vos équipes, et on vise des solutions qui tiennent dans le temps.",
+    label: 'Mon approche',
+    desc: "Je viens sur le terrain, je comprends vos flux de l'intérieur, et on co-construit ensemble ce qui manque. Pas un plan figé, mais des ajustements concrets qu'on teste et qu'on améliore.",
     accent: true,
   },
   {
     label: 'Conseil classique',
-    desc: "Diagnostic générique, recommandations théoriques, peu d'appropriation par les équipes, et résultats difficiles à mesurer.",
+    desc: "Diagnostic générique, recommandations théoriques, peu d'appropriation par les équipes. Le rapport finit dans un tiroir.",
     accent: false,
   },
 ];
@@ -52,8 +52,8 @@ export default function DesignOrg() {
             className="mb-5"
             style={{ color: 'var(--text)' }}
           >
-            Le Design Organisationnel,{' '}
-            <span style={{ color: 'var(--primary)' }}>c'est quoi exactement ?</span>
+            Ce que je fais,{' '}
+            <span style={{ color: 'var(--primary)' }}>concrètement</span>
           </motion.h2>
 
           <motion.p
@@ -65,9 +65,9 @@ export default function DesignOrg() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Ce n'est pas du conseil classique. C'est une approche qui traite l'organisation
-            comme un système vivant — avec des méthodes issues du design,
-            de la systémique et de l'intelligence collective. C'est cette approche que je pratique depuis 15 ans.
+            J'appelle ça le Design Organisationnel. En pratique : je regarde comment
+            votre entreprise fonctionne vraiment, et on ajuste ce qui coincé — avec vos équipes,
+            pas dans un rapport que personne ne lit.
           </motion.p>
 
           <motion.div
@@ -131,9 +131,9 @@ export default function DesignOrg() {
             }}
           >
             <p style={{ fontSize: '0.9rem', color: 'var(--text)', lineHeight: 1.65 }}>
-              <strong style={{ color: 'var(--accent)' }}>Ce que j'observe sur le terrain :</strong>{' '}
-              Les équipes s'approprient les solutions, les résultats sont mesurables dès les
-              premiers mois, et l'organisation gagne en autonomie — pas en dépendance.
+              <strong style={{ color: 'var(--accent)' }}>Ce que ça donne :</strong>{' '}
+              les équipes s'approprient les changements, les résultats
+              sont mesurables dès les premiers mois, et l'organisation tourne mieux — même quand je ne suis plus là.
             </p>
           </motion.div>
         </div>

@@ -84,7 +84,7 @@ export default function OfferEntrepreneurs() {
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4" style={{ color: 'var(--primary)', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
-                {"Voici ce que j'ai mis en place pour des dizaines de dirigeants dans cette situation."}
+                {"C'est une situation que je vois souvent. Voici ce que je mets en place."}
               </motion.p>
             </div>
           </Container>
@@ -140,12 +140,12 @@ export default function OfferEntrepreneurs() {
                 <p className="mb-4" style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}>
                   {"Un accompagnement sur "}
                   <span style={{ color: 'var(--primary)', fontWeight: 600 }}>6 mois</span>
-                  {" pour structurer votre pilotage de dirigeant. On construit ensemble votre cockpit de direction : le syst\u00e8me qui vous donne la vue d'ensemble, fluidifie la d\u00e9l\u00e9gation, et vous lib\u00e8re du temps op\u00e9rationnel."}
+                  {" pour structurer votre pilotage. Vue d'ensemble, d\u00e9l\u00e9gation, temps lib\u00e9r\u00e9."}
                 </p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
                   {"Le tout sur "}
                   <strong style={{ color: 'var(--text)' }}>Notion</strong>
-                  {", construit sur-mesure pour votre entreprise. Je fais la partie technique, vous validez et pilotez. Et vos managers proches sont form\u00e9s pour que le syst\u00e8me vive sans moi."}
+                  {", construit sur-mesure. Je fais le technique, vous validez et pilotez."}
                 </p>
               </motion.div>
             </div>
@@ -410,8 +410,8 @@ export default function OfferEntrepreneurs() {
                 <span style={{ color: 'var(--primary)' }}>Échangeons.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                45 min pour comprendre votre situation et voir ensemble si cet accompagnement est adapté.
-                <br />On discute, et on décide après.
+                45 min pour comprendre votre situation. Vous me dites ce qui bloque.
+                <br />Je vous dis ce que je ferais. On décide après.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -428,7 +428,7 @@ export default function OfferEntrepreneurs() {
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                {"Pas s\u00fbr(e) ? Pas grave. On \u00e9change, on voit si \u00e7a colle. Et si ce n'est pas le bon moment, on se le dit."}
+                {"Pas s\u00fbr ? Pas grave. On \u00e9change, on voit si \u00e7a colle. Si ce n'est pas le bon moment, on se le dit."}
               </p>
             </motion.div>
           </Container>

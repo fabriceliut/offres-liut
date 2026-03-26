@@ -5,27 +5,27 @@ import IndexLabel from './IndexLabel';
 const SITUATIONS = [
   {
     num: '01',
-    title: 'Croissance qui crée du chaos',
-    desc: "Vous avez doublé de taille en 3 ans. Vos processus d'il y a 5 ans ne tiennent plus. Les managers passent leur temps à éteindre des feux.",
-    signal: "Signal : réunions qui n'aboutissent plus, informations qui se perdent",
+    title: 'La croissance brouille les repères',
+    desc: "Vous passez de 10 à 30, 50, 90 personnes. Les process informels craquent, la coordination devient lourde, des coûts cachés apparaissent.",
+    signal: "Réunions qui s'allongent, doublons, délais qui glissent",
   },
   {
     num: '02',
-    title: 'Flux de production en tension',
-    desc: "Les délais glissent, les coûts augmentent, la qualité fluctue. Tout le monde s'active mais le système perd de l'énergie.",
-    signal: "Signal : heures sup constantes, turnover en hausse, clients qui s'impatientent",
+    title: 'La communication coincé entre les équipes',
+    desc: "Les informations se perdent, les décisions traînent, les équipes travaillent en silo. Tout le monde s'active mais le système perd de l'énergie.",
+    signal: "Emails sans réponse, réunions qui n'aboutissent pas, turn-over en hausse",
   },
   {
     num: '03',
-    title: 'Projet de transformation bloqué',
-    desc: "Vous avez lancé un chantier ERP, lean, réorg — et ça patine. Résistances, manque d'adoption, résultats qui ne viennent pas.",
-    signal: "Signal : équipes qui contournent les nouvelles procédures, retour aux anciennes habitudes",
+    title: 'Un sujet qui traîne',
+    desc: "Un chantier ERP, lean, réorg — et ça patine. Résistances, manque d'adoption. Personne n'arrive à le faire avancer seul.",
+    signal: "Équipes qui contournent les nouvelles procédures, retour aux anciennes habitudes",
   },
   {
     num: '04',
-    title: "Direction qui s'épuise",
-    desc: "Vous faites le travail de 3 personnes. Votre organisation repose trop sur vous, vous n'arrivez pas à déléguer réellement.",
-    signal: "Signal : vous êtes sur le chemin critique de tout, votre agenda est plein de réunions opérationnelles",
+    title: 'Une direction qui porte tout',
+    desc: "Vous faites le travail de 3 personnes. Votre entreprise repose trop sur vous. Déléguer est compliqué : sans vous, rien n'avance.",
+    signal: "Vous êtes sur le chemin critique de tout, votre agenda déborde d'opérationnel",
   },
 ];
 
@@ -63,8 +63,8 @@ export default function Situations() {
           className="mb-4"
           style={{ color: 'var(--text)' }}
         >
-          Vous reconnaissez-vous{' '}
-          <span style={{ color: 'var(--primary)' }}>dans ces situations ?</span>
+          Quelques situations{' '}
+          <span style={{ color: 'var(--primary)' }}>où j'interviens souvent</span>
         </motion.h2>
 
         <motion.p
@@ -75,8 +75,8 @@ export default function Situations() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Des situations fréquentes dans les PME en croissance.
-          Si l'une d'elles résonne, on a probablement quelque chose à explorer ensemble.
+          L'entreprise grandit, mais l'organisation ne suit plus.
+          Si l'une de ces situations vous parle, on a probablement quelque chose à explorer.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-5">

@@ -4,22 +4,22 @@ import IndexLabel from './IndexLabel';
 
 const TESTIMONIALS = [
   {
-    quote: "En 4 mois, on a réduit nos délais de livraison de 30% et libéré 2 semaines par an de travail pour chaque chef d'atelier. Ce que Fabrice a vu en 2 jours, on cherchait depuis 2 ans.",
-    author: 'Directeur industriel',
-    company: 'Métallurgie, 55 salariés',
-    result: '−30% délais livraison',
+    quote: "Un process terrain passé de 48h à 20 minutes par intervention. Fabrice a compris nos flux en 2 jours et a simplifié ce qui nous bloquait depuis des mois.",
+    author: 'BDR Therma',
+    company: 'Industrie thermique',
+    result: '48h → 20 min/intervention',
   },
   {
-    quote: "J'avais peur de dépenser 15 000€ pour du vent. On a récupéré l'investissement en 8 mois. Ce qui m'a convaincu : Fabrice ne nous a pas donné un rapport — il nous a aidé à changer.",
-    author: 'PDG',
-    company: 'Sous-traitant aéronautique, 38 salariés',
-    result: 'ROI en 8 mois',
+    quote: "+3 185 heures récupérées par an en simplifiant la coordination. L'investissement a été remboursé 4,5 fois.",
+    author: 'Dirigeant',
+    company: 'PME de services, 30 personnes',
+    result: 'Retour x4,5',
   },
   {
-    quote: "Notre équipe de direction était épuisée. Fabrice a restructuré nos instances de décision en 6 semaines. Aujourd'hui je passe 40% de temps en moins sur l'opérationnel.",
-    author: 'Présidente',
-    company: 'Plasturgie, 72 salariés',
-    result: '−40% temps opérationnel DG',
+    quote: "+12% de temps facturable, −12% de délais, turn-over en baisse. On a clarifié les rôles et fluid le fonctionnement entre les équipes.",
+    author: 'Direction',
+    company: 'PME IT, 90 personnes',
+    result: '+12% temps facturable',
   },
 ];
 
@@ -48,8 +48,8 @@ export default function Testimonials() {
           className="mb-4"
           style={{ color: 'var(--text)' }}
         >
-          Ce qu'en disent{' '}
-          <span style={{ color: 'var(--primary)' }}>ceux qui l'ont vécu</span>
+          Résultats{' '}
+          <span style={{ color: 'var(--primary)' }}>récents</span>
         </motion.h2>
 
         <motion.p
@@ -60,8 +60,7 @@ export default function Testimonials() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Des retours de dirigeants accompagnés.
-          Des résultats mesurés, des équipes qui ont porté le changement.
+          Quelques exemples concrets de missions récentes.
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-5">
