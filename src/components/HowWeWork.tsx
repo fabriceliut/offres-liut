@@ -6,7 +6,7 @@ const STEPS = [
   {
     num: '01',
     title: '45 min pour clarifier',
-    desc: "Un appel pour comprendre votre situation, vérifier qu'on est alignés sur les objectifs, et voir si ma méthode correspond à votre contexte. Pas de pitch, pas de vente. Une vraie conversation.",
+    desc: "Un appel pour comprendre votre situation, vérifier qu'on est alignés, et voir si ma méthode correspond à votre contexte. On parle, et on décide ensuite si on continue. Ou pas.",
     duration: '45 min — gratuit',
   },
   {
@@ -18,7 +18,7 @@ const STEPS = [
   {
     num: '03',
     title: 'Mission co-construite',
-    desc: "On travaille ensemble sur les priorités identifiées. Ateliers, prototypes, déploiements progressifs. Vous gardez la maîtrise, vos équipes s'approprient. Je reste jusqu'à ce que ça tienne.",
+    desc: "On travaille ensemble sur les priorités identifiées. Ateliers, prototypes, déploiements progressifs. Vous gardez la maîtrise, vos équipes s'approprient les changements.",
     duration: '3–6 mois selon complexité',
   },
 ];
@@ -43,7 +43,7 @@ export default function HowWeWork() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="04 — Déroulé" />
+          <IndexLabel text="04 — Déroulé" />
         </motion.div>
 
         <motion.h2
@@ -66,8 +66,8 @@ export default function HowWeWork() {
           className="mb-14 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Pas de grand programme prépackagé. Une progression logique qui s'adapte
-          à votre rythme et votre réalité.
+          Une progression logique, éprouvée sur plus de 150 missions,
+          qui s'adapte à votre rythme et votre réalité.
         </motion.p>
 
         <div className="relative">

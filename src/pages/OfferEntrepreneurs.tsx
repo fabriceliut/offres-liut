@@ -84,7 +84,7 @@ export default function OfferEntrepreneurs() {
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4" style={{ color: 'var(--primary)', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
-                {"Il est temps de reprendre le contr\u00f4le \u2014 sans tout porter seul."}
+                {"Voici ce que j'ai mis en place pour des dizaines de dirigeants dans cette situation."}
               </motion.p>
             </div>
           </Container>
@@ -406,12 +406,12 @@ export default function OfferEntrepreneurs() {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-4" style={{ color: 'var(--text)' }}>
-                {"Pr\u00eat \u00e0 "}
-                <span style={{ color: 'var(--primary)' }}>reprendre le contrôle ?</span>
+                Ça vous parle ?{' '}
+                <span style={{ color: 'var(--primary)' }}>Échangeons.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                {"45 min pour comprendre votre situation et voir si je peux vous aider."}
-                <br />{"Pas de pitch. Pas de vente. Une vraie conversation."}
+                45 min pour comprendre votre situation et voir ensemble si cet accompagnement est adapté.
+                <br />On discute, et on décide après.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -428,7 +428,7 @@ export default function OfferEntrepreneurs() {
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                {"Pas s\u00fbr(e) ? Pas grave. On parle, on voit si \u00e7a colle."}
+                {"Pas s\u00fbr(e) ? Pas grave. On \u00e9change, on voit si \u00e7a colle. Et si ce n'est pas le bon moment, on se le dit."}
               </p>
             </motion.div>
           </Container>

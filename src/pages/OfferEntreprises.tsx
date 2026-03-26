@@ -117,11 +117,11 @@ const CASE_STUDIES = [
 ];
 
 const REASONS = [
-  { title: 'Approche terrain', desc: 'Je suis avec vous et vos équipes, pas dans un bureau à distance' },
+  { title: 'Approche terrain', desc: 'Je suis avec vous et vos équipes, en prise directe avec le réel' },
   { title: 'Actions concrètes', desc: 'On lance des quick wins dès les premières semaines' },
   { title: 'Mesure continue', desc: 'Chaque action est suivie, chaque gain est mesuré' },
   { title: 'Adaptabilité', desc: 'On ajuste en temps réel selon ce qui marche' },
-  { title: 'Durabilité', desc: "L'objectif, c'est que ça tienne sans moi après les 6 mois" },
+  { title: 'Autonomie', desc: "L'objectif : que ça tienne sans moi. J'ai toujours fonctionné comme ça." },
 ];
 
 export default function OfferEntreprises() {
@@ -162,12 +162,13 @@ export default function OfferEntreprises() {
               </motion.div>
 
               <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible" className="mb-5" style={{ color: 'var(--text)' }}>
-                10 Jours pour{' '}
-                <span style={{ color: 'var(--primary)' }}>+ de Rentabilité</span>
+                10 jours de travail,{' '}
+                <span style={{ color: 'var(--primary)' }}>des résultats mesurés</span>
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
-                6 mois d'accompagnement pour booster votre efficience, fluidifier votre organisation et augmenter votre rentabilité.
+                Un programme de 6 mois, éprouvé sur des dizaines de structures.
+                Voici comment ça se passe, et les résultats que j'ai observés.
               </motion.p>
 
               <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
@@ -206,7 +207,7 @@ export default function OfferEntreprises() {
               </div>
 
               <div className="mb-10 p-8 rounded-2xl text-center" style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}>
-                <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>Le retour sur investissement</h2>
+                <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>Le retour sur investissement observé</h2>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.2rem, 4vw, 2rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
                   22 500€ → +17 500€ dès l'année 1
                 </div>
@@ -297,10 +298,10 @@ export default function OfferEntreprises() {
                 Comment <span style={{ color: 'var(--primary)' }}>ça marche ?</span>
               </h2>
               <p className="mb-4" style={{ color: 'var(--muted)' }}>
-                On commence par <span style={{ color: 'var(--primary)', fontWeight: 600 }}>45 minutes d'échange gratuit</span> pour comprendre votre contexte, valider qu'on peut travailler ensemble, et vous présenter la démarche en détail.
+                On commence par <span style={{ color: 'var(--primary)', fontWeight: 600 }}>45 minutes d'échange</span> pour comprendre votre contexte, voir si ma méthode est adaptée, et décider ensemble de la suite.
               </p>
               <p style={{ color: 'var(--muted)' }}>
-                Si on décide de se lancer, on attaque le premier jour d'intervention. Pas de paperasse inutile, on y va.
+                Si on décide de se lancer, on attaque concrètement. Pas de paperasse inutile.
               </p>
             </motion.div>
           </Container>
@@ -323,7 +324,7 @@ export default function OfferEntreprises() {
                 Le programme des <span style={{ color: 'var(--primary)' }}>10 jours</span>
               </h2>
               <p className="mb-10" style={{ color: 'var(--muted)' }}>
-                10 jours de travail effectif sur 6 mois pour réaliser toutes les actions et atteindre l'objectif. Une approche inspirée du design thinking, adaptée à votre réalité terrain.
+                10 jours de travail effectif sur 6 mois. Voici le déroulé type, ajusté à chaque contexte.
               </p>
             </motion.div>
 
@@ -534,11 +535,11 @@ export default function OfferEntreprises() {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-5" style={{ color: 'var(--text)' }}>
-                Prêt à investir dans{' '}
-                <span style={{ color: 'var(--primary)' }}>votre efficience ?</span>
+                Ça vous parle ?{' '}
+                <span style={{ color: 'var(--primary)' }}>On en discute.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)' }}>
-                45 min pour comprendre votre contexte et voir si on peut travailler ensemble.
+                45 min pour comprendre votre contexte et voir ensemble si cet accompagnement est adapté.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -555,7 +556,7 @@ export default function OfferEntreprises() {
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                Pas sûr(e) ? Pas grave. On parle, on voit si ça colle.
+                Pas sûr(e) ? Pas grave. On échange, on voit si ça colle. Et si ce n'est pas le bon moment, on se le dit.
               </p>
             </motion.div>
           </Container>

@@ -25,7 +25,8 @@ export default function ProofBand() {
           {[
             'PME & PMI',
             'Équipes de direction',
-            'Transformations réussies',
+            'Start-ups & Scale-ups',
+            'Associations',
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
               <div style={{
@@ -49,7 +50,7 @@ export default function ProofBand() {
             fontFamily: 'var(--font-heading)',
             fontWeight: 600,
           }}>
-            100+ entreprises accompagnées
+            +150 organisations depuis +15 ans
           </div>
         </motion.div>
       </Container>

@@ -14,7 +14,7 @@ const fadeUp: Variants = {
 const DIFFERENTIATIONS = [
   {
     label: 'Design Organisationnel',
-    desc: "On part de votre réalité terrain, on co-construit avec vos équipes, et on livre des solutions qui tiennent dans le temps.",
+    desc: "On part de votre réalité terrain, on co-construit avec vos équipes, et on vise des solutions qui tiennent dans le temps. C'est ce que j'ai observé fonctionner le mieux.",
     accent: true,
   },
   {
@@ -40,7 +40,7 @@ export default function DesignOrg() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="01 — La méthode" />
+            <IndexLabel text="01 — La méthode" />
           </motion.div>
 
           <motion.h2
@@ -66,8 +66,8 @@ export default function DesignOrg() {
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
             Ce n'est pas du conseil classique. C'est une approche qui traite l'organisation
-            comme un système vivant — avec des méthodes issues du design de produit,
-            de la systémique et de l'intelligence collective.
+            comme un système vivant — avec des méthodes issues du design,
+            de la systémique et de l'intelligence collective. C'est cette approche que je pratique depuis 15 ans.
           </motion.p>
 
           <motion.div
@@ -131,9 +131,9 @@ export default function DesignOrg() {
             }}
           >
             <p style={{ fontSize: '0.9rem', color: 'var(--text)', lineHeight: 1.65 }}>
-              <strong style={{ color: 'var(--accent)' }}>Ce que ça change pour vous :</strong>{' '}
-              Vos équipes s'approprient les solutions, les résultats sont mesurables dès les
-              premiers mois, et votre organisation gagne en autonomie — pas en dépendance.
+              <strong style={{ color: 'var(--accent)' }}>Ce que j'observe sur le terrain :</strong>{' '}
+              Les équipes s'approprient les solutions, les résultats sont mesurables dès les
+              premiers mois, et l'organisation gagne en autonomie — pas en dépendance.
             </p>
           </motion.div>
         </div>

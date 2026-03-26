@@ -32,17 +32,17 @@ const WHY_ME = [
   {
     icon: '⚡',
     title: "40h d'essais → 1h de diagnostic",
-    desc: "Là où vous passeriez 40 heures à tester des solutions incertaines, j'identifie le maillon faible de vos processus en 1 heure et j'y injecte la solution exacte.",
+    desc: "Là où beaucoup passent des dizaines d'heures à tester des solutions incertaines, mon expérience me permet d'identifier rapidement le maillon faible et d'y injecter la bonne solution.",
   },
   {
     icon: '🔄',
     title: "Veille permanente",
-    desc: "L'IA évolue plus vite que tout. Je reste en veille. Dès qu'une évolution impacte votre secteur, je l'adapte à votre structure. Vous restez à la pointe sans lire une ligne de doc technique.",
+    desc: "L'IA évolue plus vite que tout. Je reste en veille permanente. Dès qu'une évolution concerne votre secteur, je l'adapte à votre structure.",
   },
   {
     icon: '🔒',
     title: "Sécurité & Souveraineté",
-    desc: "Bricoler seul, c'est souvent exposer ses données. Je sécurise vos flux pour que l'IA soit un coffre-fort, pas une passoire.",
+    desc: "Bricoler seul, c'est souvent exposer ses données sans le savoir. Je sécurise vos flux pour que l'IA soit intégrée proprement.",
   },
 ];
 
@@ -198,8 +198,8 @@ export default function OfferIA() {
                 style={{ borderLeft: '3px solid var(--success)' }}
               >
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                  <strong style={{ color: 'var(--text)' }}>Ma mission :</strong> vous éviter ces deux écueils.
-                  Je deviens votre bras droit en intégration IA. On identifie ensemble où ça a de la valeur — et on ne touche qu'à ça.
+                  <strong style={{ color: 'var(--text)' }}>Mon approche :</strong> aider les dirigeants à naviguer entre ces deux écueils.
+                  On identifie ensemble où ça a de la valeur — et on ne touche qu'à ça.
                 </p>
               </motion.div>
             </div>
@@ -229,7 +229,7 @@ export default function OfferIA() {
                 style={{ color: 'var(--text)' }}
               >
                 Je ne vends pas un outil.{' '}
-                <span style={{ color: 'var(--primary)' }}>Je vous apporte une architecture pérenne.</span>
+              <span style={{ color: 'var(--primary)' }}>Je partage une méthode éprouvée.</span>
               </motion.h2>
 
               <div className="flex flex-col gap-4">
@@ -398,15 +398,15 @@ export default function OfferIA() {
               className="max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-4" style={{ color: 'var(--text)' }}>
-                Prêt à transformer l'IA en{' '}
-                <span style={{ color: 'var(--primary)' }}>avantage déloyal ?</span>
+                Ça vous parle ?{' '}
+                <span style={{ color: 'var(--primary)' }}>Échangeons.</span>
               </h2>
               <p className="mb-3" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                45 min pour analyser vos flux et identifier où l'IA peut vous rapporter gros.
-                Pas de pitch. Pas de vente. Un vrai diagnostic.
+                45 min pour analyser ensemble vos flux et voir si l'IA peut vous être utile.
+                On discute, et on décide après.
               </p>
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.7, fontStyle: 'italic', opacity: 0.8 }}>
-                "L'IA est un excellent serviteur, mais un piètre maître. Reprenons ensemble les commandes de votre productivité."
+                L'objectif n'est pas de mettre de l'IA partout. C'est de la mettre là où elle change vraiment la donne pour vous.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
@@ -423,7 +423,7 @@ export default function OfferIA() {
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                Pas sûr(e) ? Pas grave. On parle, on voit si ça colle.
+                Pas sûr(e) ? Pas grave. On échange, on voit si ça colle. Et si ce n'est pas le bon moment, on se le dit.
               </p>
             </motion.div>
           </Container>

@@ -52,7 +52,7 @@ export default function Situations() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="03 — Situations" />
+          <IndexLabel text="03 — Situations" />
         </motion.div>
 
         <motion.h2
@@ -75,7 +75,7 @@ export default function Situations() {
           className="mb-12 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Ces situations sont celles que je rencontre le plus souvent.
+          Des situations que j'ai rencontrées régulièrement au fil des missions.
           Si l'une d'elles résonne, on a probablement quelque chose à explorer ensemble.
         </motion.p>
 

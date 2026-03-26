@@ -22,17 +22,17 @@ export default function FinalCTA() {
           className="max-w-2xl mx-auto text-center"
         >
           <div className="mb-6 flex justify-center">
-            <span className="index-label">06 — Commençons</span>
+            <span className="index-label">06 — Commençons</span>
           </div>
 
           <h2 className="mb-5" style={{ color: 'var(--text)' }}>
-            Prêt à transformer{' '}
-            <span style={{ color: 'var(--primary)' }}>votre organisation ?</span>
+            Ça vous parle ?{' '}
+            <span style={{ color: 'var(--primary)' }}>Échangeons.</span>
           </h2>
 
           <p className="mb-10" style={{ color: 'var(--muted)', fontSize: '1rem' }}>
-            45 min pour comprendre votre situation et voir si je peux vous aider.
-            Pas de pitch. Pas de vente. Une vraie conversation.
+            45 min pour comprendre votre situation et voir ensemble si je peux vous aider.
+            Pas de pitch. Pas d'engagement. On discute, et on décide après.
           </p>
 
           {/* ROI reminder */}
@@ -47,7 +47,7 @@ export default function FinalCTA() {
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>
                 40 000€
               </div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>d'économies annuelles</div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>d'économies observées/an</div>
             </div>
             <div className="hidden sm:block" style={{ width: '1px', background: 'var(--border)', alignSelf: 'stretch' }} aria-hidden="true" />
             <div className="text-center">

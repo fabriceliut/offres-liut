@@ -63,7 +63,7 @@ export default function DirigeantSection() {
             style={{ color: 'var(--text)' }}
           >
             Et vous, dirigeant ?{' '}
-            <span style={{ color: 'var(--primary)' }}>Votre propre organisation tient-elle la route ?</span>
+            <span style={{ color: 'var(--primary)' }}>C'est une situation que j'observe souvent.</span>
           </motion.h2>
 
           <motion.p
@@ -75,9 +75,9 @@ export default function DirigeantSection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Au-delà de transformer l'organisation de votre entreprise, il y a votre propre
-            système de pilotage. Celui qui vous permet de garder la vue d'ensemble, de décider vite,
-            et de déléguer sans perdre le contrôle.
+            Au-delà de l'organisation de l'entreprise, il y a le système de pilotage du dirigeant.
+            Celui qui permet de garder la vue d'ensemble, de décider vite, et de déléguer.
+            C'est un sujet sur lequel j'ai beaucoup travaillé.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -114,8 +114,8 @@ export default function DirigeantSection() {
               Reprendre le contrôle en <span style={{ color: 'var(--primary)' }}>6 mois</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Un accompagnement dédié pour structurer votre pilotage de dirigeant.
-              Moins de temps dans l'opérationnel, plus de temps sur la stratégie et le développement.
+              Un accompagnement dédié pour structurer votre pilotage de dirigeant,
+              basé sur ce que j'ai vu fonctionner dans des dizaines de PME.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">

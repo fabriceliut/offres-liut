@@ -12,9 +12,9 @@ const fadeUp: Variants = {
 };
 
 const STATS = [
-  { value: '40 000€', label: "d'économies annuelles" },
-  { value: '15 000€', label: "d'investissement" },
-  { value: 'ROI+', label: 'dès la 1ère année' },
+  { value: '+150', label: 'organisations accompagnées' },
+  { value: '+15 ans', label: "d'expérience terrain" },
+  { value: '40 000€', label: "d'économies observées/an" },
   { value: '10–90', label: 'salariés' },
 ];
 
@@ -81,10 +81,8 @@ export default function Hero() {
             style={{ color: 'var(--text)' }}
             className="mb-6"
           >
-            Votre organisation{' '}
-            <span style={{ color: 'var(--primary)' }}>freine votre croissance.</span>
-            <br />
-            On change ça.
+            Design Organisationnel{' '}
+            <span style={{ color: 'var(--primary)' }}>pour PME & PMI</span>
           </motion.h1>
 
           {/* Subtext */}
@@ -96,9 +94,9 @@ export default function Hero() {
             className="text-lg mb-10 max-w-xl"
             style={{ color: 'var(--muted)' }}
           >
-            Pour les dirigeants de PME & PMI (10–90 salariés) qui veulent
-            transformer leur organisation sans perdre leur âme — ni leur budget.
-            Le Design Organisationnel comme levier stratégique.
+            Depuis plus de 15 ans, j'accompagne les dirigeants de PME & PMI
+            (10–90 salariés) dans la transformation de leur organisation.
+            Voici ce que je propose, et les résultats que j'ai observés.
           </motion.p>
 
           {/* CTAs */}

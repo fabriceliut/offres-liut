@@ -6,7 +6,7 @@ const PILLARS = [
   {
     num: '01',
     title: 'Immersion terrain',
-    desc: "Je passe du temps dans votre usine, avec vos équipes. Je regarde comment ça tourne vraiment — pas le flux théorique du dernier audit. Ce que je vois, vous ne le voyez plus.",
+    desc: "Je passe du temps dans votre usine, avec vos équipes. Je regarde comment ça tourne vraiment — pas le flux théorique du dernier audit. Un regard extérieur permet souvent de voir ce qui est devenu invisible au quotidien.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
@@ -18,7 +18,7 @@ const PILLARS = [
   {
     num: '02',
     title: 'On remonte aux causes',
-    desc: "Pas les symptômes. Les vraies causes. Je cartographie vos flux, je trouve les goulots, les frictions silencieuses, les ressources que vous sous-exploitez.",
+    desc: "On ne reste pas sur les symptômes. Je cartographie vos flux, je cherche les goulots, les frictions silencieuses, les ressources sous-exploitées. C'est ce qui me permet de proposer des actions ciblées.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="5" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -72,7 +72,7 @@ export default function Pillars() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="02 — Les piliers" />
+          <IndexLabel text="02 — Les piliers" />
         </motion.div>
 
         <motion.h2
@@ -83,8 +83,7 @@ export default function Pillars() {
           className="mb-4"
           style={{ color: 'var(--text)' }}
         >
-          Comment je me rends{' '}
-          <span style={{ color: 'var(--primary)' }}>utile</span>
+          Comment je travaille
         </motion.h2>
 
         <motion.p
@@ -96,7 +95,7 @@ export default function Pillars() {
           style={{ color: 'var(--muted)' }}
         >
           Chaque mission suit le même fil. Du terrain à la solution,
-          de l'observation à l'action. Pas de grand plan théorique.
+          de l'observation à l'action. C'est ce que j'ai vu fonctionner.
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-5">
