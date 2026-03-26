@@ -1,9 +1,10 @@
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import OfferPMI from './pages/OfferPMI';
-import OfferEntreprises from './pages/OfferEntreprises';
-import OfferEntrepreneurs from './pages/OfferEntrepreneurs';
-import OfferIA from './pages/OfferIA';
+
+const OfferEntreprises = lazy(() => import('./pages/OfferEntreprises'));
+const OfferEntrepreneurs = lazy(() => import('./pages/OfferEntrepreneurs'));
+const OfferIA = lazy(() => import('./pages/OfferIA'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -17,12 +18,14 @@ function App() {
   return (
     <HashRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<OfferPMI />} />
-        <Route path="/entreprises" element={<OfferEntreprises />} />
-        <Route path="/entrepreneurs" element={<OfferEntrepreneurs />} />
-        <Route path="/ia" element={<OfferIA />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<OfferPMI />} />
+          <Route path="/entreprises" element={<OfferEntreprises />} />
+          <Route path="/entrepreneurs" element={<OfferEntrepreneurs />} />
+          <Route path="/ia" element={<OfferIA />} />
+        </Routes>
+      </Suspense>
     </HashRouter>
   );
 }
