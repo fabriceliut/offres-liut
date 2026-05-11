@@ -80,6 +80,25 @@ const STEPS = [
   },
 ];
 
+const METRICS = [
+  { value: '5–7', label: 'leviers identifiés', sub: 'par diagnostic — priorisés par impact réel' },
+  { value: '1–2h', label: 'récupérées par jour', sub: 'en moyenne après les quick wins' },
+  { value: '4 jours', label: 'pour les premiers effets', sub: "plan d'action livré avec le rapport" },
+];
+
+const DIAGNOSTIC_INCLUDES = [
+  'Interview 45 min enregistrée — vos workflows, vos douleurs, vos mots',
+  'Analyse IA de la transcription — identification des 5–7 leviers prioritaires',
+  "Rapport livré : matrice Impact/Effort + outils recommandés + plan quick wins 4 jours",
+  'Call de restitution 30 min — on aligne, on répond, on priorise',
+];
+
+const LADDER = [
+  { num: '01', title: 'Diagnostic', desc: 'On cartographie les leviers.' },
+  { num: '02', title: 'Intégration', desc: 'On les met en place.' },
+  { num: '03', title: 'Autonomie', desc: 'Vos équipes tiennent la main.' },
+];
+
 export default function OfferIA() {
   return (
     <>
@@ -105,6 +124,13 @@ export default function OfferIA() {
               backgroundSize: '64px 64px',
               maskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 100%)',
               WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 100%)',
+            }}
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'radial-gradient(ellipse 65% 55% at 50% 40%, rgba(118,107,255,0.13) 0%, transparent 70%)',
             }}
           />
           <Container className="relative z-10">
@@ -179,7 +205,7 @@ export default function OfferIA() {
                       <span style={{ fontSize: '1.2rem' }}>{trap.icon}</span>
                       <h3 style={{ color: '#ef5350', fontSize: '0.95rem', fontWeight: 600 }}>{trap.title}</h3>
                     </div>
-                    <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>{trap.desc}</p>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.65 }}>{trap.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -241,7 +267,7 @@ export default function OfferIA() {
                     <span style={{ fontSize: '1.2rem', flexShrink: 0 }}>{item.icon}</span>
                     <div>
                       <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{item.title}</span>
-                      <p style={{ color: 'var(--muted)', fontSize: '0.875rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
+                      <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -382,6 +408,45 @@ export default function OfferIA() {
           </Container>
         </section>
 
+        {/* Métriques */}
+        <section style={{ paddingTop: '64px', paddingBottom: '64px' }}>
+          <Container>
+            <div className="max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {METRICS.map((m, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ delay: i * 0.08, duration: 0.45 }}
+                    className="card-base p-5 text-center"
+                  >
+                    <div style={{ fontSize: '1.9rem', fontWeight: 700, color: 'var(--primary)', fontFamily: 'var(--font-heading)', lineHeight: 1 }}>{m.value}</div>
+                    <div style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.82rem', marginTop: '6px' }}>{m.label}</div>
+                    <div style={{ color: 'var(--muted)', fontSize: '0.75rem', marginTop: '3px' }}>{m.sub}</div>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ delay: 0.3, duration: 0.45 }}
+                className="mt-5 p-5 rounded-2xl text-center"
+                style={{ border: '1px solid var(--border)', background: 'var(--surface)' }}
+              >
+                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', fontStyle: 'italic', lineHeight: 1.65 }}>
+                  "En 45 minutes, on a identifié 6 tâches à automatiser. Mon équipe récupère 90 minutes par jour depuis."
+                </p>
+                <p style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, marginTop: '8px' }}>
+                  — Directeur d'une PME, 12 collaborateurs
+                </p>
+              </motion.div>
+            </div>
+          </Container>
+        </section>
+
         {/* CTA */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
           <Container>
@@ -392,6 +457,9 @@ export default function OfferIA() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-2xl mx-auto text-center"
             >
+              <div className="mb-4">
+                <IndexLabel text="OFFRE — Diagnostic Flux & IA" />
+              </div>
               <h2 className="mb-4" style={{ color: 'var(--text)' }}>
                 On en discute ?{' '}
                 <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
@@ -400,9 +468,39 @@ export default function OfferIA() {
                 Vous me dites ce qui vous prend du temps. Je vous dis où l'IA peut aider.
                 On décide après.
               </p>
-              <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.7, fontStyle: 'italic', opacity: 0.8 }}>
+              <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.7, fontStyle: 'italic', opacity: 0.8 }}>
                 L'objectif n'est pas de mettre de l'IA partout. C'est de la mettre là où elle change vraiment la donne pour vous.
               </p>
+              <div className="mb-6 text-left max-w-lg mx-auto">
+                <p className="mb-3" style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem' }}>Ce que vous obtenez :</p>
+                <ul className="flex flex-col gap-2">
+                  {DIAGNOSTIC_INCLUDES.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.6 }}>
+                      <span style={{ color: 'var(--primary)', flexShrink: 0 }}>→</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4" style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
+                  Tarif diagnostic :{' '}
+                  <span style={{ color: 'var(--text)', fontWeight: 600, opacity: 1 }}>990 €</span>
+                  {' '}— imputable sur l'intégration si on continue ensemble.
+                </p>
+              </div>
+              <div className="flex flex-wrap justify-center items-center gap-3 mb-8">
+                {LADDER.map((l, i) => (
+                  <div key={l.num} className="flex items-center gap-2">
+                    <div className="p-3 rounded-xl text-center" style={{ background: 'var(--surface2)', border: '1px solid var(--border)', minWidth: '96px' }}>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 700, letterSpacing: '0.06em' }}>{l.num}</div>
+                      <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text)', marginTop: '2px' }}>{l.title}</div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{l.desc}</div>
+                    </div>
+                    {i < LADDER.length - 1 && (
+                      <span style={{ color: 'var(--muted)', opacity: 0.4, fontSize: '0.9rem' }}>→</span>
+                    )}
+                  </div>
+                ))}
+              </div>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
                   href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
