@@ -1,42 +1,32 @@
-import { motion } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
 const SITUATIONS = [
   {
     num: '01',
-    title: 'La croissance brouille les repères',
-    desc: "Vous passez de 10 à 30, 50, 90 personnes. Les process informels craquent, la coordination devient lourde, des coûts cachés apparaissent.",
-    signal: "Réunions qui s'allongent, doublons, délais qui glissent",
+    title: 'La croissance brouille les rep\u00e8res',
+    desc: "Vous passez de 10 \u00e0 30, 50, 90 personnes. Les process informels craquent, la coordination devient lourde, des co\u00fbts cach\u00e9s apparaissent.",
+    signal: "R\u00e9unions qui s\u2019allongent, doublons, d\u00e9lais qui glissent",
   },
   {
     num: '02',
-    title: 'La communication coince entre les équipes',
-    desc: "Les informations se perdent, les décisions traînent, les équipes travaillent en silo. Tout le monde s'active mais le système perd de l'énergie.",
-    signal: "Emails sans réponse, réunions qui n'aboutissent pas, turn-over en hausse",
+    title: 'La communication coince entre les \u00e9quipes',
+    desc: "Les informations se perdent, les d\u00e9cisions tra\u00eenent, les \u00e9quipes travaillent en silo. Tout le monde s\u2019active mais le syst\u00e8me perd de l\u2019\u00e9nergie.",
+    signal: "Emails sans r\u00e9ponse, r\u00e9unions qui n\u2019aboutissent pas, turn-over en hausse",
   },
   {
     num: '03',
-    title: 'Un sujet qui traîne',
-    desc: "Un chantier ERP, lean, réorg — et ça patine. Résistances, manque d'adoption. Personne n'arrive à le faire avancer seul.",
-    signal: "Équipes qui contournent les nouvelles procédures, retour aux anciennes habitudes",
+    title: 'Un sujet qui tra\u00eene',
+    desc: "Un chantier ERP, lean, r\u00e9org \u2014 et \u00e7a patine. R\u00e9sistances, manque d\u2019adoption. Personne n\u2019arrive \u00e0 le faire avancer seul.",
+    signal: "\u00c9quipes qui contournent les nouvelles proc\u00e9dures, retour aux anciennes habitudes",
   },
   {
     num: '04',
     title: 'Une direction qui porte tout',
-    desc: "Vous faites le travail de 3 personnes. Votre entreprise repose trop sur vous. Déléguer est compliqué : sans vous, rien n'avance.",
-    signal: "Vous êtes sur le chemin critique de tout, votre agenda déborde d'opérationnel",
+    desc: "Vous faites le travail de 3 personnes. Votre entreprise repose trop sur vous. D\u00e9l\u00e9guer est compliqu\u00e9\u00a0: sans vous, rien n\u2019avance.",
+    signal: "Vous \u00eates sur le chemin critique de tout, votre agenda d\u00e9borde d\u2019op\u00e9rationnel",
   },
 ];
-
-const cardVariants: import('framer-motion').Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
-  }),
-};
 
 export default function Situations() {
   return (
@@ -45,72 +35,51 @@ export default function Situations() {
       style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}
     >
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-4"
-        >
-          <IndexLabel text="03 — Situations" />
-        </motion.div>
+        <div className="reveal mb-4">
+          <IndexLabel text="03 \u2014 Situations" />
+        </div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-          className="mb-4"
-          style={{ color: 'var(--text)' }}
-        >
-          Quelques situations{' '}
-          <span style={{ color: 'var(--primary)' }}>où j'interviens souvent</span>
-        </motion.h2>
+        <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+          Vous vous reconnaissez ?
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="mb-12 max-w-xl"
-          style={{ color: 'var(--muted)' }}
-        >
-          L'entreprise grandit, mais l'organisation ne suit plus.
-          Si l'une de ces situations vous parle, on a probablement quelque chose à explorer.
-        </motion.p>
+        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
+          Ce sont les situations les plus fr\u00e9quentes que je rencontre.
+        </p>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {SITUATIONS.map((situation, i) => (
-            <motion.div
+          {SITUATIONS.map((s, i) => (
+            <div
               key={i}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-40px' }}
-              className="card-base p-6"
+              className="card-base reveal p-6"
+              style={{ '--reveal-delay': `${i * 60}ms` } as React.CSSProperties}
             >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="index-label">CAS {situation.num}</span>
+              <div style={{
+                fontFamily: 'var(--font-display)',
+                fontStyle: 'italic',
+                fontSize: 'var(--step-3)',
+                color: 'var(--ink-muted)',
+                opacity: 0.3,
+                lineHeight: 1,
+                marginBottom: 'var(--s-3)',
+                fontVariantNumeric: 'tabular-nums',
+              }}>
+                {s.num}
               </div>
-              <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1rem' }}>
-                {situation.title}
-              </h3>
-              <p className="mb-4" style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
-                {situation.desc}
+              <h3 style={{ color: 'var(--ink)', marginBottom: 'var(--s-3)', fontStyle: 'normal', fontSize: 'var(--step-1)' }}>{s.title}</h3>
+              <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, marginBottom: 'var(--s-4)' }}>
+                {s.desc}
               </p>
               <div style={{
-                padding: '8px 12px',
-                background: 'rgba(118,107,255,0.05)',
-                borderLeft: '2px solid var(--primary)',
-                borderRadius: '0 6px 6px 0',
-                fontSize: '0.78rem',
+                fontSize: 'var(--step--1)',
                 color: 'var(--accent)',
                 fontStyle: 'italic',
+                paddingTop: 'var(--s-3)',
+                borderTop: '1px solid var(--rule)',
               }}>
-                {situation.signal}
+                Signal\u00a0: {s.signal}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </Container>

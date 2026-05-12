@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -43,15 +42,6 @@ const PILLARS = [
   },
 ];
 
-const cardVariants: import('framer-motion').Variants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
-  }),
-};
-
 export default function Pillars() {
   return (
     <section
@@ -59,61 +49,36 @@ export default function Pillars() {
       style={{
         paddingTop: 'var(--spacing-section-v)',
         paddingBottom: 'var(--spacing-section-v)',
-        background: 'var(--surface)',
-        borderTop: '1px solid var(--border)',
-        borderBottom: '1px solid var(--border)',
+        background: 'var(--bg-elevated)',
+        borderTop: '1px solid var(--rule)',
+        borderBottom: '1px solid var(--rule)',
       }}
     >
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-          className="mb-4"
-        >
-          <IndexLabel text="02 — Les piliers" />
-        </motion.div>
+        <div className="reveal mb-4">
+          <IndexLabel text="02 — Les piliers" />
+        </div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-          className="mb-4"
-          style={{ color: 'var(--text)' }}
-        >
+        <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
           Comment je travaille
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="mb-12 max-w-xl"
-          style={{ color: 'var(--muted)' }}
-        >
+        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
           Chaque mission suit le même fil :
-        </motion.p>
+        </p>
 
         <div className="grid md:grid-cols-3 gap-5">
           {PILLARS.map((pillar, i) => (
-            <motion.div
+            <div
               key={i}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-40px' }}
-              className="card-base p-6"
-              style={{ background: 'var(--surface2)' }}
+              className="card-base reveal p-6"
+              style={{ '--reveal-delay': `${i * 80}ms` } as React.CSSProperties}
             >
               <div className="flex items-start gap-4 mb-4">
                 <div style={{
-                  color: 'var(--primary)',
-                  background: 'rgba(118,107,255,0.1)',
-                  borderRadius: '10px',
+                  color: 'var(--accent)',
+                  background: 'light-dark(oklch(55% 0.18 28 / 0.08), oklch(72% 0.16 28 / 0.12))',
+                  borderRadius: '6px',
                   padding: '10px',
                   flexShrink: 0,
                 }}>
@@ -121,13 +86,13 @@ export default function Pillars() {
                 </div>
                 <div>
                   <div className="index-label mb-2">PILIER {pillar.num}</div>
-                  <h3 style={{ color: 'var(--text)', fontSize: '1.05rem' }}>{pillar.title}</h3>
+                  <h3 style={{ color: 'var(--ink)', fontSize: 'var(--step-0)', fontStyle: 'normal' }}>{pillar.title}</h3>
                 </div>
               </div>
-              <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
+              <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65 }}>
                 {pillar.desc}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </Container>

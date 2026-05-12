@@ -1,18 +1,9 @@
-import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import IndexLabel from '../components/IndexLabel';
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 14 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
-  }),
-};
 
 const PAIN_POINTS = [
   "Sans vous, rien n'avance. Vous \u00eates le goulot d'\u00e9tranglement de votre propre entreprise.",
@@ -68,19 +59,19 @@ export default function OfferEntrepreneurs() {
           />
           <Container className="relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible" className="mb-6">
+              <div className="reveal mb-6">
                 <IndexLabel text="PROGRAMME — Pilotage Dirigeant" />
-              </motion.div>
+              </div>
 
-              <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible" className="mb-5" style={{ color: 'var(--text)' }}>
+              <h1 className="reveal mb-5" style={{ color: 'var(--text)' }}>
                 Vous dirigez une PME.
                 <br />
                 <span style={{ color: 'var(--primary)' }}>Votre organisation repose trop sur vous.</span>
-              </motion.h1>
+              </h1>
 
-              <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4" style={{ color: 'var(--primary)', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
+              <p className="reveal text-lg mb-4" style={{ color: 'var(--primary)', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
                 {"C'est une situation que je vois souvent. Voici ce que je mets en place."}
-              </motion.p>
+              </p>
             </div>
           </Container>
         </section>
@@ -89,12 +80,8 @@ export default function OfferEntrepreneurs() {
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: '48px' }}>
           <Container>
             <div className="max-w-2xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5 }}
-                className="card-base p-6"
+              <div
+                className="reveal card-base p-6"
                 style={{ borderLeft: '3px solid #ef5350' }}
               >
                 <h2 className="mb-5" style={{ color: '#ef5350', fontSize: '1.3rem' }}>
@@ -108,25 +95,17 @@ export default function OfferEntrepreneurs() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3 }}
-                className="text-center py-6"
+              <div
+                className="reveal text-center py-6"
                 style={{ color: 'var(--primary)', fontSize: '2rem' }}
               >
                 {"↓"}
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5 }}
-                className="card-base p-6"
+              <div
+                className="reveal card-base p-6"
                 style={{ borderLeft: '3px solid var(--success)' }}
               >
                 <h2 className="mb-5" style={{ color: 'var(--success)', fontSize: '1.3rem' }}>
@@ -142,7 +121,7 @@ export default function OfferEntrepreneurs() {
                   <strong style={{ color: 'var(--text)' }}>Notion</strong>
                   {", construit sur-mesure. Je fais le technique, vous validez et pilotez."}
                 </p>
-              </motion.div>
+              </div>
             </div>
           </Container>
         </section>
@@ -152,20 +131,16 @@ export default function OfferEntrepreneurs() {
           <Container>
             <div className="grid md:grid-cols-3 gap-4 max-w-2xl mx-auto">
               {BENEFITS.map((b, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="card-base p-5 text-center"
+                  className="reveal card-base p-5 text-center"
                   style={{ borderLeft: '3px solid var(--primary)' }}
                 >
                   <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 700, color: 'var(--primary)' }}>
                     {b.value}
                   </div>
                   <div style={{ fontSize: '0.85rem', color: 'var(--muted)', marginTop: '4px' }}>{b.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </Container>
@@ -174,12 +149,8 @@ export default function OfferEntrepreneurs() {
         {/* Ce que vous obtenez */}
         <section style={{ paddingTop: '48px', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="max-w-2xl mx-auto"
+            <div
+              className="reveal max-w-2xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="LIVRABLES — Ce que vous obtenez" />
@@ -197,13 +168,9 @@ export default function OfferEntrepreneurs() {
                   { title: "Gestion de projets simplifi\u00e9e", desc: "Suivi de vos chantiers en cours avec les jalons et les d\u00e9pendances. Vous voyez d'un coup d'\u0153il ce qui avance et ce qui bloque." },
                   { title: "Reporting automatis\u00e9", desc: "Les indicateurs se mettent \u00e0 jour automatiquement. Le reporting mensuel qui prenait 2 jours se fait en temps r\u00e9el." },
                 ].map((item, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: '-40px' }}
-                    transition={{ delay: i * 0.06, duration: 0.4 }}
-                    className="flex items-start gap-3 p-4 rounded-xl"
+                    className="reveal flex items-start gap-3 p-4 rounded-xl"
                     style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
                   >
                     <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>{"→"}</span>
@@ -211,22 +178,18 @@ export default function OfferEntrepreneurs() {
                       <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{item.title}</span>
                       <p style={{ color: 'var(--muted)', fontSize: '0.875rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* Prix */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6 }}
-              className="max-w-2xl mx-auto text-center p-8 rounded-2xl"
+            <div
+              className="reveal max-w-2xl mx-auto text-center p-8 rounded-2xl"
               style={{ background: 'rgba(118,107,255,0.08)', border: '1px solid var(--border-strong)' }}
             >
               <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>{"L'investissement"}</h2>
@@ -237,19 +200,15 @@ export default function OfferEntrepreneurs() {
                 {"10 jours de travail effectif sur 6 mois"}
                 <br />{"Payable en 3 fois, \u00e0 chaque \u00e9tape valid\u00e9e ensemble"}
               </p>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* ROI */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-2xl mx-auto"
+            <div
+              className="reveal max-w-2xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="ROI — Sans blabla" />
@@ -297,19 +256,15 @@ export default function OfferEntrepreneurs() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* Programme */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="max-w-3xl mx-auto"
+            <div
+              className="reveal max-w-3xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="PARCOURS — 10 jours sur 6 mois" />
@@ -337,13 +292,9 @@ export default function OfferEntrepreneurs() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 {PROGRAM_STEPS.map((step, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: '-40px' }}
-                    transition={{ delay: i * 0.06, duration: 0.5 }}
-                    className="card-base p-5"
+                    className="reveal card-base p-5"
                     style={{ borderTop: '2px solid var(--primary)' }}
                   >
                     <h3 className="mb-2" style={{ color: 'var(--primary)', fontSize: '0.95rem' }}>
@@ -352,22 +303,18 @@ export default function OfferEntrepreneurs() {
                     <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.65 }}>
                       {step.desc}
                     </p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* Pourquoi Notion */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="max-w-2xl mx-auto"
+            <div
+              className="reveal max-w-2xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="OUTIL — Pourquoi Notion" />
@@ -386,19 +333,15 @@ export default function OfferEntrepreneurs() {
                   {"Pas besoin d'\u00eatre technique. Quand c'est bien con\u00e7u, c'est aussi simple qu'un tableur \u2014 mais infiniment plus puissant."}
                 </p>
               </div>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* CTA */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-2xl mx-auto text-center"
+            <div
+              className="reveal max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-4" style={{ color: 'var(--text)' }}>
                 Ça vous parle ?{' '}
@@ -425,7 +368,7 @@ export default function OfferEntrepreneurs() {
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
                 {"Pas s\u00fbr ? Pas grave. On \u00e9change, on voit si \u00e7a colle. Si ce n'est pas le bon moment, on se le dit."}
               </p>
-            </motion.div>
+            </div>
           </Container>
         </section>
       </main>

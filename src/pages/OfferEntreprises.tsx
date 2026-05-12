@@ -1,18 +1,9 @@
-import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import IndexLabel from '../components/IndexLabel';
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 14 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
-  }),
-};
 
 const STATS = [
   { value: '10 jours', label: 'de travail effectif' },
@@ -147,21 +138,21 @@ export default function OfferEntreprises() {
           />
           <Container className="relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible" className="mb-6">
+              <div className="reveal mb-6">
                 <IndexLabel text="PROGRAMME — Entreprises" />
-              </motion.div>
+              </div>
 
-              <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible" className="mb-5" style={{ color: 'var(--text)' }}>
+              <h1 className="reveal mb-5" style={{ color: 'var(--text)' }}>
                 10 jours sur le terrain,{' '}
                 <span style={{ color: 'var(--primary)' }}>des résultats mesurés</span>
-              </motion.h1>
+              </h1>
 
-              <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
+              <p className="reveal text-lg mb-10 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
                 Un accompagnement de 6 mois. Voici comment ça se passe,
                 ce que ça implique, et ce que ça donne concrètement.
-              </motion.p>
+              </p>
 
-              <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
+              <div className="reveal grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
                 {STATS.map((stat, i) => (
                   <div key={i} className="card-base p-4" style={{ background: 'var(--surface)', textAlign: 'center' }}>
                     <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 700, color: 'var(--primary)', letterSpacing: '-0.03em' }}>
@@ -172,11 +163,11 @@ export default function OfferEntreprises() {
                     </div>
                   </div>
                 ))}
-              </motion.div>
+              </div>
 
-              <motion.p custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-6" style={{ fontSize: '0.78rem', color: 'var(--muted)', opacity: 0.6 }}>
+              <p className="reveal mt-6" style={{ fontSize: '0.78rem', color: 'var(--muted)', opacity: 0.6 }}>
                 *Retour moyen observé sur les missions de structuration d'entreprises de 10 à 90 salariés
-              </motion.p>
+              </p>
             </div>
           </Container>
         </section>
@@ -184,12 +175,8 @@ export default function OfferEntreprises() {
         {/* ROI Box */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-2xl mx-auto"
+            <div
+              className="reveal max-w-2xl mx-auto"
             >
               <div className="text-center mb-8">
                 <IndexLabel text="ROI — Retour sur investissement" />
@@ -266,19 +253,15 @@ export default function OfferEntreprises() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* Comment ça marche */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: '48px' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="max-w-3xl mx-auto"
+            <div
+              className="reveal max-w-3xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="DÉMARRAGE — Comment ça marche" />
@@ -293,19 +276,15 @@ export default function OfferEntreprises() {
               <p style={{ color: 'var(--muted)' }}>
                 Si on décide d'avancer, on attaque. Pas de paperasse inutile.
               </p>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* Programme des 10 jours */}
         <section style={{ paddingTop: '48px', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="max-w-3xl mx-auto"
+            <div
+              className="reveal max-w-3xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="PROGRAMME — 10 jours sur 6 mois" />
@@ -316,7 +295,7 @@ export default function OfferEntreprises() {
               <p className="mb-10" style={{ color: 'var(--muted)' }}>
                 10 jours de travail effectif sur 6 mois. Voici le déroulé type, ajusté à chaque contexte.
               </p>
-            </motion.div>
+            </div>
 
             <div className="max-w-3xl mx-auto relative">
               {/* Timeline line */}
@@ -328,13 +307,9 @@ export default function OfferEntreprises() {
 
               <div className="flex flex-col gap-6">
                 {TIMELINE.map((phase, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: '-40px' }}
-                    transition={{ delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="card-base p-6 md:ml-12 relative"
+                    className="reveal card-base p-6 md:ml-12 relative"
                     style={{ background: 'var(--surface2)' }}
                   >
                     {/* Timeline dot */}
@@ -377,22 +352,18 @@ export default function OfferEntreprises() {
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5 }}
-                className="mt-8 p-5 rounded-xl md:ml-12"
+              <div
+                className="reveal mt-8 p-5 rounded-xl md:ml-12"
                 style={{ background: 'var(--surface)', borderLeft: '3px solid var(--primary)', border: '1px solid var(--border)' }}
               >
                 <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
                   <strong style={{ color: 'var(--text)' }}>Et après ?</strong> On peut prévoir des points de suivi sur les 6 mois suivants pour mesurer le ROI à 1 an et valider la pérennité des changements. C'est optionnel, on en discute ensemble selon vos besoins.
                 </p>
-              </motion.div>
+              </div>
             </div>
           </Container>
         </section>
@@ -400,35 +371,23 @@ export default function OfferEntreprises() {
         {/* Exemples de transformations */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="mb-4"
+            <div
+              className="reveal mb-4"
             >
               <IndexLabel text="RÉSULTATS — Cas concrets" />
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: 0.08 }}
-              className="mb-10"
+            </div>
+            <h2
+              className="reveal mb-10"
               style={{ color: 'var(--text)' }}
             >
               Exemples de <span style={{ color: 'var(--primary)' }}>transformations</span>
-            </motion.h2>
+            </h2>
 
             <div className="flex flex-col gap-8">
               {CASE_STUDIES.map((cs, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="card-base p-6"
+                  className="reveal card-base p-6"
                   style={{ background: 'var(--surface2)' }}
                 >
                   <h3 className="mb-5" style={{ color: 'var(--text)', fontSize: '1.1rem' }}>
@@ -469,7 +428,7 @@ export default function OfferEntreprises() {
                     </div>
                     <p style={{ fontSize: '0.75rem', color: 'var(--muted)', opacity: 0.6, marginTop: '8px' }}>{cs.detail}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </Container>
@@ -478,12 +437,8 @@ export default function OfferEntreprises() {
         {/* Pourquoi ça marche */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5 }}
-              className="max-w-2xl mx-auto"
+            <div
+              className="reveal max-w-2xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="APPROCHE — Pourquoi ça marche" />
@@ -493,13 +448,9 @@ export default function OfferEntreprises() {
               </h2>
               <div className="flex flex-col gap-4">
                 {REASONS.map((reason, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: '-40px' }}
-                    transition={{ delay: i * 0.06, duration: 0.4 }}
-                    className="flex items-start gap-3 p-4 rounded-xl"
+                    className="reveal flex items-start gap-3 p-4 rounded-xl"
                     style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
                   >
                     <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>→</span>
@@ -507,22 +458,18 @@ export default function OfferEntreprises() {
                       <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{reason.title}</span>
                       <span style={{ color: 'var(--muted)', fontSize: '0.875rem' }}> — {reason.desc}</span>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </Container>
         </section>
 
         {/* CTA */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
           <Container>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-2xl mx-auto text-center"
+            <div
+              className="reveal max-w-2xl mx-auto text-center"
             >
               <h2 className="mb-5" style={{ color: 'var(--text)' }}>
                 On en discute ?{' '}
@@ -548,7 +495,7 @@ export default function OfferEntreprises() {
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
                 Pas sûr ? Pas grave. On échange, on voit si ça colle. Si ce n'est pas le bon moment, on se le dit.
               </p>
-            </motion.div>
+            </div>
           </Container>
         </section>
       </main>
