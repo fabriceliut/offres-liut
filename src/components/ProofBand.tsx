@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Container from './Container';
 
 export default function ProofBand() {
@@ -12,7 +12,7 @@ export default function ProofBand() {
       }}
     >
       <Container>
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -52,7 +52,7 @@ export default function ProofBand() {
           }}>
             +150 organisations depuis +15 ans
           </div>
-        </motion.div>
+        </m.div>
       </Container>
     </div>
   );

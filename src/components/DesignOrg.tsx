@@ -1,4 +1,4 @@
-import { motion, type Variants } from 'framer-motion';
+import { m, type Variants } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -32,7 +32,7 @@ export default function DesignOrg() {
     >
       <Container>
         <div className="max-w-3xl mx-auto">
-          <motion.div
+          <m.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
@@ -40,10 +40,10 @@ export default function DesignOrg() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="01 — La méthode" />
-          </motion.div>
+            <IndexLabel text="01 — La méthode" />
+          </m.div>
 
-          <motion.h2
+          <m.h2
             custom={1}
             variants={fadeUp}
             initial="hidden"
@@ -54,9 +54,9 @@ export default function DesignOrg() {
           >
             Ce que je fais,{' '}
             <span style={{ color: 'var(--primary)' }}>concrètement</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             custom={2}
             variants={fadeUp}
             initial="hidden"
@@ -68,9 +68,9 @@ export default function DesignOrg() {
             J'appelle ça le Design Organisationnel. En pratique : je regarde comment
             votre entreprise fonctionne vraiment, et on ajuste ce qui coince — avec vos équipes,
             pas dans un rapport que personne ne lit.
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             custom={3}
             variants={fadeUp}
             initial="hidden"
@@ -116,9 +116,9 @@ export default function DesignOrg() {
                 </p>
               </div>
             ))}
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             custom={4}
             variants={fadeUp}
             initial="hidden"
@@ -135,7 +135,7 @@ export default function DesignOrg() {
               les équipes s'approprient les changements, les résultats
               sont mesurables dès les premiers mois, et l'organisation tourne mieux — même quand je ne suis plus là.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </Container>
     </section>

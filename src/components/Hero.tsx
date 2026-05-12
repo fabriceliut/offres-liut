@@ -1,4 +1,4 @@
-import { motion, type Variants } from 'framer-motion';
+import { m, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Container from './Container';
 
@@ -62,7 +62,7 @@ export default function Hero() {
       <Container className="relative z-10">
         <div className="max-w-3xl">
           {/* Index label */}
-          <motion.div
+          <m.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
@@ -70,10 +70,10 @@ export default function Hero() {
             className="mb-6"
           >
             <span className="index-label">Associé Opérationnel & Stratégique</span>
-          </motion.div>
+          </m.div>
 
           {/* H1 */}
-          <motion.h1
+          <m.h1
             custom={1}
             variants={fadeUp}
             initial="hidden"
@@ -83,10 +83,10 @@ export default function Hero() {
           >
             J'accompagne des dirigeants de PME & PMI{' '}
             <span style={{ color: 'var(--primary)' }}>dans la structuration de leur entreprise.</span>
-          </motion.h1>
+          </m.h1>
 
           {/* Subtext */}
-          <motion.p
+          <m.p
             custom={2}
             variants={fadeUp}
             initial="hidden"
@@ -97,10 +97,10 @@ export default function Hero() {
             Basé à Lyon, je viens sur place, j'écoute ce qui coince,
             et on avance ensemble. Vous me dites ce qui bloque.
             J'observe, je mets en place. On teste, on ajuste, on continue.
-          </motion.p>
+          </m.p>
 
           {/* CTAs */}
-          <motion.div
+          <m.div
             custom={3}
             variants={fadeUp}
             initial="hidden"
@@ -131,10 +131,10 @@ export default function Hero() {
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
-          </motion.div>
+          </m.div>
 
           {/* Stats */}
-          <motion.div
+          <m.div
             custom={4}
             variants={fadeUp}
             initial="hidden"
@@ -161,7 +161,7 @@ export default function Hero() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </Container>
     </section>

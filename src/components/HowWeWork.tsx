@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -36,17 +36,17 @@ export default function HowWeWork() {
       }}
     >
       <Container>
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="04 — Déroulé" />
-        </motion.div>
+          <IndexLabel text="04 — Dérulé" />
+        </m.div>
 
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -56,9 +56,9 @@ export default function HowWeWork() {
         >
           Comment ça{' '}
           <span style={{ color: 'var(--primary)' }}>démarre</span>
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -68,12 +68,12 @@ export default function HowWeWork() {
         >
           Pas de programme packagé. On avance pas à pas,
           en commençant toujours par comprendre.
-        </motion.p>
+        </m.p>
 
         <div className="relative">
           <div className="grid md:grid-cols-3 gap-6">
             {STEPS.map((step, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function HowWeWork() {
                 <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
                   {step.desc}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

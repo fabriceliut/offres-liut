@@ -1,4 +1,4 @@
-import { motion, type Variants } from 'framer-motion';
+import { m, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
@@ -42,7 +42,7 @@ export default function DirigeantSection() {
     >
       <Container>
         <div className="max-w-3xl mx-auto">
-          <motion.div
+          <m.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
@@ -51,9 +51,9 @@ export default function DirigeantSection() {
             className="mb-4"
           >
             <IndexLabel text="03B — Pour le dirigeant" />
-          </motion.div>
+          </m.div>
 
-          <motion.h2
+          <m.h2
             custom={1}
             variants={fadeUp}
             initial="hidden"
@@ -64,9 +64,9 @@ export default function DirigeantSection() {
           >
             C'est une situation{' '}
             <span style={{ color: 'var(--primary)' }}>que je vois souvent.</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             custom={2}
             variants={fadeUp}
             initial="hidden"
@@ -75,13 +75,13 @@ export default function DirigeantSection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Au-delà de l'organisation, il y a votre système de pilotage.
+            Au-delà de l’organisation, il y a votre système de pilotage.
             Celui qui vous permet de voir clair, décider vite, et déléguer. Ça se structure.
-          </motion.p>
+          </m.p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-10">
             {PAIN_POINTS.map((point, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 custom={i + 3}
                 variants={fadeUp}
@@ -94,11 +94,11 @@ export default function DirigeantSection() {
                 <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
                   {point.text}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -143,7 +143,7 @@ export default function DirigeantSection() {
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
-          </motion.div>
+          </m.div>
         </div>
       </Container>
     </section>

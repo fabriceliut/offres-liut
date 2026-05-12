@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -65,17 +65,17 @@ export default function Pillars() {
       }}
     >
       <Container>
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="02 — Les piliers" />
-        </motion.div>
+          <IndexLabel text="02 — Les piliers" />
+        </m.div>
 
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -84,9 +84,9 @@ export default function Pillars() {
           style={{ color: 'var(--text)' }}
         >
           Comment je travaille
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -95,11 +95,11 @@ export default function Pillars() {
           style={{ color: 'var(--muted)' }}
         >
           Chaque mission suit le même fil :
-        </motion.p>
+        </m.p>
 
         <div className="grid md:grid-cols-3 gap-5">
           {PILLARS.map((pillar, i) => (
-            <motion.div
+            <m.div
               key={i}
               custom={i}
               variants={cardVariants}
@@ -127,7 +127,7 @@ export default function Pillars() {
               <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
                 {pillar.desc}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </Container>

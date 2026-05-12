@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -45,17 +45,17 @@ export default function Situations() {
       style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}
     >
       <Container>
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="03 — Situations" />
-        </motion.div>
+          <IndexLabel text="03 — Situations" />
+        </m.div>
 
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -65,9 +65,9 @@ export default function Situations() {
         >
           Quelques situations{' '}
           <span style={{ color: 'var(--primary)' }}>où j'interviens souvent</span>
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -77,11 +77,11 @@ export default function Situations() {
         >
           L'entreprise grandit, mais l'organisation ne suit plus.
           Si l'une de ces situations vous parle, on a probablement quelque chose à explorer.
-        </motion.p>
+        </m.p>
 
         <div className="grid md:grid-cols-2 gap-5">
           {SITUATIONS.map((situation, i) => (
-            <motion.div
+            <m.div
               key={i}
               custom={i}
               variants={cardVariants}
@@ -110,7 +110,7 @@ export default function Situations() {
               }}>
                 {situation.signal}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </Container>

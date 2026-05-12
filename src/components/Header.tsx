@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import Container from './Container';
 import { useActiveSection, scrollToSection } from '../lib/anchors';
@@ -47,7 +47,7 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <motion.header
+    <m.header
       initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -130,7 +130,7 @@ export default function Header() {
                   }}
                 >
                   {activeSection === item.id && (
-                    <motion.span
+                    <m.span
                       layoutId="navIndicator"
                       className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-4 rounded-full"
                       style={{ background: 'var(--primary)' }}
@@ -213,7 +213,7 @@ export default function Header() {
       {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -311,9 +311,9 @@ export default function Header() {
                 </div>
               </nav>
             </Container>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </m.header>
   );
 }

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Container from './Container';
 
@@ -14,7 +14,7 @@ export default function FinalCTA() {
       }}
     >
       <Container>
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -100,7 +100,7 @@ export default function FinalCTA() {
             </svg>
             Suivre Fabrice Liut sur LinkedIn
           </a>
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   );

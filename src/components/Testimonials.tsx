@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -30,17 +30,17 @@ export default function Testimonials() {
       style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}
     >
       <Container>
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="05 — Retours terrain" />
-        </motion.div>
+          <IndexLabel text="05 — Retours terrain" />
+        </m.div>
 
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -50,9 +50,9 @@ export default function Testimonials() {
         >
           Résultats{' '}
           <span style={{ color: 'var(--primary)' }}>récents</span>
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -61,11 +61,11 @@ export default function Testimonials() {
           style={{ color: 'var(--muted)' }}
         >
           Quelques exemples concrets de missions récentes.
-        </motion.p>
+        </m.p>
 
         <div className="grid md:grid-cols-3 gap-5">
           {TESTIMONIALS.map((t, i) => (
-            <motion.div
+            <m.div
               key={i}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function Testimonials() {
                   {t.company}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </Container>
