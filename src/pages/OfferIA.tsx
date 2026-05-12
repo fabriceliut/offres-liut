@@ -96,7 +96,7 @@ const DIAGNOSTIC_INCLUDES = [
 const LADDER = [
   { num: '01', title: 'Diagnostic', desc: 'On cartographie les leviers.' },
   { num: '02', title: 'Intégration', desc: 'On les met en place.' },
-  { num: '03', title: 'Autonomie', desc: 'Vos équipes tiennent la main.' },
+  { num: '03', title: 'Autonomie', desc: 'Vos équipes volent de leurs propres ailes.' },
 ];
 
 export default function OfferIA() {
@@ -488,7 +488,7 @@ export default function OfferIA() {
 
               {/* LADDER */}
               <div className="mb-12">
-                <p className="mb-6" style={{ fontSize: '0.75rem', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.5 }}>Et si vous allez plus loin</p>
+                <p className="mb-6" style={{ fontSize: '0.75rem', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.5 }}>Et si on va plus loin ensemble</p>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3">
                   {LADDER.map((l, i) => (
                     <div key={l.num} className="flex flex-col md:flex-row items-center gap-3 w-full md:w-auto">
