@@ -457,51 +457,62 @@ export default function OfferIA() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-2xl mx-auto text-center"
             >
-              <div className="mb-4">
+              <div className="mb-5">
                 <IndexLabel text="OFFRE — Diagnostic Flux & IA" />
               </div>
-              <h2 className="mb-4" style={{ color: 'var(--text)' }}>
+              <h2 className="mb-5" style={{ color: 'var(--text)' }}>
                 On en discute ?{' '}
                 <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
               </h2>
-              <p className="mb-3" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
+              <p className="mb-12" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
                 Vous me dites ce qui vous prend du temps. Je vous dis où l'IA peut aider.
                 On décide après.
               </p>
-              <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.7, fontStyle: 'italic', opacity: 0.8 }}>
-                L'objectif n'est pas de mettre de l'IA partout. C'est de la mettre là où elle change vraiment la donne pour vous.
-              </p>
-              <div className="mb-6 text-left max-w-lg mx-auto">
-                <p className="mb-3" style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.85rem' }}>Ce que vous obtenez :</p>
-                <ul className="flex flex-col gap-2">
+
+              {/* Deliverables card */}
+              <div className="mb-12 text-left rounded-2xl p-7" style={{ background: 'var(--surface2)', border: '1px solid var(--border-strong)' }}>
+                <p className="mb-5" style={{ color: 'var(--text)', fontWeight: 700, fontSize: '0.78rem', letterSpacing: '0.07em', textTransform: 'uppercase' }}>Ce que vous obtenez</p>
+                <ul className="flex flex-col gap-4">
                   {DIAGNOSTIC_INCLUDES.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2" style={{ color: 'var(--muted)', fontSize: '0.85rem', lineHeight: 1.6 }}>
-                      <span style={{ color: 'var(--primary)', flexShrink: 0 }}>→</span>
+                    <li key={i} className="flex items-start gap-3" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.65 }}>
+                      <span style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }}>→</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4" style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                  Tarif diagnostic :{' '}
-                  <span style={{ color: 'var(--text)', fontWeight: 600, opacity: 1 }}>990 €</span>
-                  {' '}— imputable sur l'intégration si on continue ensemble.
-                </p>
+                <div className="mt-7 pt-6 flex items-baseline gap-2" style={{ borderTop: '1px solid var(--border)' }}>
+                  <span style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-heading)' }}>990 €</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>— imputable sur l'intégration si on continue ensemble.</span>
+                </div>
               </div>
-              <div className="flex flex-wrap justify-center items-center gap-3 mb-8">
-                {LADDER.map((l, i) => (
-                  <div key={l.num} className="flex items-center gap-2">
-                    <div className="p-3 rounded-xl text-center" style={{ background: 'var(--surface2)', border: '1px solid var(--border)', minWidth: '96px' }}>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 700, letterSpacing: '0.06em' }}>{l.num}</div>
-                      <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text)', marginTop: '2px' }}>{l.title}</div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '2px' }}>{l.desc}</div>
+
+              {/* LADDER */}
+              <div className="mb-12">
+                <p className="mb-6" style={{ fontSize: '0.75rem', color: 'var(--muted)', letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.5 }}>Et si vous allez plus loin</p>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-3">
+                  {LADDER.map((l, i) => (
+                    <div key={l.num} className="flex flex-col md:flex-row items-center gap-3 w-full md:w-auto">
+                      <div
+                        className="w-full md:w-auto rounded-xl text-center"
+                        style={{ background: 'var(--surface2)', border: '1px solid var(--border)', padding: '16px 28px' }}
+                      >
+                        <div style={{ fontSize: '0.72rem', color: 'var(--primary)', fontWeight: 700, letterSpacing: '0.07em' }}>{l.num}</div>
+                        <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text)', marginTop: '5px' }}>{l.title}</div>
+                        <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: '3px' }}>{l.desc}</div>
+                      </div>
+                      {i < LADDER.length - 1 && (
+                        <>
+                          <span className="hidden md:block" style={{ color: 'var(--muted)', opacity: 0.3, fontSize: '1rem' }}>→</span>
+                          <span className="block md:hidden" style={{ color: 'var(--muted)', opacity: 0.3, fontSize: '1rem' }}>↓</span>
+                        </>
+                      )}
                     </div>
-                    {i < LADDER.length - 1 && (
-                      <span style={{ color: 'var(--muted)', opacity: 0.4, fontSize: '0.9rem' }}>→</span>
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-4 justify-center mb-6">
+
+              {/* Buttons */}
+              <div className="flex flex-wrap gap-4 justify-center mb-8">
                 <a
                   href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
                   target="_blank"
