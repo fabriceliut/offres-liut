@@ -1,9 +1,18 @@
+import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import IndexLabel from '../components/IndexLabel';
 
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  }),
+};
 
 const TRAPS = [
   {
@@ -126,20 +135,20 @@ export default function OfferIA() {
           />
           <Container className="relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="reveal mb-6">
+              <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible" className="mb-6">
                 <IndexLabel text="PROGRAMME — Intégration IA" />
-              </div>
+              </motion.div>
 
-              <h1 className="reveal mb-5" style={{ color: 'var(--text)' }}>
+              <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible" className="mb-5" style={{ color: 'var(--text)' }}>
                 L'IA aux bons moments,{' '}
                 <span style={{ color: 'var(--primary)' }}>aux bons endroits.</span>
                 <br />
                 Pas plus.
-              </h1>
+              </motion.h1>
 
-              <p className="reveal text-lg mb-4 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
+              <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
                 Intégrez l'intelligence artificielle là où elle crée de la valeur. Et nulle part ailleurs.
-              </p>
+              </motion.p>
             </div>
           </Container>
         </section>
@@ -148,32 +157,48 @@ export default function OfferIA() {
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: '48px' }}>
           <Container>
             <div className="max-w-2xl mx-auto">
-              <div
-                className="reveal mb-4"
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
               >
                 <IndexLabel text="CONSTAT — Le paradoxe de l'IA" />
-              </div>
+              </motion.div>
 
-              <h2
-                className="reveal mb-4"
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: 0.08 }}
+                className="mb-4"
                 style={{ color: 'var(--text)' }}
               >
                 Tout le monde en parle.{' '}
                 <span style={{ color: 'var(--primary)' }}>Presque personne ne l'utilise bien.</span>
-              </h2>
+              </motion.h2>
 
-              <p
-                className="reveal mb-8"
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: 0.16 }}
+                className="mb-8"
                 style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}
               >
                 La plupart des entreprises tombent dans deux pièges :
-              </p>
+              </motion.p>
 
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 {TRAPS.map((trap, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="reveal card-base p-5"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                    className="card-base p-5"
                     style={{ borderLeft: '3px solid #ef5350' }}
                   >
                     <div className="flex items-center gap-2 mb-2">
@@ -181,19 +206,23 @@ export default function OfferIA() {
                       <h3 style={{ color: '#ef5350', fontSize: '0.95rem', fontWeight: 600 }}>{trap.title}</h3>
                     </div>
                     <p style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.65 }}>{trap.desc}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
-              <div
-                className="reveal card-base p-5"
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5 }}
+                className="card-base p-5"
                 style={{ borderLeft: '3px solid var(--success)' }}
               >
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.7 }}>
                   <strong style={{ color: 'var(--text)' }}>Mon approche :</strong> aider les dirigeants à naviguer entre ces deux écueils.
                   On identifie ensemble où ça a de la valeur — et on ne touche qu'à ça.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </Container>
         </section>
@@ -202,25 +231,37 @@ export default function OfferIA() {
         <section style={{ paddingTop: '48px', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
             <div className="max-w-2xl mx-auto">
-              <div
-                className="reveal mb-4"
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
               >
                 <IndexLabel text="EXPERTISE — Pourquoi un intégrateur" />
-              </div>
+              </motion.div>
 
-              <h2
-                className="reveal mb-8"
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: 0.08 }}
+                className="mb-8"
                 style={{ color: 'var(--text)' }}
               >
                 Je ne vends pas un outil.{' '}
               <span style={{ color: 'var(--primary)' }}>Je vous montre où ça crée de la valeur.</span>
-              </h2>
+              </motion.h2>
 
               <div className="flex flex-col gap-4">
                 {WHY_ME.map((item, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="reveal flex items-start gap-3 p-4 rounded-xl"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ delay: i * 0.06, duration: 0.4 }}
+                    className="flex items-start gap-3 p-4 rounded-xl"
                     style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
                   >
                     <span style={{ fontSize: '1.2rem', flexShrink: 0 }}>{item.icon}</span>
@@ -228,7 +269,7 @@ export default function OfferIA() {
                       <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{item.title}</span>
                       <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -239,26 +280,38 @@ export default function OfferIA() {
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
           <Container>
             <div className="max-w-3xl mx-auto">
-              <div
-                className="reveal mb-4"
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
               >
                 <IndexLabel text="PROMESSE — Performance & Qualité de Vie" />
-              </div>
+              </motion.div>
 
-              <h2
-                className="reveal mb-4"
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: 0.08 }}
+                className="mb-4"
                 style={{ color: 'var(--text)' }}
               >
                 L'IA n'est pas là pour remplacer l'humain.{' '}
                 <span style={{ color: 'var(--primary)' }}>Elle lui rend son temps de cerveau.</span>
-              </h2>
+              </motion.h2>
 
-              <p
-                className="reveal mb-10"
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: 0.16 }}
+                className="mb-10"
                 style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}
               >
                 Deux axes. Les deux comptent autant.
-              </p>
+              </motion.p>
 
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Performance */}
@@ -268,14 +321,18 @@ export default function OfferIA() {
                   </h3>
                   <div className="flex flex-col gap-3">
                     {PERFORMANCE.map((item, i) => (
-                      <div
+                      <motion.div
                         key={i}
-                        className="reveal p-4 rounded-xl"
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-40px' }}
+                        transition={{ delay: i * 0.06, duration: 0.4 }}
+                        className="p-4 rounded-xl"
                         style={{ background: 'var(--surface2)', border: '1px solid var(--border)' }}
                       >
                         <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{item.title}</span>
                         <p style={{ color: 'var(--muted)', fontSize: '0.82rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -287,14 +344,18 @@ export default function OfferIA() {
                   </h3>
                   <div className="flex flex-col gap-3">
                     {QVT.map((item, i) => (
-                      <div
+                      <motion.div
                         key={i}
-                        className="reveal p-4 rounded-xl"
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-40px' }}
+                        transition={{ delay: i * 0.06, duration: 0.4 }}
+                        className="p-4 rounded-xl"
                         style={{ background: 'var(--surface2)', border: '1px solid var(--border)' }}
                       >
                         <span style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem' }}>{item.title}</span>
                         <p style={{ color: 'var(--muted)', fontSize: '0.82rem', marginTop: '4px', lineHeight: 1.65 }}>{item.desc}</p>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>
@@ -306,8 +367,12 @@ export default function OfferIA() {
         {/* Comment on travaille */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)' }}>
           <Container>
-            <div
-              className="reveal max-w-2xl mx-auto"
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5 }}
+              className="max-w-2xl mx-auto"
             >
               <div className="mb-4">
                 <IndexLabel text="MÉTHODE — Approche chirurgicale" />
@@ -322,9 +387,13 @@ export default function OfferIA() {
 
               <div className="flex flex-col gap-4">
                 {STEPS.map((step, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="reveal card-base p-5"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ delay: i * 0.06, duration: 0.5 }}
+                    className="card-base p-5"
                     style={{ borderTop: '2px solid var(--primary)' }}
                   >
                     <div className="flex items-center gap-3 mb-2">
@@ -332,10 +401,10 @@ export default function OfferIA() {
                       <h3 style={{ color: 'var(--text)', fontSize: '0.95rem', fontWeight: 600 }}>{step.title}</h3>
                     </div>
                     <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.65 }}>{step.desc}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </Container>
         </section>
 
@@ -345,18 +414,26 @@ export default function OfferIA() {
             <div className="max-w-2xl mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {METRICS.map((m, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="reveal card-base p-5 text-center"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ delay: i * 0.08, duration: 0.45 }}
+                    className="card-base p-5 text-center"
                   >
                     <div style={{ fontSize: '1.9rem', fontWeight: 700, color: 'var(--primary)', fontFamily: 'var(--font-heading)', lineHeight: 1 }}>{m.value}</div>
                     <div style={{ color: 'var(--text)', fontWeight: 600, fontSize: '0.82rem', marginTop: '6px' }}>{m.label}</div>
                     <div style={{ color: 'var(--muted)', fontSize: '0.75rem', marginTop: '3px' }}>{m.sub}</div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-              <div
-                className="reveal mt-5 p-5 rounded-2xl text-center"
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ delay: 0.3, duration: 0.45 }}
+                className="mt-5 p-5 rounded-2xl text-center"
                 style={{ border: '1px solid var(--border)', background: 'var(--surface)' }}
               >
                 <p style={{ fontSize: '0.85rem', color: 'var(--muted)', fontStyle: 'italic', lineHeight: 1.65 }}>
@@ -365,7 +442,7 @@ export default function OfferIA() {
                 <p style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, marginTop: '8px' }}>
                   — Directeur d'une PME, 12 collaborateurs
                 </p>
-              </div>
+              </motion.div>
             </div>
           </Container>
         </section>
@@ -373,8 +450,12 @@ export default function OfferIA() {
         {/* CTA */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: 'var(--spacing-section-v)', background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
           <Container>
-            <div
-              className="reveal max-w-2xl mx-auto text-center"
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="max-w-2xl mx-auto text-center"
             >
               <div className="mb-5">
                 <IndexLabel text="OFFRE — Diagnostic Flux & IA" />
@@ -448,7 +529,7 @@ export default function OfferIA() {
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
                 Pas sûr ? Pas grave. On échange, on voit si ça colle. Si ce n'est pas le bon moment, on se le dit.
               </p>
-            </div>
+            </motion.div>
           </Container>
         </section>
       </main>

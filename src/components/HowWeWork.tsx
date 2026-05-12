@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -10,14 +11,14 @@ const STEPS = [
   },
   {
     num: '02',
-    title: 'Je viens, j’observe',
-    desc: "2 à 3 jours sur place pour comprendre vos flux de l’intérieur. Interviews, observation terrain, cartographie de l’existant. Un état des lieux précis.",
+    title: 'Je viens, j\u2019observe',
+    desc: "2 à 3 jours sur place pour comprendre vos flux de l'intérieur. Interviews, observation terrain, cartographie de l'existant. Un état des lieux précis.",
     duration: '2–3 jours',
   },
   {
     num: '03',
     title: 'On teste, on ajuste, on continue',
-    desc: "On co-construit les ajustements. Pas un plan figé — des changements concrets qu’on teste et qu’on améliore au fil de l’eau. Vous gardez le lead.",
+    desc: "On co-construit les ajustements. Pas un plan figé — des changements concrets qu'on teste et qu'on améliore au fil de l'eau. Vous gardez le lead.",
     duration: '3–6 mois',
   },
 ];
@@ -35,57 +36,94 @@ export default function HowWeWork() {
       }}
     >
       <Container>
-        <div className="reveal mb-4">
-          <IndexLabel text="04 — Déroulé" />
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+          className="mb-4"
+        >
+          <IndexLabel text="04 — Déroulé" />
+        </motion.div>
 
-        <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="mb-4"
+          style={{ color: 'var(--text)' }}
+        >
           Comment ça{' '}
-          <em style={{ color: 'var(--accent)' }}>démarre</em>
-        </h2>
+          <span style={{ color: 'var(--primary)' }}>démarre</span>
+        </motion.h2>
 
-        <p className="reveal mb-14 max-w-xl" style={{ color: 'var(--muted)' }}>
-          Pas de programme packagé. On avance pas à pas, en commençant toujours par comprendre.
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className="mb-14 max-w-xl"
+          style={{ color: 'var(--muted)' }}
+        >
+          Pas de programme packagé. On avance pas à pas,
+          en commençant toujours par comprendre.
+        </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {STEPS.map((step, i) => (
-            <div
-              key={i}
-              className="reveal"
-              style={{ '--reveal-delay': `${i * 80}ms` } as React.CSSProperties}
-            >
-              <div style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'var(--step-4)',
-                color: 'var(--accent)',
-                opacity: 0.4,
-                lineHeight: 1,
-                marginBottom: 'var(--s-4)',
-                fontVariantNumeric: 'tabular-nums',
-              }}>
-                {step.num}
-              </div>
-              <div style={{
-                display: 'inline-block',
-                padding: '3px 10px',
-                background: 'oklch(72% 0.16 28 / 0.15)',
-                borderRadius: 'var(--r-pill)',
-                fontSize: 'var(--step--1)',
-                color: 'var(--accent)',
-                fontWeight: 600,
-                marginBottom: 'var(--s-3)',
-              }}>
-                {step.duration}
-              </div>
-              <h3 style={{ color: 'var(--text)', marginBottom: 'var(--s-3)', fontStyle: 'normal', fontSize: 'var(--step-1)' }}>
-                {step.title}
-              </h3>
-              <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
-                {step.desc}
-              </p>
-            </div>
-          ))}
+        <div className="relative">
+          <div className="grid md:grid-cols-3 gap-6">
+            {STEPS.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="card-base p-6"
+                style={{ background: 'var(--surface2)' }}
+              >
+                {/* Step number */}
+                <div className="flex items-center gap-3 mb-5">
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                    background: 'rgba(118,107,255,0.12)',
+                    border: '1px solid var(--border-strong)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 700,
+                    fontSize: '0.85rem',
+                    color: 'var(--primary)',
+                    flexShrink: 0,
+                  }}>
+                    {step.num}
+                  </div>
+                  <div style={{
+                    padding: '3px 10px',
+                    background: 'rgba(118,107,255,0.08)',
+                    borderRadius: 'var(--r-pill)',
+                    fontSize: '0.72rem',
+                    color: 'var(--accent)',
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 500,
+                    whiteSpace: 'nowrap',
+                  }}>
+                    {step.duration}
+                  </div>
+                </div>
+
+                <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1rem' }}>
+                  {step.title}
+                </h3>
+                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

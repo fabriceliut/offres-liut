@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Container from './Container';
 
 export default function ProofBand() {
@@ -11,8 +12,14 @@ export default function ProofBand() {
       }}
     >
       <Container>
-        <div className="reveal flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-center">
-          <div style={{ color: 'var(--muted)', fontSize: 'var(--step--1)', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-body)', fontWeight: 500 }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-center"
+        >
+          <div style={{ color: 'var(--muted)', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-heading)', fontWeight: 500 }}>
             Déjà accompagné
           </div>
           {[
@@ -23,29 +30,29 @@ export default function ProofBand() {
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
               <div style={{
-                width: '5px',
-                height: '5px',
+                width: '6px',
+                height: '6px',
                 borderRadius: '50%',
-                background: 'var(--accent)',
+                background: 'var(--primary)',
                 flexShrink: 0,
               }} aria-hidden="true" />
-              <span style={{ color: 'var(--text)', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step--1)' }}>
+              <span style={{ color: 'var(--text)', fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '0.9rem' }}>
                 {item}
               </span>
             </div>
           ))}
           <div style={{
-            padding: '5px 12px',
-            border: '1px solid var(--accent)',
+            padding: '6px 14px',
+            border: '1px solid var(--border-strong)',
             borderRadius: 'var(--r-pill)',
             color: 'var(--accent)',
-            fontSize: 'var(--step--1)',
-            fontFamily: 'var(--font-body)',
+            fontSize: '0.85rem',
+            fontFamily: 'var(--font-heading)',
             fontWeight: 600,
           }}>
             +150 organisations depuis +15 ans
           </div>
-        </div>
+        </motion.div>
       </Container>
     </div>
   );

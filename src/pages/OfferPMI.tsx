@@ -14,7 +14,6 @@ import Footer from '../components/Footer';
 export default function OfferPMI() {
   return (
     <>
-      <div className="scroll-progress" aria-hidden="true" />
       <Header />
       <main>
         <Hero />

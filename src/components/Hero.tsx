@@ -1,196 +1,111 @@
-import { useEffect, useRef } from 'react';
+import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Container from './Container';
 
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.06, duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  }),
+};
+
+const STATS = [
+  { value: '+150', label: 'organisations accompagnées' },
+  { value: '+15 ans', label: 'de terrain' },
+  { value: '10–90', label: 'salariés' },
+  { value: 'x4,5', label: 'retour moyen observé' },
+];
+
 export default function Hero() {
-  const statRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const el = statRef.current;
-    if (!el) return;
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      el.textContent = 'x4,5';
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.disconnect();
-
-        const target = 4.5;
-        const duration = 1600;
-        const startTime = performance.now();
-
-        function update(now: number) {
-          const elapsed = now - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          el!.textContent = 'x' + (eased * target).toFixed(1).replace('.', ',');
-          if (progress < 1) requestAnimationFrame(update);
-        }
-
-        requestAnimationFrame(update);
-      },
-      { threshold: 0.1 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="hero"
-      aria-label="Introduction"
+      className="relative flex flex-col justify-center overflow-hidden"
       style={{
-        paddingTop: 'calc(var(--s-32) + 64px)',
-        paddingBottom: 'var(--s-24)',
-        borderBottom: '1px solid var(--border)',
+        minHeight: '100vh',
+        paddingTop: '96px',
+        paddingBottom: '80px',
       }}
+      aria-label="Introduction"
     >
-      <Container>
-        <div style={{ maxWidth: '760px' }}>
+      {/* Background subtle grid */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(118,107,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(118,107,255,0.04) 1px, transparent 1px)
+          `,
+          backgroundSize: '64px 64px',
+          maskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 100%)',
+        }}
+      />
 
-          {/* Eyebrow */}
-          <p
-            className="hero-animate"
-            style={{
-              '--delay': '0ms',
-              fontSize: 'var(--step--1)',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              fontFamily: 'var(--font-body)',
-              fontWeight: 500,
-              color: 'var(--muted)',
-              marginBottom: 'var(--s-6)',
-            } as React.CSSProperties}
+      {/* Glow */}
+      <div
+        aria-hidden="true"
+        className="absolute pointer-events-none"
+        style={{
+          top: '20%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '600px',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(118,107,255,0.08) 0%, transparent 70%)',
+        }}
+      />
+
+      <Container className="relative z-10">
+        <div className="max-w-3xl">
+          {/* Index label */}
+          <motion.div
+            custom={0}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="mb-6"
           >
-            Fabrice Liut — Associé Opérationnel &amp; Stratégique
-          </p>
+            <span className="index-label">Fabrice Liut — Associé Opérationnel & Stratégique</span>
+          </motion.div>
 
           {/* H1 */}
-          <h1
-            className="hero-animate"
-            style={{
-              '--delay': '80ms',
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'var(--step-5)',
-              fontWeight: 700,
-              lineHeight: 1.12,
-              letterSpacing: '-0.03em',
-              color: 'var(--text)',
-              marginBottom: 'var(--s-12)',
-              textWrap: 'balance',
-            } as React.CSSProperties}
+          <motion.h1
+            custom={1}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            style={{ color: 'var(--text)' }}
+            className="mb-6"
           >
-            J'accompagne des dirigeants de PME&nbsp;&amp;&nbsp;PMI{' '}
-            <em style={{ color: 'var(--accent)' }}>dans la structuration de leur entreprise.</em>
-          </h1>
-
-          {/* Stat cinématique x4.5 */}
-          <div
-            className="hero-animate"
-            style={{
-              '--delay': '160ms',
-              display: 'flex',
-              alignItems: 'baseline',
-              gap: 'var(--s-4)',
-              marginBottom: 'var(--s-4)',
-              paddingBottom: 'var(--s-8)',
-              borderBottom: '1px solid var(--border)',
-            } as React.CSSProperties}
-          >
-            <span
-              ref={statRef}
-              data-stat
-              aria-label="Retour x4,5"
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'var(--step-6)',
-                fontWeight: 700,
-                color: 'var(--accent)',
-                lineHeight: 1,
-                fontVariantNumeric: 'tabular-nums',
-              }}
-            >
-              x0,0
-            </span>
-            <p
-              style={{
-                fontSize: 'var(--step-0)',
-                color: 'var(--muted)',
-                lineHeight: 1.4,
-                maxWidth: '220px',
-                margin: 0,
-              }}
-            >
-              retour moyen observé sur +150 organisations accompagnées
-            </p>
-          </div>
-
-          {/* Supporting stats */}
-          <div
-            className="hero-animate"
-            style={{
-              '--delay': '200ms',
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 'var(--s-6)',
-              marginBottom: 'var(--s-12)',
-            } as React.CSSProperties}
-          >
-            {[
-              { value: '+15 ans', label: 'de terrain' },
-              { value: '10–90', label: 'salariés' },
-              { value: 'Lyon', label: 'basé, déplacements France' },
-            ].map((s) => (
-              <div key={s.value} style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--s-2)' }}>
-                <span
-                  data-stat
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: 'var(--step-2)',
-                    fontWeight: 700,
-                    color: 'var(--text)',
-                    fontVariantNumeric: 'tabular-nums',
-                  }}
-                >
-                  {s.value}
-                </span>
-                <span style={{ fontSize: 'var(--step--1)', color: 'var(--muted)' }}>
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
+            J'accompagne des dirigeants de PME & PMI{' '}
+            <span style={{ color: 'var(--primary)' }}>dans la structuration de leur entreprise.</span>
+          </motion.h1>
 
           {/* Subtext */}
-          <p
-            className="hero-animate"
-            style={{
-              '--delay': '280ms',
-              fontSize: 'var(--step-1)',
-              color: 'var(--muted)',
-              lineHeight: 1.65,
-              maxWidth: '520px',
-              marginBottom: 'var(--s-10)',
-            } as React.CSSProperties}
+          <motion.p
+            custom={2}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="text-lg mb-10 max-w-xl"
+            style={{ color: 'var(--muted)' }}
           >
-            Basé à Lyon, je viens sur place, j'écoute ce qui coince, et on avance ensemble.
-            Vous me dites ce qui bloque. J'observe, je mets en place. On teste, on ajuste, on continue.
-          </p>
+            Basé à Lyon, je viens sur place, j'écoute ce qui coince,
+            et on avance ensemble. Vous me dites ce qui bloque.
+            J'observe, je mets en place. On teste, on ajuste, on continue.
+          </motion.p>
 
           {/* CTAs */}
-          <div
-            className="hero-animate"
-            style={{
-              '--delay': '360ms',
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 'var(--s-4)',
-            } as React.CSSProperties}
+          <motion.div
+            custom={3}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-wrap gap-4 mb-16"
           >
             <a
               href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
@@ -198,24 +113,55 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <rect x="2" y="3" width="12" height="11" rx="2" stroke="currentColor" strokeWidth="1.4"/>
-                <path d="M5 1.5V4.5M11 1.5V4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-                <path d="M2 7h12" stroke="currentColor" strokeWidth="1.4"/>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="2" y="3" width="12" height="11" rx="2" stroke="white" strokeWidth="1.3"/>
+                <path d="M5 1.5V4.5M11 1.5V4.5" stroke="white" strokeWidth="1.3" strokeLinecap="round"/>
+                <path d="M2 7h12" stroke="white" strokeWidth="1.3"/>
               </svg>
               Prendre 45 min
             </a>
-            <Link to="/entreprises" className="btn-secondary">
+            <Link
+              to="/entreprises"
+              className="btn-secondary"
+            >
               Découvrir le programme
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
-          </div>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            custom={4}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          >
+            {STATS.map((stat, i) => (
+              <div
+                key={i}
+                className="card-base p-4"
+                style={{ background: 'var(--surface)', textAlign: 'center' }}
+              >
+                <div style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '1.4rem',
+                  fontWeight: 700,
+                  color: 'var(--primary)',
+                  letterSpacing: '-0.03em',
+                }}>
+                  {stat.value}
+                </div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--muted)', marginTop: '4px' }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </Container>
     </section>
   );
 }
-
-
