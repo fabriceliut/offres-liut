@@ -76,7 +76,6 @@ export default function Hero() {
             style={{
               '--delay': '80ms',
               fontFamily: 'var(--font-display)',
-              fontStyle: 'italic',
               fontSize: 'var(--step-5)',
               fontWeight: 700,
               lineHeight: 1.12,
@@ -109,7 +108,6 @@ export default function Hero() {
               aria-label="Retour x4,5"
               style={{
                 fontFamily: 'var(--font-display)',
-                fontStyle: 'italic',
                 fontSize: 'var(--step-6)',
                 fontWeight: 700,
                 color: 'var(--accent)',
@@ -153,7 +151,6 @@ export default function Hero() {
                   data-stat
                   style={{
                     fontFamily: 'var(--font-display)',
-                    fontStyle: 'italic',
                     fontSize: 'var(--step-2)',
                     fontWeight: 700,
                     color: 'var(--ink)',

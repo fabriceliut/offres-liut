@@ -57,7 +57,6 @@ export default function HowWeWork() {
             >
               <div style={{
                 fontFamily: 'var(--font-display)',
-                fontStyle: 'italic',
                 fontSize: 'var(--step-4)',
                 color: 'var(--accent)',
                 opacity: 0.4,

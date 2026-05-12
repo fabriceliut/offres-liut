@@ -56,7 +56,6 @@ export default function Situations() {
             >
               <div style={{
                 fontFamily: 'var(--font-display)',
-                fontStyle: 'italic',
                 fontSize: 'var(--step-3)',
                 color: 'var(--ink-muted)',
                 opacity: 0.3,
@@ -73,7 +72,6 @@ export default function Situations() {
               <div style={{
                 fontSize: 'var(--step--1)',
                 color: 'var(--accent)',
-                fontStyle: 'italic',
                 paddingTop: 'var(--s-3)',
                 borderTop: '1px solid var(--rule)',
               }}>

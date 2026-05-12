@@ -272,7 +272,6 @@ function LogoText() {
   return (
     <span style={{
       fontFamily: 'var(--font-display)',
-      fontStyle: 'italic',
       fontWeight: 700,
       fontSize: '1rem',
       letterSpacing: '-0.03em',

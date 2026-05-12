@@ -1,64 +1,62 @@
 :root {
-  color-scheme: light dark;
+  /* ── Couleurs originales — fond sombre, violet ── */
+  --bg:          #07070A;
+  --bg-elevated: #0D0D14;
+  --ink:         #F4F5FF;
+  --ink-muted:   rgba(244, 245, 255, 0.72);
+  --accent:      #766BFF;
+  --rule:        rgba(244, 245, 255, 0.10);
 
-    /* ── Couleurs oklch — light + dark via light-dark() ── */
-    --bg:          light-dark(oklch(98% 0.005 80),  oklch(14% 0.01 250));
-    --bg-elevated: light-dark(oklch(100% 0 0),      oklch(18% 0.015 250));
-    --ink:         light-dark(oklch(18% 0.02 250),  oklch(96% 0.005 80));
-    --ink-muted:   light-dark(oklch(45% 0.015 250), oklch(70% 0.01 80));
-    --accent:      light-dark(oklch(55% 0.18 28),   oklch(72% 0.16 28)); /* terre cuite */
-    --rule:        light-dark(oklch(88% 0.005 80),  oklch(28% 0.01 250));
+  /* ── Aliases backward-compat ── */
+  --surface:       var(--bg-elevated);
+  --surface2:      #121225;
+  --text:          var(--ink);
+  --muted:         var(--ink-muted);
+  --primary:       var(--accent);
+  --border:        var(--rule);
+  --border-strong: rgba(118, 107, 255, 0.35);
+  --success:       #39D98A;
+  --warning:       #FFB020;
 
-    /* ── Typographie — Fraunces display + Inter body ── */
-    --font-display: "Fraunces Variable", "Fraunces", "Times New Roman", serif;
-    --font-body:    "Inter Variable", "Inter", system-ui, sans-serif;
-    --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+  /* ── Typographie — Space Grotesk + Inter ── */
+  --font-display: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+  --font-heading: var(--font-display);
 
-    /* ── Échelle modulaire 1.25 (clamp fluid) ── */
-    --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.94rem);
-    --step-0:  clamp(1rem,    0.95rem + 0.25vw, 1.13rem);
-    --step-1:  clamp(1.25rem, 1.15rem + 0.5vw,  1.5rem);
-    --step-2:  clamp(1.56rem, 1.4rem + 0.8vw,   2rem);
-    --step-3:  clamp(1.95rem, 1.7rem + 1.25vw,  2.66rem);
-    --step-4:  clamp(2.44rem, 2.0rem + 2vw,     3.55rem);
-    --step-5:  clamp(3.05rem, 2.4rem + 3vw,     4.73rem);
-    --step-6:  clamp(3.81rem, 2.8rem + 5vw,     6.31rem);
+  /* ── Échelle modulaire 1.25 (clamp fluid) ── */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.94rem);
+  --step-0:  clamp(1rem,    0.95rem + 0.25vw, 1.13rem);
+  --step-1:  clamp(1.25rem, 1.15rem + 0.5vw,  1.5rem);
+  --step-2:  clamp(1.56rem, 1.4rem + 0.8vw,   2rem);
+  --step-3:  clamp(1.95rem, 1.7rem + 1.25vw,  2.66rem);
+  --step-4:  clamp(2.44rem, 2.0rem + 2vw,     3.55rem);
+  --step-5:  clamp(3.05rem, 2.4rem + 3vw,     4.73rem);
+  --step-6:  clamp(3.81rem, 2.8rem + 5vw,     6.31rem);
 
-    /* ── Espacement 4pt ── */
-    --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
-    --s-6: 1.5rem;   --s-8: 2rem;     --s-12: 3rem;    --s-16: 4rem;
-    --s-24: 6rem;    --s-32: 8rem;
+  /* ── Espacement 4pt ── */
+  --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
+  --s-6: 1.5rem;   --s-8: 2rem;     --s-12: 3rem;    --s-16: 4rem;
+  --s-24: 6rem;    --s-32: 8rem;
 
-    /* ── Easing ── */
-    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-    --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
-    --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* ── Easing ── */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    /* ── Layout ── */
-    --max-width: 1280px;
-    --gutter: 24px;
-    --spacing-section-v: 6rem;
-    --spacing-section-v-mobile: 4rem;
+  /* ── Layout ── */
+  --max-width: 1200px;
+  --gutter: 24px;
+  --spacing-section-v: 112px;
+  --spacing-section-v-mobile: 64px;
 
-    /* ── Radi & ombres ── */
-    --r-card: 6px;
-    --r-pill: 999px;
-    --r-modal: 8px;
-    --sh-card: 0 1px 2px light-dark(oklch(80% 0.005 80 / 0.15), rgba(0,0,0,0.4)),
-               0 4px 16px light-dark(oklch(80% 0.005 80 / 0.08), rgba(0,0,0,0.35));
-    --sh-elevate: 0 2px 4px light-dark(oklch(80% 0.005 80 / 0.12), rgba(0,0,0,0.5)),
-                  0 12px 32px light-dark(oklch(80% 0.005 80 / 0.1), rgba(0,0,0,0.5));
-
-    /* ── Backward-compat aliases (composants existants) ── */
-    --surface:      var(--bg-elevated);
-    --surface2:     light-dark(oklch(95% 0.008 80), oklch(22% 0.015 250));
-    --text:         var(--ink);
-    --muted:        var(--ink-muted);
-    --primary:      var(--accent);
-    --border:       var(--rule);
-    --border-strong: light-dark(oklch(55% 0.18 28 / 0.35), oklch(72% 0.16 28 / 0.35));
-    --font-heading: var(--font-display);
-    --sh-inset:     inset 0 1px 0 light-dark(rgba(0,0,0,0.04), rgba(255,255,255,0.06));
+  /* ── Radii & ombres ── */
+  --r-card: 18px;
+  --r-pill: 999px;
+  --r-modal: 24px;
+  --sh-card:    0 1px 0 rgba(255,255,255,0.04), 0 12px 30px rgba(0,0,0,0.55);
+  --sh-elevate: 0 2px 0 rgba(255,255,255,0.05), 0 18px 60px rgba(0,0,0,0.60);
+  --sh-inset:   inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .num, time, [data-stat] { font-variant-numeric: tabular-nums; }
