@@ -87,7 +87,8 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--primary);
   background: rgba(118,107,255,0.08);
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
 }
 
 /* Card base */

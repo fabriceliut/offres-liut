@@ -69,7 +69,7 @@ export default function Hero() {
             animate="visible"
             className="mb-6"
           >
-            <span className="index-label">Fabrice Liut — Associé Opérationnel & Stratégique</span>
+            <span className="index-label">Associé Opérationnel & Stratégique</span>
           </motion.div>
 
           {/* H1 */}
