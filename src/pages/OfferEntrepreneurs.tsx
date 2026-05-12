@@ -6,28 +6,28 @@ import IndexLabel from '../components/IndexLabel';
 
 
 const PAIN_POINTS = [
-  "Sans vous, rien n'avance. Vous \u00eates le goulot d'\u00e9tranglement de votre propre entreprise.",
-  "Vous passez 70% de votre temps dans l'op\u00e9rationnel au lieu de piloter la strat\u00e9gie et le d\u00e9veloppement.",
-  "Vos informations sont \u00e9parpill\u00e9es : emails, carnets, fichiers, WhatsApp. Impossible d'avoir une vue d'ensemble.",
-  "D\u00e9l\u00e9guer est compliqu\u00e9 : vos collaborateurs n'ont pas les bonnes infos, alors vous reprenez la main.",
-  "Le reporting vous prend des heures \u2014 et il est d\u00e9j\u00e0 obsol\u00e8te quand vous le finissez.",
+  "Sans vous, rien n'avance. Vous êtes le goulot d'étranglement de votre propre entreprise.",
+  "Vous passez 70% de votre temps dans l'opérationnel au lieu de piloter la stratégie et le développement.",
+  "Vos informations sont éparpillées : emails, carnets, fichiers, WhatsApp. Impossible d'avoir une vue d'ensemble.",
+  "Déléguer est compliqué : vos collaborateurs n'ont pas les bonnes infos, alors vous reprenez la main.",
+  "Le reporting vous prend des heures — et il est déjà obsolète quand vous le finissez.",
 ];
 
 const BENEFITS = [
-  { value: '6-8h', label: "r\u00e9cup\u00e9r\u00e9es par semaine sur l'op\u00e9rationnel" },
-  { value: '360\u00b0', label: "vue d'ensemble en temps r\u00e9el sur votre activit\u00e9" },
-  { value: '\u00d72', label: "capacit\u00e9 de d\u00e9l\u00e9gation effective" },
+  { value: '6-8h', label: "récupérées par semaine sur l'opérationnel" },
+  { value: '360°', label: "vue d'ensemble en temps réel sur votre activité" },
+  { value: '×2', label: "capacité de délégation effective" },
 ];
 
 const PROGRAM_STEPS = [
-  { title: "Audit de votre pilotage", desc: "On cartographie votre r\u00e9alit\u00e9 : comment circule l'information, o\u00f9 vous perdez du temps, ce qui d\u00e9pend trop de vous. Sans filtre." },
-  { title: "Priorisation des leviers", desc: "On identifie les 20% de changements qui vont lib\u00e9rer 80% de votre charge. On priorise par impact et facilit\u00e9." },
-  { title: "Design du cockpit", desc: "On dessine ensemble votre syst\u00e8me de pilotage id\u00e9al : suivi projets, d\u00e9cisions, \u00e9quipes, indicateurs. Sur papier d'abord." },
-  { title: "Construction sur Notion", desc: "Je construis votre cockpit sur Notion. Tableaux de bord, suivi de projets, syst\u00e8me de d\u00e9l\u00e9gation, bases de connaissances. Je fais le gros du technique." },
-  { title: "Mise en route & formation", desc: "On bascule vers votre nouveau syst\u00e8me. Je vous forme et je forme vos managers proches pour que le syst\u00e8me vive au quotidien." },
-  { title: "It\u00e9rations terrain", desc: "On ajuste selon l'usage r\u00e9el. Ce qui marche, on garde. Ce qui coince, on simplifie. Le syst\u00e8me s'adapte \u00e0 vous, pas l'inverse." },
-  { title: "Structuration de la d\u00e9l\u00e9gation", desc: "On met en place les flux pour que vos collaborateurs aient l'info sans vous solliciter. Votre pr\u00e9sence devient strat\u00e9gique, pas op\u00e9rationnelle." },
-  { title: "P\u00e9rennisation", desc: "On s'assure que le syst\u00e8me tient sans moi. Vous \u00eates autonome. Votre entreprise peut tourner m\u00eame quand vous n'\u00eates pas l\u00e0." },
+  { title: "Audit de votre pilotage", desc: "On cartographie votre réalité : comment circule l'information, où vous perdez du temps, ce qui dépend trop de vous. Sans filtre." },
+  { title: "Priorisation des leviers", desc: "On identifie les 20% de changements qui vont libérer 80% de votre charge. On priorise par impact et facilité." },
+  { title: "Design du cockpit", desc: "On dessine ensemble votre système de pilotage idéal : suivi projets, décisions, équipes, indicateurs. Sur papier d'abord." },
+  { title: "Construction sur Notion", desc: "Je construis votre cockpit sur Notion. Tableaux de bord, suivi de projets, système de délégation, bases de connaissances. Je fais le gros du technique." },
+  { title: "Mise en route & formation", desc: "On bascule vers votre nouveau système. Je vous forme et je forme vos managers proches pour que le système vive au quotidien." },
+  { title: "Itérations terrain", desc: "On ajuste selon l'usage réel. Ce qui marche, on garde. Ce qui coince, on simplifie. Le système s'adapte à vous, pas l'inverse." },
+  { title: "Structuration de la délégation", desc: "On met en place les flux pour que vos collaborateurs aient l'info sans vous solliciter. Votre présence devient stratégique, pas opérationnelle." },
+  { title: "Pérennisation", desc: "On s'assure que le système tient sans moi. Vous êtes autonome. Votre entreprise peut tourner même quand vous n'êtes pas là." },
 ];
 
 export default function OfferEntrepreneurs() {
@@ -114,7 +114,7 @@ export default function OfferEntrepreneurs() {
                 <p className="mb-4" style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}>
                   {"Un accompagnement sur "}
                   <span style={{ color: 'var(--primary)', fontWeight: 600 }}>6 mois</span>
-                  {" pour structurer votre pilotage. Vue d'ensemble, d\u00e9l\u00e9gation, temps lib\u00e9r\u00e9."}
+                  {" pour structurer votre pilotage. Vue d'ensemble, délégation, temps libéré."}
                 </p>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
                   {"Le tout sur "}
@@ -162,11 +162,11 @@ export default function OfferEntrepreneurs() {
 
               <div className="flex flex-col gap-4">
                 {[
-                  { title: "Tableau de bord strat\u00e9gique", desc: "Vue en temps r\u00e9el sur vos projets, vos indicateurs cl\u00e9s, et l'avancement de vos \u00e9quipes. Plus besoin de demander o\u00f9 on en est." },
-                  { title: "Syst\u00e8me de d\u00e9l\u00e9gation structur\u00e9", desc: "Chaque t\u00e2che d\u00e9l\u00e9gu\u00e9e a un responsable, un d\u00e9lai, un suivi. Vos collaborateurs savent quoi faire sans vous solliciter." },
-                  { title: "Base de connaissances centralis\u00e9e", desc: "Process, d\u00e9cisions, comptes-rendus, contacts cl\u00e9s : tout est au m\u00eame endroit. Finie la perte d'information." },
-                  { title: "Gestion de projets simplifi\u00e9e", desc: "Suivi de vos chantiers en cours avec les jalons et les d\u00e9pendances. Vous voyez d'un coup d'\u0153il ce qui avance et ce qui bloque." },
-                  { title: "Reporting automatis\u00e9", desc: "Les indicateurs se mettent \u00e0 jour automatiquement. Le reporting mensuel qui prenait 2 jours se fait en temps r\u00e9el." },
+                  { title: "Tableau de bord stratégique", desc: "Vue en temps réel sur vos projets, vos indicateurs clés, et l'avancement de vos équipes. Plus besoin de demander où on en est." },
+                  { title: "Système de délégation structuré", desc: "Chaque tâche déléguée a un responsable, un délai, un suivi. Vos collaborateurs savent quoi faire sans vous solliciter." },
+                  { title: "Base de connaissances centralisée", desc: "Process, décisions, comptes-rendus, contacts clés : tout est au même endroit. Finie la perte d'information." },
+                  { title: "Gestion de projets simplifiée", desc: "Suivi de vos chantiers en cours avec les jalons et les dépendances. Vous voyez d'un coup d'œil ce qui avance et ce qui bloque." },
+                  { title: "Reporting automatisé", desc: "Les indicateurs se mettent à jour automatiquement. Le reporting mensuel qui prenait 2 jours se fait en temps réel." },
                 ].map((item, i) => (
                   <div
                     key={i}
@@ -194,11 +194,11 @@ export default function OfferEntrepreneurs() {
             >
               <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>{"L'investissement"}</h2>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
-                {"13 000\u20ac"}
+                {"13 000€"}
               </div>
               <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
                 {"10 jours de travail effectif sur 6 mois"}
-                <br />{"Payable en 3 fois, \u00e0 chaque \u00e9tape valid\u00e9e ensemble"}
+                <br />{"Payable en 3 fois, à chaque étape validée ensemble"}
               </p>
             </div>
           </Container>
@@ -214,7 +214,7 @@ export default function OfferEntrepreneurs() {
                 <IndexLabel text="ROI — Sans blabla" />
               </div>
               <h2 className="mb-6" style={{ color: 'var(--text)' }}>
-                {"Est-ce que \u00e7a "}
+                {"Est-ce que ça "}
                 <span style={{ color: 'var(--primary)' }}>vaut le coup ?</span>
               </h2>
 
@@ -276,16 +276,16 @@ export default function OfferEntrepreneurs() {
 
               {/* Format */}
               <div className="card-base p-5 mb-8" style={{ background: 'var(--surface2)' }}>
-                <h3 className="mb-4" style={{ color: 'var(--primary)', fontSize: '1rem' }}>{"Format adapt\u00e9 \u00e0 votre agenda de dirigeant"}</h3>
+                <h3 className="mb-4" style={{ color: 'var(--primary)', fontSize: '1rem' }}>{"Format adapté à votre agenda de dirigeant"}</h3>
                 <div className="flex flex-col gap-3">
                   <div style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
-                    <strong style={{ color: 'var(--text)' }}>{"Sessions de 1 \u00e0 2h"}</strong>{" \u2014 En pr\u00e9sentiel ou \u00e0 distance, selon votre planning"}
+                    <strong style={{ color: 'var(--text)' }}>{"Sessions de 1 à 2h"}</strong>{" — En présentiel ou à distance, selon votre planning"}
                   </div>
                   <div style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65, borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
-                    <strong style={{ color: 'var(--text)' }}>{"Workshops demi-journ\u00e9e"}</strong>{" \u2014 Pour les mises en place structurantes et la formation de vos managers"}
+                    <strong style={{ color: 'var(--text)' }}>{"Workshops demi-journée"}</strong>{" — Pour les mises en place structurantes et la formation de vos managers"}
                   </div>
                   <div style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65, borderTop: '1px solid var(--border)', paddingTop: '12px' }}>
-                    <strong style={{ color: 'var(--text)' }}>Travail asynchrone</strong>{" \u2014 Je construis le syst\u00e8me, vous validez, on affine"}
+                    <strong style={{ color: 'var(--text)' }}>Travail asynchrone</strong>{" — Je construis le système, vous validez, on affine"}
                   </div>
                 </div>
               </div>
@@ -321,16 +321,16 @@ export default function OfferEntrepreneurs() {
               </div>
               <div className="card-base p-5" style={{ borderLeft: '3px solid var(--primary)' }}>
                 <p className="mb-4" style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                  {"Notion est l'outil le plus adapt\u00e9 pour construire un cockpit de direction sur-mesure. Il est "}
+                  {"Notion est l'outil le plus adapté pour construire un cockpit de direction sur-mesure. Il est "}
                   <strong style={{ color: 'var(--text)' }}>flexible</strong>
                   {" (on construit exactement ce dont vous avez besoin), "}
-                  <strong style={{ color: 'var(--text)' }}>{"\u00e9volutif"}</strong>
-                  {" (le syst\u00e8me grandit avec votre entreprise), et "}
+                  <strong style={{ color: 'var(--text)' }}>{"évolutif"}</strong>
+                  {" (le système grandit avec votre entreprise), et "}
                   <strong style={{ color: 'var(--text)' }}>partageable</strong>
-                  {" (vos managers y acc\u00e8dent facilement)."}
+                  {" (vos managers y accèdent facilement)."}
                 </p>
                 <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                  {"Pas besoin d'\u00eatre technique. Quand c'est bien con\u00e7u, c'est aussi simple qu'un tableur \u2014 mais infiniment plus puissant."}
+                  {"Pas besoin d'être technique. Quand c'est bien conçu, c'est aussi simple qu'un tableur — mais infiniment plus puissant."}
                 </p>
               </div>
             </div>
@@ -362,11 +362,11 @@ export default function OfferEntrepreneurs() {
                   {"Prendre 45 min"}
                 </a>
                 <Link to="/" className="btn-secondary" style={{ fontSize: '1rem', padding: '15px 28px' }}>
-                  {"← Retour \u00e0 l'accueil"}
+                  {"← Retour à l'accueil"}
                 </Link>
               </div>
               <p style={{ fontSize: '0.82rem', color: 'var(--muted)', opacity: 0.7 }}>
-                {"Pas s\u00fbr ? Pas grave. On \u00e9change, on voit si \u00e7a colle. Si ce n'est pas le bon moment, on se le dit."}
+                {"Pas sûr ? Pas grave. On échange, on voit si ça colle. Si ce n'est pas le bon moment, on se le dit."}
               </p>
             </div>
           </Container>

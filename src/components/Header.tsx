@@ -4,15 +4,15 @@ import Container from './Container';
 import { useActiveSection, scrollToSection } from '../lib/anchors';
 
 const NAV_ITEMS = [
-  { label: 'M\u00e9thode', id: 'methode' },
+  { label: 'Méthode', id: 'methode' },
   { label: 'Piliers', id: 'piliers' },
   { label: 'Situations', id: 'situations' },
-  { label: 'T\u00e9moignages', id: 'temoignages' },
+  { label: 'Témoignages', id: 'temoignages' },
 ];
 
 const OFFER_LINKS = [
   { label: 'Offre Dirigeant', to: '/entrepreneurs' },
-  { label: 'Int\u00e9gration IA', to: '/ia' },
+  { label: 'Intégration IA', to: '/ia' },
 ];
 
 const SECTION_IDS = NAV_ITEMS.map(n => n.id);
@@ -63,7 +63,7 @@ export default function Header() {
               <LogoText />
             </button>
           ) : (
-            <Link to="/" className="flex items-center gap-2" aria-label="Retour \u00e0 l'accueil">
+            <Link to="/" className="flex items-center gap-2" aria-label="Retour à l'accueil">
               <LogoMark />
               <LogoText />
             </Link>
@@ -121,7 +121,7 @@ export default function Header() {
                 className="px-3 py-1.5 text-sm transition-colors duration-150"
                 style={{ fontFamily: 'var(--font-body)', fontWeight: 500, color: 'var(--ink-muted)', fontSize: 'var(--step--1)' }}
               >
-                \u2190 Accueil
+                ← Accueil
               </Link>
             </nav>
           )}
@@ -210,7 +210,7 @@ export default function Header() {
                     className="px-3 py-2.5 rounded transition-colors duration-150"
                     style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step-0)', color: 'var(--accent)' }}
                   >
-                    {link.label} \u2192
+                    {link.label} →
                   </Link>
                 ))}
               </>
@@ -222,7 +222,7 @@ export default function Header() {
                   className="px-3 py-2.5 rounded transition-colors duration-150"
                   style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 'var(--step-0)', color: 'var(--ink)' }}
                 >
-                  \u2190 Retour \u00e0 l\u2019accueil
+                  ← Retour à l’accueil
                 </Link>
                 <div className="my-2" style={{ borderTop: '1px solid var(--rule)' }} />
                 {OFFER_LINKS.map((link) => (
@@ -233,7 +233,7 @@ export default function Header() {
                     className="px-3 py-2.5 rounded transition-colors duration-150"
                     style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step-0)', color: 'var(--accent)' }}
                   >
-                    {link.label} \u2192
+                    {link.label} →
                   </Link>
                 ))}
               </>

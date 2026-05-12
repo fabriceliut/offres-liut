@@ -15,12 +15,12 @@ export default function FinalCTA() {
       <Container>
         <div className="reveal max-w-2xl mx-auto text-center">
           <div className="mb-6 flex justify-center">
-            <span className="index-label">06 \u2014 Commen\u00e7ons</span>
+            <span className="index-label">06 — Commençons</span>
           </div>
 
           <h2 className="mb-5" style={{ color: 'var(--ink)' }}>
             On prend{' '}
-            <em style={{ color: 'var(--accent)' }}>45 minutes ensemble\u00a0?</em>
+            <em style={{ color: 'var(--accent)' }}>45 minutes ensemble ?</em>
           </h2>
 
           <p className="mb-8" style={{ color: 'var(--ink-muted)', fontSize: 'var(--step-0)' }}>
@@ -37,15 +37,15 @@ export default function FinalCTA() {
             }}
           >
             <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step--1)', color: 'var(--ink)', marginBottom: 'var(--s-3)' }}>
-              Deux conditions pour que \u00e7a fonctionne bien\u00a0:
+              Deux conditions pour que ça fonctionne bien :
             </p>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--s-2)', fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, marginBottom: 'var(--s-2)' }}>
-              <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>\u2192</span>
+              <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>→</span>
               Vous gardez le lead sur votre entreprise
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--s-2)', fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65 }}>
-              <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>\u2192</span>
-              Vous \u00eates pr\u00eat \u00e0 arr\u00eater ce qui ne marche plus
+              <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>→</span>
+              Vous êtes prêt à arrêter ce qui ne marche plus
             </div>
           </div>
 
@@ -72,7 +72,7 @@ export default function FinalCTA() {
           </div>
 
           <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', fontStyle: 'italic' }}>
-            Bas\u00e9 \u00e0 Lyon \u2014 D\u00e9placements France
+            Basé à Lyon — Déplacements France
           </p>
         </div>
       </Container>

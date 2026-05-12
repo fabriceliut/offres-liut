@@ -4,12 +4,12 @@ import IndexLabel from './IndexLabel';
 const DIFFERENTIATIONS = [
   {
     label: 'Mon approche',
-    desc: "Je viens sur le terrain, je comprends vos flux de l\u2019int\u00e9rieur, et on co-construit ensemble ce qui manque. Pas un plan fig\u00e9, mais des ajustements concrets qu\u2019on teste et qu\u2019on am\u00e9liore.",
+    desc: "Je viens sur le terrain, je comprends vos flux de l’intérieur, et on co-construit ensemble ce qui manque. Pas un plan figé, mais des ajustements concrets qu’on teste et qu’on améliore.",
     accent: true,
   },
   {
     label: 'Conseil classique',
-    desc: "Diagnostic g\u00e9n\u00e9rique, recommandations th\u00e9oriques, peu d\u2019appropriation par les \u00e9quipes. Le rapport finit dans un tiroir.",
+    desc: "Diagnostic générique, recommandations théoriques, peu d’appropriation par les équipes. Le rapport finit dans un tiroir.",
     accent: false,
   },
 ];
@@ -23,17 +23,17 @@ export default function DesignOrg() {
       <Container>
         <div className="max-w-3xl mx-auto">
           <div className="reveal mb-4">
-            <IndexLabel text="01 \u2014 La m\u00e9thode" />
+            <IndexLabel text="01 — La méthode" />
           </div>
 
           <h2 className="reveal mb-5" style={{ color: 'var(--ink)' }}>
             Ce que je fais,{' '}
-            <em style={{ color: 'var(--accent)' }}>conc\u00e8tement</em>
+            <em style={{ color: 'var(--accent)' }}>concètement</em>
           </h2>
 
           <p className="reveal text-base mb-10" style={{ color: 'var(--ink-muted)', maxWidth: '580px' }}>
-            J\u2019appelle \u00e7a le Design Organisationnel. En pratique\u00a0: je regarde comment
-            votre entreprise fonctionne vraiment, et on ajuste ce qui coince \u2014 avec vos \u00e9quipes,
+            J’appelle ça le Design Organisationnel. En pratique : je regarde comment
+            votre entreprise fonctionne vraiment, et on ajuste ce qui coince — avec vos équipes,
             pas dans un rapport que personne ne lit.
           </p>
 

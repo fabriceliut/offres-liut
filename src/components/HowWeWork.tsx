@@ -10,15 +10,15 @@ const STEPS = [
   },
   {
     num: '02',
-    title: 'Je viens, j\u2019observe',
-    desc: "2 \u00e0 3 jours sur place pour comprendre vos flux de l\u2019int\u00e9rieur. Interviews, observation terrain, cartographie de l\u2019existant. Un \u00e9tat des lieux pr\u00e9cis.",
-    duration: '2\u20133 jours',
+    title: 'Je viens, j’observe',
+    desc: "2 à 3 jours sur place pour comprendre vos flux de l’intérieur. Interviews, observation terrain, cartographie de l’existant. Un état des lieux précis.",
+    duration: '2–3 jours',
   },
   {
     num: '03',
     title: 'On teste, on ajuste, on continue',
-    desc: "On co-construit les ajustements. Pas un plan fig\u00e9 \u2014 des changements concrets qu\u2019on teste et qu\u2019on am\u00e9liore au fil de l\u2019eau. Vous gardez le lead.",
-    duration: '3\u20136 mois',
+    desc: "On co-construit les ajustements. Pas un plan figé — des changements concrets qu’on teste et qu’on améliore au fil de l’eau. Vous gardez le lead.",
+    duration: '3–6 mois',
   },
 ];
 
@@ -36,16 +36,16 @@ export default function HowWeWork() {
     >
       <Container>
         <div className="reveal mb-4">
-          <IndexLabel text="04 \u2014 D\u00e9roul\u00e9" />
+          <IndexLabel text="04 — Déroulé" />
         </div>
 
         <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
-          Comment \u00e7a{' '}
-          <em style={{ color: 'var(--accent)' }}>d\u00e9marre</em>
+          Comment ça{' '}
+          <em style={{ color: 'var(--accent)' }}>démarre</em>
         </h2>
 
         <p className="reveal mb-14 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
-          Pas de programme packag\u00e9. On avance pas \u00e0 pas, en commen\u00e7ant toujours par comprendre.
+          Pas de programme packagé. On avance pas à pas, en commençant toujours par comprendre.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">

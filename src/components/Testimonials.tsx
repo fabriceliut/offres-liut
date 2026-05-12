@@ -3,22 +3,22 @@ import IndexLabel from './IndexLabel';
 
 const TESTIMONIALS = [
   {
-    quote: "Un process terrain pass\u00e9 de 48h \u00e0 20 minutes par intervention. Fabrice a compris nos flux en 2 jours et a simplifi\u00e9 ce qui nous bloquait depuis des mois.",
+    quote: "Un process terrain passé de 48h à 20 minutes par intervention. Fabrice a compris nos flux en 2 jours et a simplifié ce qui nous bloquait depuis des mois.",
     author: 'BDR Therma',
     company: 'Industrie thermique',
-    result: '48h \u2192 20\u00a0min/intervention',
+    result: '48h → 20 min/intervention',
   },
   {
-    quote: "+3\u00a0185 heures r\u00e9cup\u00e9r\u00e9es par an en simplifiant la coordination. L\u2019investissement a \u00e9t\u00e9 rembours\u00e9 4,5 fois.",
+    quote: "+3 185 heures récupérées par an en simplifiant la coordination. L’investissement a été remboursé 4,5 fois.",
     author: 'Dirigeant',
     company: 'PME de services, 30 personnes',
     result: 'Retour x4,5',
   },
   {
-    quote: "+12\u00a0% de temps facturable, \u221212\u00a0% de d\u00e9lais, turn-over en baisse. On a clarifi\u00e9 les r\u00f4les et fluid le fonctionnement entre les \u00e9quipes.",
+    quote: "+12 % de temps facturable, −12 % de délais, turn-over en baisse. On a clarifié les rôles et fluid le fonctionnement entre les équipes.",
     author: 'Direction',
     company: 'PME IT, 90 personnes',
-    result: '+12\u00a0% temps facturable',
+    result: '+12 % temps facturable',
   },
 ];
 
@@ -30,16 +30,16 @@ export default function Testimonials() {
     >
       <Container>
         <div className="reveal mb-4">
-          <IndexLabel text="05 \u2014 Retours terrain" />
+          <IndexLabel text="05 — Retours terrain" />
         </div>
 
         <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
-          R\u00e9sultats{' '}
-          <em style={{ color: 'var(--accent)' }}>r\u00e9cents</em>
+          Résultats{' '}
+          <em style={{ color: 'var(--accent)' }}>récents</em>
         </h2>
 
         <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
-          Quelques exemples concrets de missions r\u00e9centes.
+          Quelques exemples concrets de missions récentes.
         </p>
 
         <div className="grid md:grid-cols-3 gap-5">
@@ -72,7 +72,7 @@ export default function Testimonials() {
                 margin: '0 0 var(--s-4)',
                 fontStyle: 'italic',
               }}>
-                \u00ab\u00a0{t.quote}\u00a0\u00bb
+                « {t.quote} »
               </blockquote>
 
               <footer style={{
