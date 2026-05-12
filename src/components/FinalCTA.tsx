@@ -8,8 +8,8 @@ export default function FinalCTA() {
       style={{
         paddingTop: 'var(--spacing-section-v)',
         paddingBottom: 'var(--spacing-section-v)',
-        background: 'var(--bg-elevated)',
-        borderTop: '1px solid var(--rule)',
+        background: 'var(--surface)',
+        borderTop: '1px solid var(--border)',
       }}
     >
       <Container>
@@ -18,12 +18,12 @@ export default function FinalCTA() {
             <span className="index-label">06 — Commençons</span>
           </div>
 
-          <h2 className="mb-5" style={{ color: 'var(--ink)' }}>
+          <h2 className="mb-5" style={{ color: 'var(--text)' }}>
             On prend{' '}
             <em style={{ color: 'var(--accent)' }}>45 minutes ensemble ?</em>
           </h2>
 
-          <p className="mb-8" style={{ color: 'var(--ink-muted)', fontSize: 'var(--step-0)' }}>
+          <p className="mb-8" style={{ color: 'var(--muted)', fontSize: 'var(--step-0)' }}>
             Vous posez le contexte. On identifie ce qui coince vraiment.
             Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.
           </p>
@@ -32,18 +32,18 @@ export default function FinalCTA() {
             className="mb-10 p-5 text-left max-w-md mx-auto"
             style={{
               background: 'var(--bg)',
-              border: '1px solid var(--rule)',
+              border: '1px solid var(--border)',
               borderRadius: 'var(--r-card)',
             }}
           >
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step--1)', color: 'var(--ink)', marginBottom: 'var(--s-3)' }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step--1)', color: 'var(--text)', marginBottom: 'var(--s-3)' }}>
               Deux conditions pour que ça fonctionne bien :
             </p>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--s-2)', fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, marginBottom: 'var(--s-2)' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--s-2)', fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65, marginBottom: 'var(--s-2)' }}>
               <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>→</span>
               Vous gardez le lead sur votre entreprise
             </div>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--s-2)', fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65 }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 'var(--s-2)', fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65 }}>
               <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>→</span>
               Vous êtes prêt à arrêter ce qui ne marche plus
             </div>
@@ -71,7 +71,7 @@ export default function FinalCTA() {
             </Link>
           </div>
 
-          <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', fontStyle: 'italic' }}>
+          <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', fontStyle: 'italic' }}>
             Basé à Lyon — Déplacements France
           </p>
         </div>

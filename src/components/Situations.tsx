@@ -39,11 +39,11 @@ export default function Situations() {
           <IndexLabel text="03 — Situations" />
         </div>
 
-        <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+        <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
           Vous vous reconnaissez ?
         </h2>
 
-        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
+        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--muted)' }}>
           Ce sont les situations les plus fréquentes que je rencontre.
         </p>
 
@@ -55,9 +55,9 @@ export default function Situations() {
               style={{ '--reveal-delay': `${i * 60}ms` } as React.CSSProperties}
             >
               <div style={{
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-heading)',
                 fontSize: 'var(--step-3)',
-                color: 'var(--ink-muted)',
+                color: 'var(--muted)',
                 opacity: 0.3,
                 lineHeight: 1,
                 marginBottom: 'var(--s-3)',
@@ -65,15 +65,15 @@ export default function Situations() {
               }}>
                 {s.num}
               </div>
-              <h3 style={{ color: 'var(--ink)', marginBottom: 'var(--s-3)', fontStyle: 'normal', fontSize: 'var(--step-1)' }}>{s.title}</h3>
-              <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, marginBottom: 'var(--s-4)' }}>
+              <h3 style={{ color: 'var(--text)', marginBottom: 'var(--s-3)', fontStyle: 'normal', fontSize: 'var(--step-1)' }}>{s.title}</h3>
+              <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65, marginBottom: 'var(--s-4)' }}>
                 {s.desc}
               </p>
               <div style={{
                 fontSize: 'var(--step--1)',
                 color: 'var(--accent)',
                 paddingTop: 'var(--s-3)',
-                borderTop: '1px solid var(--rule)',
+                borderTop: '1px solid var(--border)',
               }}>
                 Signal : {s.signal}
               </div>

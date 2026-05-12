@@ -29,9 +29,9 @@ export default function HowWeWork() {
       style={{
         paddingTop: 'var(--spacing-section-v)',
         paddingBottom: 'var(--spacing-section-v)',
-        background: 'var(--bg-elevated)',
-        borderTop: '1px solid var(--rule)',
-        borderBottom: '1px solid var(--rule)',
+        background: 'var(--surface)',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
       }}
     >
       <Container>
@@ -39,12 +39,12 @@ export default function HowWeWork() {
           <IndexLabel text="04 — Déroulé" />
         </div>
 
-        <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+        <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
           Comment ça{' '}
           <em style={{ color: 'var(--accent)' }}>démarre</em>
         </h2>
 
-        <p className="reveal mb-14 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
+        <p className="reveal mb-14 max-w-xl" style={{ color: 'var(--muted)' }}>
           Pas de programme packagé. On avance pas à pas, en commençant toujours par comprendre.
         </p>
 
@@ -56,7 +56,7 @@ export default function HowWeWork() {
               style={{ '--reveal-delay': `${i * 80}ms` } as React.CSSProperties}
             >
               <div style={{
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-heading)',
                 fontSize: 'var(--step-4)',
                 color: 'var(--accent)',
                 opacity: 0.4,
@@ -69,7 +69,7 @@ export default function HowWeWork() {
               <div style={{
                 display: 'inline-block',
                 padding: '3px 10px',
-                background: 'light-dark(oklch(55% 0.18 28 / 0.1), oklch(72% 0.16 28 / 0.15))',
+                background: 'oklch(72% 0.16 28 / 0.15)',
                 borderRadius: 'var(--r-pill)',
                 fontSize: 'var(--step--1)',
                 color: 'var(--accent)',
@@ -78,10 +78,10 @@ export default function HowWeWork() {
               }}>
                 {step.duration}
               </div>
-              <h3 style={{ color: 'var(--ink)', marginBottom: 'var(--s-3)', fontStyle: 'normal', fontSize: 'var(--step-1)' }}>
+              <h3 style={{ color: 'var(--text)', marginBottom: 'var(--s-3)', fontStyle: 'normal', fontSize: 'var(--step-1)' }}>
                 {step.title}
               </h3>
-              <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
                 {step.desc}
               </p>
             </div>

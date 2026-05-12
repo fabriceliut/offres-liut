@@ -47,7 +47,7 @@ export default function Hero() {
       style={{
         paddingTop: 'calc(var(--s-32) + 64px)',
         paddingBottom: 'var(--s-24)',
-        borderBottom: '1px solid var(--rule)',
+        borderBottom: '1px solid var(--border)',
       }}
     >
       <Container>
@@ -63,7 +63,7 @@ export default function Hero() {
               textTransform: 'uppercase',
               fontFamily: 'var(--font-body)',
               fontWeight: 500,
-              color: 'var(--ink-muted)',
+              color: 'var(--muted)',
               marginBottom: 'var(--s-6)',
             } as React.CSSProperties}
           >
@@ -75,12 +75,12 @@ export default function Hero() {
             className="hero-animate"
             style={{
               '--delay': '80ms',
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-heading)',
               fontSize: 'var(--step-5)',
               fontWeight: 700,
               lineHeight: 1.12,
               letterSpacing: '-0.03em',
-              color: 'var(--ink)',
+              color: 'var(--text)',
               marginBottom: 'var(--s-12)',
               textWrap: 'balance',
             } as React.CSSProperties}
@@ -99,7 +99,7 @@ export default function Hero() {
               gap: 'var(--s-4)',
               marginBottom: 'var(--s-4)',
               paddingBottom: 'var(--s-8)',
-              borderBottom: '1px solid var(--rule)',
+              borderBottom: '1px solid var(--border)',
             } as React.CSSProperties}
           >
             <span
@@ -107,7 +107,7 @@ export default function Hero() {
               data-stat
               aria-label="Retour x4,5"
               style={{
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-heading)',
                 fontSize: 'var(--step-6)',
                 fontWeight: 700,
                 color: 'var(--accent)',
@@ -120,7 +120,7 @@ export default function Hero() {
             <p
               style={{
                 fontSize: 'var(--step-0)',
-                color: 'var(--ink-muted)',
+                color: 'var(--muted)',
                 lineHeight: 1.4,
                 maxWidth: '220px',
                 margin: 0,
@@ -150,16 +150,16 @@ export default function Hero() {
                 <span
                   data-stat
                   style={{
-                    fontFamily: 'var(--font-display)',
+                    fontFamily: 'var(--font-heading)',
                     fontSize: 'var(--step-2)',
                     fontWeight: 700,
-                    color: 'var(--ink)',
+                    color: 'var(--text)',
                     fontVariantNumeric: 'tabular-nums',
                   }}
                 >
                   {s.value}
                 </span>
-                <span style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)' }}>
+                <span style={{ fontSize: 'var(--step--1)', color: 'var(--muted)' }}>
                   {s.label}
                 </span>
               </div>
@@ -172,7 +172,7 @@ export default function Hero() {
             style={{
               '--delay': '280ms',
               fontSize: 'var(--step-1)',
-              color: 'var(--ink-muted)',
+              color: 'var(--muted)',
               lineHeight: 1.65,
               maxWidth: '520px',
               marginBottom: 'var(--s-10)',

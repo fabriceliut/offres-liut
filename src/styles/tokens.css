@@ -1,68 +1,37 @@
 :root {
-  /* ── Couleurs originales — fond sombre, violet ── */
-  --bg:          #07070A;
-  --bg-elevated: #0D0D14;
-  --ink:         #F4F5FF;
-  --ink-muted:   rgba(244, 245, 255, 0.72);
-  --accent:      #766BFF;
-  --rule:        rgba(244, 245, 255, 0.10);
+  --bg: #07070A;
+  --surface: #0D0D14;
+  --surface2: #121225;
+  --text: #F4F5FF;
+  --muted: rgba(244, 245, 255, 0.72);
+  --primary: #766BFF;
+  --accent: #A79FFF;
+  --success: #39D98A;
+  --warning: #FFB020;
 
-  /* ── Aliases backward-compat ── */
-  --surface:       var(--bg-elevated);
-  --surface2:      #121225;
-  --text:          var(--ink);
-  --muted:         var(--ink-muted);
-  --primary:       var(--accent);
-  --border:        var(--rule);
+  --border: rgba(244, 245, 255, 0.10);
   --border-strong: rgba(118, 107, 255, 0.35);
-  --success:       #39D98A;
-  --warning:       #FFB020;
 
-  /* ── Typographie — Space Grotesk + Inter ── */
-  --font-display: "Space Grotesk Variable", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body:    "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
-  --font-heading: var(--font-display);
-
-  /* ── Échelle modulaire 1.25 (clamp fluid) ── */
-  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.94rem);
-  --step-0:  clamp(1rem,    0.95rem + 0.25vw, 1.13rem);
-  --step-1:  clamp(1.25rem, 1.15rem + 0.5vw,  1.5rem);
-  --step-2:  clamp(1.56rem, 1.4rem + 0.8vw,   2rem);
-  --step-3:  clamp(1.95rem, 1.7rem + 1.25vw,  2.66rem);
-  --step-4:  clamp(2.44rem, 2.0rem + 2vw,     3.55rem);
-  --step-5:  clamp(3.05rem, 2.4rem + 3vw,     4.73rem);
-  --step-6:  clamp(3.81rem, 2.8rem + 5vw,     6.31rem);
-
-  /* ── Espacement 4pt ── */
-  --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
-  --s-6: 1.5rem;   --s-8: 2rem;     --s-12: 3rem;    --s-16: 4rem;
-  --s-24: 6rem;    --s-32: 8rem;
-
-  /* ── Easing ── */
-  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
-
-  /* ── Layout ── */
-  --max-width: 1200px;
-  --gutter: 24px;
-  --spacing-section-v: 112px;
-  --spacing-section-v-mobile: 64px;
-
-  /* ── Radii & ombres ── */
   --r-card: 18px;
   --r-pill: 999px;
   --r-modal: 24px;
-  --sh-card:    0 1px 0 rgba(255,255,255,0.04), 0 12px 30px rgba(0,0,0,0.55);
-  --sh-elevate: 0 2px 0 rgba(255,255,255,0.05), 0 18px 60px rgba(0,0,0,0.60);
-  --sh-inset:   inset 0 1px 0 rgba(255,255,255,0.06);
-}
 
-.num, time, [data-stat] { font-variant-numeric: tabular-nums; }
+  --sh-card: 0 1px 0 rgba(255,255,255,0.04), 0 12px 30px rgba(0,0,0,0.55);
+  --sh-elevate: 0 2px 0 rgba(255,255,255,0.05), 0 18px 60px rgba(0,0,0,0.60);
+  --sh-inset: inset 0 1px 0 rgba(255,255,255,0.06);
+
+  --font-heading: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --spacing-section-v: 112px;
+  --spacing-section-v-mobile: 64px;
+  --max-width: 1200px;
+  --gutter: 24px;
+}
 
 @media (max-width: 768px) {
   :root {
-    --spacing-section-v: var(--spacing-section-v-mobile);
+    --spacing-section-v: 64px;
+    --spacing-section-v-mobile: 48px;
   }
 }

@@ -49,9 +49,9 @@ export default function Pillars() {
       style={{
         paddingTop: 'var(--spacing-section-v)',
         paddingBottom: 'var(--spacing-section-v)',
-        background: 'var(--bg-elevated)',
-        borderTop: '1px solid var(--rule)',
-        borderBottom: '1px solid var(--rule)',
+        background: 'var(--surface)',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
       }}
     >
       <Container>
@@ -59,11 +59,11 @@ export default function Pillars() {
           <IndexLabel text="02 — Les piliers" />
         </div>
 
-        <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+        <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
           Comment je travaille
         </h2>
 
-        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
+        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--muted)' }}>
           Chaque mission suit le même fil :
         </p>
 
@@ -77,7 +77,7 @@ export default function Pillars() {
               <div className="flex items-start gap-4 mb-4">
                 <div style={{
                   color: 'var(--accent)',
-                  background: 'light-dark(oklch(55% 0.18 28 / 0.08), oklch(72% 0.16 28 / 0.12))',
+                  background: 'oklch(72% 0.16 28 / 0.12)',
                   borderRadius: '6px',
                   padding: '10px',
                   flexShrink: 0,
@@ -86,10 +86,10 @@ export default function Pillars() {
                 </div>
                 <div>
                   <div className="index-label mb-2">PILIER {pillar.num}</div>
-                  <h3 style={{ color: 'var(--ink)', fontSize: 'var(--step-0)', fontStyle: 'normal' }}>{pillar.title}</h3>
+                  <h3 style={{ color: 'var(--text)', fontSize: 'var(--step-0)', fontStyle: 'normal' }}>{pillar.title}</h3>
                 </div>
               </div>
-              <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65 }}>
+              <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65 }}>
                 {pillar.desc}
               </p>
             </div>

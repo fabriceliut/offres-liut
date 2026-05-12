@@ -26,12 +26,12 @@ export default function DesignOrg() {
             <IndexLabel text="01 — La méthode" />
           </div>
 
-          <h2 className="reveal mb-5" style={{ color: 'var(--ink)' }}>
+          <h2 className="reveal mb-5" style={{ color: 'var(--text)' }}>
             Ce que je fais,{' '}
             <em style={{ color: 'var(--accent)' }}>concrètement</em>
           </h2>
 
-          <p className="reveal text-base mb-10" style={{ color: 'var(--ink-muted)', maxWidth: '580px' }}>
+          <p className="reveal text-base mb-10" style={{ color: 'var(--muted)', maxWidth: '580px' }}>
             J’appelle ça le Design Organisationnel. En pratique : je regarde comment
             votre entreprise fonctionne vraiment, et on ajuste ce qui coince — avec vos équipes,
             pas dans un rapport que personne ne lit.
@@ -43,7 +43,7 @@ export default function DesignOrg() {
                 key={i}
                 className="card-base p-6"
                 style={{
-                  borderColor: d.accent ? 'var(--accent)' : 'var(--rule)',
+                  borderColor: d.accent ? 'var(--accent)' : 'var(--border)',
                 }}
               >
                 <div className="flex items-center gap-2 mb-3">
@@ -61,14 +61,14 @@ export default function DesignOrg() {
                     fontFamily: 'var(--font-body)',
                     fontWeight: 600,
                     fontSize: 'var(--step--1)',
-                    color: d.accent ? 'var(--accent)' : 'var(--ink-muted)',
+                    color: d.accent ? 'var(--accent)' : 'var(--muted)',
                     letterSpacing: '0.04em',
                     textTransform: 'uppercase',
                   }}>
                     {d.label}
                   </span>
                 </div>
-                <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, margin: 0 }}>
+                <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
                   {d.desc}
                 </p>
               </div>

@@ -42,9 +42,9 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         background: scrolled
-          ? 'light-dark(rgba(250,248,244,0.92), rgba(20,18,25,0.9))'
+          ? 'rgba(7,7,10,0.88)'
           : 'transparent',
-        borderBottom: scrolled ? '1px solid var(--rule)' : '1px solid transparent',
+        borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'none',
       }}
@@ -80,7 +80,7 @@ export default function Header() {
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontWeight: 500,
-                    color: activeSection === item.id ? 'var(--ink)' : 'var(--ink-muted)',
+                    color: activeSection === item.id ? 'var(--text)' : 'var(--muted)',
                     background: 'none',
                     border: 'none',
                     cursor: 'pointer',
@@ -97,7 +97,7 @@ export default function Header() {
                   {item.label}
                 </button>
               ))}
-              <span className="mx-1" style={{ color: 'var(--rule)' }} aria-hidden="true">|</span>
+              <span className="mx-1" style={{ color: 'var(--border)' }} aria-hidden="true">|</span>
               {OFFER_LINKS.map((link) => (
                 <Link
                   key={link.to}
@@ -106,7 +106,7 @@ export default function Header() {
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontWeight: 500,
-                    color: 'var(--ink-muted)',
+                    color: 'var(--muted)',
                     fontSize: 'var(--step--1)',
                   }}
                 >
@@ -119,7 +119,7 @@ export default function Header() {
               <Link
                 to="/"
                 className="px-3 py-1.5 text-sm transition-colors duration-150"
-                style={{ fontFamily: 'var(--font-body)', fontWeight: 500, color: 'var(--ink-muted)', fontSize: 'var(--step--1)' }}
+                style={{ fontFamily: 'var(--font-body)', fontWeight: 500, color: 'var(--muted)', fontSize: 'var(--step--1)' }}
               >
                 ← Accueil
               </Link>
@@ -145,20 +145,20 @@ export default function Header() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             aria-expanded={menuOpen}
-            style={{ border: '1px solid var(--rule)', background: 'var(--bg-elevated)' }}
+            style={{ border: '1px solid var(--border)', background: 'var(--surface)' }}
           >
             <div className="flex flex-col gap-1" aria-hidden="true">
               <span className="block w-5 h-0.5 transition-all duration-200" style={{
-                background: 'var(--ink)',
+                background: 'var(--text)',
                 transform: menuOpen ? 'rotate(45deg) translate(2px, 2px)' : 'none',
               }} />
               <span className="block h-0.5 transition-all duration-200" style={{
-                background: 'var(--ink)',
+                background: 'var(--text)',
                 width: menuOpen ? '20px' : '14px',
                 opacity: menuOpen ? 0 : 1,
               }} />
               <span className="block w-5 h-0.5 transition-all duration-200" style={{
-                background: 'var(--ink)',
+                background: 'var(--text)',
                 transform: menuOpen ? 'rotate(-45deg) translate(2px, -2px)' : 'none',
               }} />
             </div>
@@ -169,8 +169,8 @@ export default function Header() {
       {/* Mobile menu — CSS transition, no Framer Motion */}
       <div
         style={{
-          background: 'light-dark(rgba(250,248,244,0.97), rgba(20,18,25,0.97))',
-          borderTop: menuOpen ? '1px solid var(--rule)' : '1px solid transparent',
+          background: '248,244,0.97, rgba(20,18,25,0.97))',
+          borderTop: menuOpen ? '1px solid var(--border)' : '1px solid transparent',
           backdropFilter: 'blur(12px)',
           overflow: 'hidden',
           maxHeight: menuOpen ? '420px' : '0',
@@ -192,8 +192,8 @@ export default function Header() {
                       fontFamily: 'var(--font-body)',
                       fontWeight: 500,
                       fontSize: 'var(--step-0)',
-                      color: activeSection === item.id ? 'var(--accent)' : 'var(--ink)',
-                      background: activeSection === item.id ? 'light-dark(oklch(55% 0.18 28 / 0.08), oklch(72% 0.16 28 / 0.1))' : 'transparent',
+                      color: activeSection === item.id ? 'var(--accent)' : 'var(--text)',
+                      background: activeSection === item.id ? 'oklch(72% 0.16 28 / 0.1)' : 'transparent',
                       border: 'none',
                       cursor: 'pointer',
                     }}
@@ -201,7 +201,7 @@ export default function Header() {
                     {item.label}
                   </button>
                 ))}
-                <div className="my-2" style={{ borderTop: '1px solid var(--rule)' }} />
+                <div className="my-2" style={{ borderTop: '1px solid var(--border)' }} />
                 {OFFER_LINKS.map((link) => (
                   <Link
                     key={link.to}
@@ -220,11 +220,11 @@ export default function Header() {
                   to="/"
                   onClick={() => setMenuOpen(false)}
                   className="px-3 py-2.5 rounded transition-colors duration-150"
-                  style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 'var(--step-0)', color: 'var(--ink)' }}
+                  style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 'var(--step-0)', color: 'var(--text)' }}
                 >
                   ← Retour à l’accueil
                 </Link>
-                <div className="my-2" style={{ borderTop: '1px solid var(--rule)' }} />
+                <div className="my-2" style={{ borderTop: '1px solid var(--border)' }} />
                 {OFFER_LINKS.map((link) => (
                   <Link
                     key={link.to}
@@ -260,9 +260,9 @@ function LogoMark() {
   return (
     <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect x="4" y="8" width="18" height="14" rx="2" fill="none" stroke="var(--accent)" strokeWidth="1.5"/>
-      <rect x="8" y="5" width="18" height="14" rx="2" fill="none" stroke="light-dark(oklch(55% 0.18 28 / 0.3), oklch(72% 0.16 28 / 0.3))" strokeWidth="1.5"/>
+      <rect x="8" y="5" width="18" height="14" rx="2" fill="none" stroke="oklch(72% 0.16 28 / 0.3)" strokeWidth="1.5"/>
       <line x1="8" y1="13" x2="18" y2="13" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="8" y1="16.5" x2="15" y2="16.5" stroke="light-dark(oklch(55% 0.18 28 / 0.5), oklch(72% 0.16 28 / 0.5))" strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="8" y1="16.5" x2="15" y2="16.5" stroke="oklch(72% 0.16 28 / 0.5)" strokeWidth="1.5" strokeLinecap="round"/>
       <circle cx="23" cy="23" r="2.5" fill="var(--accent)"/>
     </svg>
   );
@@ -271,11 +271,11 @@ function LogoMark() {
 function LogoText() {
   return (
     <span style={{
-      fontFamily: 'var(--font-display)',
+      fontFamily: 'var(--font-heading)',
       fontWeight: 700,
       fontSize: '1rem',
       letterSpacing: '-0.03em',
-      color: 'var(--ink)',
+      color: 'var(--text)',
     }}>
       liut<span style={{ color: 'var(--accent)' }}>.</span>offres
     </span>

@@ -4,15 +4,15 @@ export default function ProofBand() {
   return (
     <div
       style={{
-        background: 'var(--bg-elevated)',
-        borderTop: '1px solid var(--rule)',
-        borderBottom: '1px solid var(--rule)',
+        background: 'var(--surface)',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
         padding: '28px 0',
       }}
     >
       <Container>
         <div className="reveal flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-center">
-          <div style={{ color: 'var(--ink-muted)', fontSize: 'var(--step--1)', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-body)', fontWeight: 500 }}>
+          <div style={{ color: 'var(--muted)', fontSize: 'var(--step--1)', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-body)', fontWeight: 500 }}>
             Déjà accompagné
           </div>
           {[
@@ -29,7 +29,7 @@ export default function ProofBand() {
                 background: 'var(--accent)',
                 flexShrink: 0,
               }} aria-hidden="true" />
-              <span style={{ color: 'var(--ink)', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step--1)' }}>
+              <span style={{ color: 'var(--text)', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 'var(--step--1)' }}>
                 {item}
               </span>
             </div>

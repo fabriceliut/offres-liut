@@ -39,9 +39,9 @@ export default function IASection() {
       style={{
         paddingTop: 'var(--spacing-section-v)',
         paddingBottom: 'var(--spacing-section-v)',
-        background: 'var(--bg-elevated)',
-        borderTop: '1px solid var(--rule)',
-        borderBottom: '1px solid var(--rule)',
+        background: 'var(--surface)',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)',
       }}
     >
       <Container>
@@ -50,12 +50,12 @@ export default function IASection() {
             <IndexLabel text="03C — L’accélérateur" />
           </div>
 
-          <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+          <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
             Et l’IA dans tout ça ?{' '}
             <em style={{ color: 'var(--accent)' }}>Aux bons endroits, pas partout.</em>
           </h2>
 
-          <p className="reveal text-base mb-10" style={{ color: 'var(--ink-muted)', maxWidth: '580px' }}>
+          <p className="reveal text-base mb-10" style={{ color: 'var(--muted)', maxWidth: '580px' }}>
             L’IA peut accélérer ce qui est déjà bien structuré.
             Pas de gadget. Du chirurgical. On ne touche qu’à ce qui crée de la valeur.
           </p>
@@ -73,7 +73,7 @@ export default function IASection() {
                 }}>
                   {point.icon}
                 </div>
-                <p style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)', lineHeight: 1.65, margin: 0 }}>
+                <p style={{ fontSize: 'var(--step--1)', color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
                   {point.text}
                 </p>
               </div>

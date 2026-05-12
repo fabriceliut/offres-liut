@@ -24,12 +24,12 @@ export default function DirigeantSection() {
             <IndexLabel text="03B — Pour le dirigeant" />
           </div>
 
-          <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+          <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
             C’est une situation{' '}
             <em style={{ color: 'var(--accent)' }}>que je vois souvent.</em>
           </h2>
 
-          <p className="reveal text-base mb-10" style={{ color: 'var(--ink-muted)', maxWidth: '580px' }}>
+          <p className="reveal text-base mb-10" style={{ color: 'var(--muted)', maxWidth: '580px' }}>
             Au-delà de l’organisation, il y a votre système de pilotage.
             Celui qui vous permet de voir clair, décider vite, et déléguer. Ça se structure.
           </p>
@@ -43,10 +43,10 @@ export default function DirigeantSection() {
                   alignItems: 'flex-start',
                   gap: 'var(--s-3)',
                   fontSize: 'var(--step-0)',
-                  color: 'var(--ink-muted)',
+                  color: 'var(--muted)',
                   lineHeight: 1.6,
                   paddingBottom: 'var(--s-3)',
-                  borderBottom: i < PAIN_POINTS.length - 1 ? '1px solid var(--rule)' : 'none',
+                  borderBottom: i < PAIN_POINTS.length - 1 ? '1px solid var(--border)' : 'none',
                 }}
               >
                 <span style={{ color: 'var(--accent)', fontWeight: 700, flexShrink: 0 }}>→</span>

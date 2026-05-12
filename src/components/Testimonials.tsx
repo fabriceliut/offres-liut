@@ -33,12 +33,12 @@ export default function Testimonials() {
           <IndexLabel text="05 — Retours terrain" />
         </div>
 
-        <h2 className="reveal mb-4" style={{ color: 'var(--ink)' }}>
+        <h2 className="reveal mb-4" style={{ color: 'var(--text)' }}>
           Résultats{' '}
           <em style={{ color: 'var(--accent)' }}>récents</em>
         </h2>
 
-        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--ink-muted)' }}>
+        <p className="reveal mb-12 max-w-xl" style={{ color: 'var(--muted)' }}>
           Quelques exemples concrets de missions récentes.
         </p>
 
@@ -52,7 +52,7 @@ export default function Testimonials() {
               <div style={{
                 display: 'inline-block',
                 padding: '4px 10px',
-                background: 'light-dark(oklch(55% 0.18 28 / 0.1), oklch(72% 0.16 28 / 0.15))',
+                background: 'oklch(72% 0.16 28 / 0.15)',
                 borderRadius: 'var(--r-pill)',
                 fontSize: 'var(--step--1)',
                 color: 'var(--accent)',
@@ -66,7 +66,7 @@ export default function Testimonials() {
               <blockquote style={{
                 flex: 1,
                 fontSize: 'var(--step--1)',
-                color: 'var(--ink-muted)',
+                color: 'var(--muted)',
                 lineHeight: 1.7,
                 marginBottom: 'var(--s-4)',
                 margin: '0 0 var(--s-4)',
@@ -77,17 +77,17 @@ export default function Testimonials() {
 
               <footer style={{
                 paddingTop: 'var(--s-4)',
-                borderTop: '1px solid var(--rule)',
+                borderTop: '1px solid var(--border)',
               }}>
                 <div style={{
                   fontWeight: 600,
                   fontSize: 'var(--step--1)',
-                  color: 'var(--ink)',
+                  color: 'var(--text)',
                   fontFamily: 'var(--font-body)',
                 }}>
                   {t.author}
                 </div>
-                <div style={{ fontSize: 'var(--step--1)', color: 'var(--ink-muted)' }}>
+                <div style={{ fontSize: 'var(--step--1)', color: 'var(--muted)' }}>
                   {t.company}
                 </div>
               </footer>
