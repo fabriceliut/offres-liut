@@ -480,9 +480,9 @@ export default function OfferIA() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-7 pt-6 flex items-baseline gap-2" style={{ borderTop: '1px solid var(--border)' }}>
-                  <span style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-heading)' }}>990 €</span>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>— imputable sur l'intégration si on continue ensemble.</span>
+                <div className="mt-7 pt-6" style={{ borderTop: '1px solid var(--border)' }}>
+                  <span style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-heading)', whiteSpace: 'nowrap' }}>990 €</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--muted)', marginLeft: '8px' }}>— imputable sur l'intégration si on continue ensemble.</span>
                 </div>
               </div>
 
