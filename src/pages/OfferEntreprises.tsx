@@ -240,25 +240,25 @@ export default function OfferEntreprises() {
                     Exemple pour une entreprise de 10 personnes :
                   </div>
                   <div className="flex flex-col gap-2">
-                    <div className="flex justify-between" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>
+                    <div className="flex justify-between gap-4" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>
                       <span>Accompagnement Fabrice Liut</span>
-                      <span style={{ fontWeight: 600, color: 'var(--text)' }}>15 000€</span>
+                      <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>15 000€</span>
                     </div>
-                    <div className="flex justify-between gap-2 pb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
+                    <div className="flex justify-between gap-4 pb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
                       <span>Temps interne (10 pers. × 10h + dirigeant 25h)</span>
                       <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>~7 500€</span>
                     </div>
-                    <div className="flex justify-between pt-1" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }}>
+                    <div className="flex justify-between gap-4 pt-1" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }}>
                       <span>INVESTISSEMENT TOTAL</span>
-                      <span>22 500€</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>22 500€</span>
                     </div>
-                    <div className="flex justify-between" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--success)' }}>
+                    <div className="flex justify-between gap-4" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--success)' }}>
                       <span>Économies année 1</span>
-                      <span>40 000€</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>40 000€</span>
                     </div>
-                    <div className="flex justify-between" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--success)' }}>
+                    <div className="flex justify-between gap-4" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--success)' }}>
                       <span>ROI NET première année</span>
-                      <span>+17 500€</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>+17 500€</span>
                     </div>
                   </div>
                   <p style={{ fontSize: '0.75rem', color: 'var(--muted)', opacity: 0.6, marginTop: '12px' }}>

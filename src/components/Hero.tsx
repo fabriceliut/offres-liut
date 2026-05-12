@@ -112,6 +112,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
+              style={{ flexShrink: 0 }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <rect x="2" y="3" width="12" height="11" rx="2" stroke="white" strokeWidth="1.3"/>
@@ -123,6 +124,7 @@ export default function Hero() {
             <Link
               to="/entreprises"
               className="btn-secondary"
+              style={{ flexShrink: 0 }}
             >
               Découvrir le programme
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">

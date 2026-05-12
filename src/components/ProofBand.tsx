@@ -17,11 +17,12 @@ export default function ProofBand() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-center"
+          className="flex flex-col items-center gap-4 text-center"
         >
           <div style={{ color: 'var(--muted)', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-heading)', fontWeight: 500 }}>
             Déjà accompagné
           </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
           {[
             'PME & PMI',
             'Équipes de direction',
@@ -40,8 +41,7 @@ export default function ProofBand() {
                 {item}
               </span>
             </div>
-          ))}
-          <div style={{
+          ))}          </div>          <div style={{
             padding: '6px 14px',
             border: '1px solid var(--border-strong)',
             borderRadius: 'var(--r-pill)',
