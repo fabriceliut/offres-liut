@@ -3,21 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#07070A" />
-    <title>Offres — Fabrice Liut | Design Organisationnel pour PME & PMI</title>
-    <meta name="description" content="Fabrice Liut accompagne les dirigeants de PME et PMI (10–90 salariés) avec le Design Organisationnel et l'Intégration IA. Offre Entreprise, Offre Dirigeant et Intégration IA. Prenez 45 min." />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f4" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#230f0a" />
+
+    <!-- GitHub Pages SPA routing — decode path from query string -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            decoded[0].replace('p=', '/') +
+            (decoded[1] ? '&' + decoded[1].replace('q=', '?') : '') +
+            l.hash
+          );
+        }
+      }(window.location));
+    </script>
+
+    <title>Offres — Fabrice Liut | Design Organisationnel pour PME &amp; PMI</title>
+    <meta name="description" content="Fabrice Liut accompagne les dirigeants de PME et PMI (10–90 salariés) avec le Design Organisationnel et l'IA. Retour x4,5 observé. Basé à Lyon. Prenez 45 min." />
+    <link rel="canonical" href="https://offres.liut.me/" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Offres — Fabrice Liut | Design Organisationnel" />
-    <meta property="og:description" content="Transformez votre organisation et votre pilotage de dirigeant. Offres concrètes pour PME & PMI de 10 à 90 salariés." />
+    <meta property="og:description" content="Associé opérationnel pour dirigeants de PME & PMI (10–90 salariés). Retour x4,5 observé sur +150 organisations. Basé à Lyon." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://offres.liut.me/" />
+    <meta property="og:image" content="https://offres.liut.me/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Fabrice Liut — Offres" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Offres — Fabrice Liut | Design Organisationnel" />
+    <meta name="twitter:description" content="Associé opérationnel pour PME & PMI. Retour x4,5. Basé à Lyon." />
+    <meta name="twitter:image" content="https://offres.liut.me/og-image.png" />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://offres.liut.me/#fabrice",
+          "name": "Fabrice Liut",
+          "jobTitle": "Associé Opérationnel & Stratégique",
+          "url": "https://liut.me",
+          "sameAs": ["https://www.linkedin.com/in/liut/"],
+          "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" }
+        },
+        {
+          "@type": "Service",
+          "name": "Design Organisationnel pour PME & PMI",
+          "provider": { "@id": "https://offres.liut.me/#fabrice" },
+          "areaServed": "France",
+          "audience": { "@type": "BusinessAudience", "audienceType": "Dirigeants de PME et PMI 10-90 salariés" }
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://offres.liut.me",
+          "name": "Offres — Fabrice Liut",
+          "inLanguage": "fr-FR"
+        }
+      ]
+    }
+    </script>
+
     <link rel="icon" type="image/webp" href="/favicon.webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    </noscript>
   </head>
   <body>
     <div id="root"></div>
