@@ -105,7 +105,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap gap-4 mb-16"
+            className="flex flex-nowrap gap-3 mb-16"
           >
             <a
               href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
