@@ -1,6 +1,5 @@
-@layer tokens {
-  :root {
-    color-scheme: light dark;
+:root {
+  color-scheme: light dark;
 
     /* ── Couleurs oklch — light + dark via light-dark() ── */
     --bg:          light-dark(oklch(98% 0.005 80),  oklch(14% 0.01 250));
@@ -60,13 +59,12 @@
     --border-strong: light-dark(oklch(55% 0.18 28 / 0.35), oklch(72% 0.16 28 / 0.35));
     --font-heading: var(--font-display);
     --sh-inset:     inset 0 1px 0 light-dark(rgba(0,0,0,0.04), rgba(255,255,255,0.06));
-  }
+}
 
-  .num, time, [data-stat] { font-variant-numeric: tabular-nums; }
+.num, time, [data-stat] { font-variant-numeric: tabular-nums; }
 
-  @media (max-width: 768px) {
-    :root {
-      --spacing-section-v: var(--spacing-section-v-mobile);
-    }
+@media (max-width: 768px) {
+  :root {
+    --spacing-section-v: var(--spacing-section-v-mobile);
   }
 }

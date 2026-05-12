@@ -28,7 +28,7 @@ export default function DesignOrg() {
 
           <h2 className="reveal mb-5" style={{ color: 'var(--ink)' }}>
             Ce que je fais,{' '}
-            <em style={{ color: 'var(--accent)' }}>concètement</em>
+            <em style={{ color: 'var(--accent)' }}>concrètement</em>
           </h2>
 
           <p className="reveal text-base mb-10" style={{ color: 'var(--ink-muted)', maxWidth: '580px' }}>
