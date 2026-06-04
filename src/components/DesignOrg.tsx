@@ -1,4 +1,5 @@
 import { m, type Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Container from './Container';
 import IndexLabel from './IndexLabel';
 
@@ -65,9 +66,9 @@ export default function DesignOrg() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            J'appelle ça le Design Organisationnel. En pratique : je regarde comment
-            votre entreprise fonctionne vraiment, et on ajuste ce qui coince — avec vos équipes,
-            pas dans un rapport que personne ne lit.
+            J'appelle ça le Design Organisationnel — la méthode qui structure votre OS d'entreprise.
+            En pratique : je regarde comment votre entreprise fonctionne vraiment, et on ajuste
+            ce qui coince — avec vos équipes, pas dans un rapport que personne ne lit.
           </m.p>
 
           <m.div
@@ -135,6 +136,26 @@ export default function DesignOrg() {
               les équipes s'approprient les changements, les résultats
               sont mesurables dès les premiers mois, et l'organisation tourne mieux — même quand je ne suis plus là.
             </p>
+          </m.div>
+
+          <m.div
+            custom={5}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-40px' }}
+            className="mt-8 flex justify-start"
+          >
+            <Link
+              to="/entreprises"
+              className="btn-secondary"
+              style={{ fontSize: '0.9rem' }}
+            >
+              Découvrir le programme Organisation
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
           </m.div>
         </div>
       </Container>

@@ -149,6 +149,13 @@ export default function OfferIA() {
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
                 Intégrez l'intelligence artificielle là où elle crée de la valeur. Et nulle part ailleurs.
               </motion.p>
+
+              <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="flex flex-wrap gap-2 justify-center items-center mt-4">
+                <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>OS d'entreprise :</span>
+                <Link to="/entreprises" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>Organisation</Link>
+                <Link to="/entrepreneurs" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>Pilotage dirigeant</Link>
+                <span style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.78rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>IA intégrée</span>
+              </motion.div>
             </div>
           </Container>
         </section>

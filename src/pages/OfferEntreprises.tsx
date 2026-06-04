@@ -177,6 +177,13 @@ export default function OfferEntreprises() {
               <motion.p custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-6" style={{ fontSize: '0.78rem', color: 'var(--muted)', opacity: 0.6 }}>
                 *Retour moyen observé sur les missions de structuration d'entreprises de 10 à 90 salariés
               </motion.p>
+
+              <motion.div custom={5} variants={fadeUp} initial="hidden" animate="visible" className="flex flex-wrap gap-2 justify-center items-center mt-4">
+                <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>OS d'entreprise :</span>
+                <span style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.78rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>Organisation</span>
+                <Link to="/entrepreneurs" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>Pilotage dirigeant</Link>
+                <Link to="/ia" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>IA intégrée</Link>
+              </motion.div>
             </div>
           </Container>
         </section>

@@ -46,7 +46,7 @@ export default function IASection() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="03C — L'accélérateur" />
+            <IndexLabel text="03C — La 3e couche de votre OS" />
           </m.div>
 
           <m.h2
@@ -71,7 +71,7 @@ export default function IASection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            L'IA peut accélérer ce qui est déjà bien structuré.
+            L'IA vient compléter votre OS d'entreprise — pas en plus, mais intégrée dedans.
             Pas de gadget. Du chirurgical. On ne touche qu'à ce qui crée de la valeur.
           </m.p>
 

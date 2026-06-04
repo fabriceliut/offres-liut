@@ -81,8 +81,8 @@ export default function Hero() {
             style={{ color: 'var(--text)' }}
             className="mb-6"
           >
-            J'accompagne des dirigeants de PME & PMI{' '}
-            <span style={{ color: 'var(--primary)' }}>dans la structuration de leur entreprise.</span>
+            Je construis avec vous{' '}
+            <span style={{ color: 'var(--primary)' }}>l'operating system de votre entreprise.</span>
           </m.h1>
 
           {/* Subtext */}
@@ -94,9 +94,9 @@ export default function Hero() {
             className="text-lg mb-10 max-w-xl"
             style={{ color: 'var(--muted)' }}
           >
-            Basé à Lyon, je viens sur place, j'écoute ce qui coince,
-            et on avance ensemble. Vous me dites ce qui bloque.
-            J'observe, je mets en place. On teste, on ajuste, on continue.
+            Organisation, pilotage, IA intégrée — trois dimensions que j'assemble avec vous.
+            Basé à Lyon, je viens sur place, je comprends comment ça tourne vraiment.
+            On construit ensemble, on teste, on ajuste, on continue.
           </m.p>
 
           {/* CTAs */}

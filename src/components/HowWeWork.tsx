@@ -66,8 +66,8 @@ export default function HowWeWork() {
           className="mb-14 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Pas de programme packagé. On avance pas à pas,
-          en commençant toujours par comprendre.
+          Pas un plan figé imposé — une construction sur-mesure avec un cadre clair.
+          On avance pas à pas, en commençant toujours par comprendre.
         </m.p>
 
         <div className="relative">

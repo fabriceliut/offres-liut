@@ -110,11 +110,12 @@ export default function DirigeantSection() {
             }}
           >
             <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.15rem' }}>
-              On structure votre pilotage en <span style={{ color: 'var(--primary)' }}>6 mois</span>
+              On conçoit ensemble votre pilotage en <span style={{ color: 'var(--primary)' }}>6 mois</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              Je construis votre cockpit de direction sur Notion. Vue d'ensemble, délégation, reporting.
-              Vous gardez le lead. Je fais le technique.
+              On construit ensemble votre cockpit de direction — pilier central de votre OS.
+              Vue d'ensemble, délégation, reporting. IA intégrée là où ça compte.
+              Vous gardez le lead, on avance ensemble.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">

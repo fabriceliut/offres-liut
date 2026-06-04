@@ -81,6 +81,13 @@ export default function OfferEntrepreneurs() {
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4" style={{ color: 'var(--primary)', fontWeight: 600, fontFamily: 'var(--font-heading)' }}>
                 {"C'est une situation que je vois souvent. Voici ce que je mets en place."}
               </motion.p>
+
+              <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="flex flex-wrap gap-2 justify-center items-center mt-4">
+                <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>OS d'entreprise :</span>
+                <span style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.78rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>Pilotage dirigeant</span>
+                <Link to="/entreprises" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>Organisation</Link>
+                <Link to="/ia" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>IA intégrée</Link>
+              </motion.div>
             </div>
           </Container>
         </section>
