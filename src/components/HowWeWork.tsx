@@ -43,7 +43,7 @@ export default function HowWeWork() {
           transition={{ duration: 0.5 }}
           className="mb-4"
         >
-          <IndexLabel text="04 — Dérulé" />
+          <IndexLabel text="04 — Déroulé" />
         </m.div>
 
         <m.h2

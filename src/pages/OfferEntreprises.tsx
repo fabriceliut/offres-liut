@@ -29,7 +29,7 @@ const TIMELINE = [
       'Immersion sur le terrain avec vos équipes',
       'Interviews individuelles et collectives',
       'Analyse des process et des flux réels',
-      'Identification de ce qui coînce et de ce qui marche déjà',
+      'Identification de ce qui coince et de ce qui marche déjà',
     ],
   },
   {
@@ -536,7 +536,7 @@ export default function OfferEntreprises() {
                 <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)' }}>
-                Vous posez le contexte. On identifie ce qui coînce. Je vous dis ce que je ferais.
+                Vous posez le contexte. On identifie ce qui coince. Je vous dis ce que je ferais.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a
