@@ -14,12 +14,12 @@ const base = readFileSync(join(DIST, 'index.html'), 'utf-8');
 const routes = [
   {
     dir: 'entrepreneurs',
-    title: 'Entrepreneurs — Fabrice Liut | Cockpit dirigeant sur Notion',
-    description: 'Vous dirigez une PME et votre organisation repose trop sur vous. Fabrice Liut construit votre système de pilotage sur Notion. 6–8h récupérées/semaine.',
+    title: 'Pilotage Dirigeant — Fabrice Liut | Pilotez votre PME depuis la hauteur',
+    description: 'Le système de pilotage des dirigeants qui veulent voir clair, décider vite et déléguer sereinement. Sur Notion. 6–8h récupérées/semaine.',
     url: 'https://offres.liut.me/entrepreneurs',
     image: 'https://offres.liut.me/og-entrepreneurs.png',
-    twitterTitle: 'Entrepreneurs — Cockpit dirigeant sur Notion',
-    twitterDesc: 'Votre organisation repose trop sur vous. On change ça.',
+    twitterTitle: 'Pilotage Dirigeant — Pilotez depuis la hauteur',
+    twitterDesc: 'Voir clair, décider vite, déléguer sereinement. 6–8h récupérées/semaine.',
   },
   {
     dir: 'entreprises',

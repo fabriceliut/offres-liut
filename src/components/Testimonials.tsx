@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     result: 'Retour x4,5',
   },
   {
-    quote: "+12% de temps facturable, −12% de délais, turn-over en baisse. On a clarifié les rôles et fluid le fonctionnement entre les équipes.",
+    quote: "+12% de temps facturable, −12% de délais, turn-over en baisse. On a clarifié les rôles et fluidifié le fonctionnement entre les équipes.",
     author: 'Direction',
     company: 'PME IT, 90 personnes',
     result: '+12% temps facturable',

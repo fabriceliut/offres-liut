@@ -6,7 +6,7 @@ const PILLARS = [
   {
     num: '01',
     title: 'Immersion terrain',
-    desc: "Je viens sur place. Je passe du temps avec vos équipes, dans l'atelier, dans les bureaux. Je regarde comment ça tourne vraiment — pas le schéma théorique.",
+    desc: "Je viens sur place. Du temps avec vos équipes, dans l'atelier, dans les bureaux. Je regarde comment ça tourne vraiment.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
@@ -17,8 +17,8 @@ const PILLARS = [
   },
   {
     num: '02',
-    title: 'On cherche ce qui coince',
-    desc: "Je cartographie vos flux, je trouve les goulots, les frictions silencieuses. On ne reste pas sur les symptômes — on remonte aux causes.",
+    title: 'On trouve les leviers',
+    desc: "Je cartographie vos flux et je repère les leviers qui vous feront gagner le plus. On vise les causes, pas les symptômes.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <circle cx="5" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -31,7 +31,7 @@ const PILLARS = [
   {
     num: '03',
     title: 'Avec vos équipes, pas pour elles',
-    desc: "On construit les solutions avec ceux qui vont les utiliser. Ateliers, tests terrain, ajustements. Si vos équipes ne se les approprient pas, ça ne sert à rien.",
+    desc: "On construit les solutions avec ceux qui vont les utiliser. Ateliers, tests terrain, ajustements. C'est l'appropriation qui fait durer.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="10" width="7" height="7" rx="2" stroke="currentColor" strokeWidth="1.5"/>

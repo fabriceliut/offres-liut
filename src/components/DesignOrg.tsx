@@ -15,13 +15,13 @@ const fadeUp: Variants = {
 const DIFFERENTIATIONS = [
   {
     label: 'Mon approche',
-    desc: "Je viens sur le terrain, je comprends vos flux de l'intérieur, et on co-construit ensemble ce qui manque. Pas un plan figé, mais des ajustements concrets qu'on teste et qu'on améliore.",
+    desc: "Je viens sur le terrain, je comprends vos flux de l'intérieur, et on co-construit ce qui vous fera avancer. Pas un plan figé — des ajustements concrets qu'on teste et qu'on améliore.",
     accent: true,
   },
   {
-    label: 'Conseil classique',
-    desc: "Diagnostic générique, recommandations théoriques, peu d'appropriation par les équipes. Le rapport finit dans un tiroir.",
-    accent: false,
+    label: 'Ce que vous y gagnez',
+    desc: "Les équipes s'approprient les changements, et les résultats sont mesurables dès les premiers mois.",
+    accent: true,
   },
 ];
 
@@ -66,9 +66,9 @@ export default function DesignOrg() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            J'appelle ça le Design Organisationnel — la méthode qui structure votre OS d'entreprise.
-            En pratique : je regarde comment votre entreprise fonctionne vraiment, et on ajuste
-            ce qui coince — avec vos équipes, pas dans un rapport que personne ne lit.
+            J'appelle ça le Design Organisationnel. En pratique : je regarde comment
+            votre entreprise fonctionne vraiment, et on fait grandir ce qui marche
+            — avec vos équipes, pas dans un rapport que personne ne lit.
           </m.p>
 
           <m.div
@@ -133,8 +133,7 @@ export default function DesignOrg() {
           >
             <p style={{ fontSize: '0.9rem', color: 'var(--text)', lineHeight: 1.65 }}>
               <strong style={{ color: 'var(--accent)' }}>Ce que ça donne :</strong>{' '}
-              les équipes s'approprient les changements, les résultats
-              sont mesurables dès les premiers mois, et l'organisation tourne mieux — même quand je ne suis plus là.
+              l'organisation tourne mieux — même quand je ne suis plus là.
             </p>
           </m.div>
 

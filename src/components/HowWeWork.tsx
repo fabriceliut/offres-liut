@@ -6,19 +6,19 @@ const STEPS = [
   {
     num: '01',
     title: '45 min pour poser le contexte',
-    desc: "Vous posez le contexte. On identifie ce qui coince vraiment. Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.",
+    desc: "Vous posez le contexte, on repère le levier qui change le plus, je vous dis ce que je ferais et si je suis la bonne personne.",
     duration: '45 min',
   },
   {
     num: '02',
     title: 'Je viens, j\u2019observe',
-    desc: "2 à 3 jours sur place pour comprendre vos flux de l'intérieur. Interviews, observation terrain, cartographie de l'existant. Un état des lieux précis.",
+    desc: "Sur place pour comprendre vos flux de l'intérieur. Interviews, observation, cartographie. Un état des lieux précis.",
     duration: '2–3 jours',
   },
   {
     num: '03',
     title: 'On teste, on ajuste, on continue',
-    desc: "On co-construit les ajustements. Pas un plan figé — des changements concrets qu'on teste et qu'on améliore au fil de l'eau. Vous gardez le lead.",
+    desc: "On co-construit les ajustements. Pas un plan figé. Vous gardez le lead.",
     duration: '3–6 mois',
   },
 ];
@@ -66,7 +66,7 @@ export default function HowWeWork() {
           className="mb-14 max-w-xl"
           style={{ color: 'var(--muted)' }}
         >
-          Pas un plan figé imposé — une construction sur-mesure avec un cadre clair.
+          Pas de programme packagé.
           On avance pas à pas, en commençant toujours par comprendre.
         </m.p>
 

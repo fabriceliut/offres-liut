@@ -14,34 +14,21 @@ const fadeUp: Variants = {
   }),
 };
 
-const TRAPS = [
-  {
-    icon: '🔧',
-    title: 'Le bricolage interne',
-    desc: "On teste des outils dans son coin, on perd du temps à configurer des prompts qui ne tiennent pas. On finit par abandonner.",
-  },
-  {
-    icon: '✨',
-    title: "L'objet brillant",
-    desc: "On met de l'IA partout par peur de rater le train. On complexifie le travail au lieu de l'alléger.",
-  },
-];
-
 const WHY_ME = [
   {
     icon: '⚡',
     title: '40h d\'essais → 1h de diagnostic',
-    desc: "Là où beaucoup passent des semaines à tester, j'identifie vite le maillon faible et j'y injecte la bonne solution.",
+    desc: "J'identifie vite le bon maillon et j'y injecte la bonne solution.",
   },
   {
     icon: '🔄',
     title: 'Veille permanente',
-    desc: "L'IA bouge plus vite que tout. Dès qu'une évolution concerne votre secteur, je l'adapte à votre structure.",
+    desc: "Dès qu'une évolution concerne votre secteur, je l'adapte à votre structure.",
   },
   {
     icon: '🔒',
     title: 'Sécurité',
-    desc: "Bricoler seul, c'est souvent exposer ses données sans le savoir. Je sécurise vos flux.",
+    desc: "Vos données protégées, vos flux fiables, dès l'intégration.",
   },
 ];
 
@@ -87,10 +74,10 @@ const METRICS = [
 ];
 
 const DIAGNOSTIC_INCLUDES = [
-  'Interview 45 min enregistrée — vos workflows, vos douleurs, vos mots',
-  'Analyse IA de la transcription — identification des 5–7 leviers prioritaires',
+  'Interview 45 min enregistrée — vos workflows, vos mots',
+  'Analyse IA de la transcription — les 5–7 leviers prioritaires',
   "Rapport livré : matrice Impact/Effort + outils recommandés + plan quick wins 4 jours",
-  'Call de restitution 30 min — on aligne, on répond, on priorise',
+  'Call de restitution 30 min — on aligne, on priorise',
 ];
 
 const LADDER = [
@@ -147,7 +134,7 @@ export default function OfferIA() {
               </motion.h1>
 
               <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible" className="text-lg mb-4 max-w-xl mx-auto" style={{ color: 'var(--muted)' }}>
-                Intégrez l'intelligence artificielle là où elle crée de la valeur. Et nulle part ailleurs.
+                Mettez l'intelligence artificielle là où elle crée de la valeur — et là où elle vous rend du temps.
               </motion.p>
 
               <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="flex flex-wrap gap-2 justify-center items-center mt-4">
@@ -160,7 +147,7 @@ export default function OfferIA() {
           </Container>
         </section>
 
-        {/* Le paradoxe */}
+        {/* L'opportunité */}
         <section style={{ paddingTop: 'var(--spacing-section-v)', paddingBottom: '48px' }}>
           <Container>
             <div className="max-w-2xl mx-auto">
@@ -171,7 +158,7 @@ export default function OfferIA() {
                 transition={{ duration: 0.5 }}
                 className="mb-4"
               >
-                <IndexLabel text="CONSTAT — Le paradoxe de l'IA" />
+                <IndexLabel text="CONSTAT — L'opportunité de l'IA" />
               </motion.div>
 
               <motion.h2
@@ -182,8 +169,8 @@ export default function OfferIA() {
                 className="mb-4"
                 style={{ color: 'var(--text)' }}
               >
-                Tout le monde en parle.{' '}
-                <span style={{ color: 'var(--primary)' }}>Presque personne ne l'utilise bien.</span>
+                L'IA bien placée{' '}
+                <span style={{ color: 'var(--primary)' }}>vous rend du temps.</span>
               </motion.h2>
 
               <motion.p
@@ -194,28 +181,10 @@ export default function OfferIA() {
                 className="mb-8"
                 style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}
               >
-                La plupart des entreprises tombent dans deux pièges :
+                L'IA est devenue un standard. La vraie différence, ce n'est pas d'en mettre partout
+                — c'est de la placer juste. Mon rôle : vous amener droit à ce qui crée de la valeur,
+                sans le bricolage qui épuise et sans l'IA-gadget qui complexifie.
               </motion.p>
-
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                {TRAPS.map((trap, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: '-40px' }}
-                    transition={{ delay: i * 0.1, duration: 0.5 }}
-                    className="card-base p-5"
-                    style={{ borderLeft: '3px solid #ef5350' }}
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <span style={{ fontSize: '1.2rem' }}>{trap.icon}</span>
-                      <h3 style={{ color: '#ef5350', fontSize: '0.95rem', fontWeight: 600 }}>{trap.title}</h3>
-                    </div>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.65 }}>{trap.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -226,8 +195,8 @@ export default function OfferIA() {
                 style={{ borderLeft: '3px solid var(--success)' }}
               >
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.7 }}>
-                  <strong style={{ color: 'var(--text)' }}>Mon approche :</strong> aider les dirigeants à naviguer entre ces deux écueils.
-                  On identifie ensemble où ça a de la valeur — et on ne touche qu'à ça.
+                  <strong style={{ color: 'var(--text)' }}>Mon approche :</strong> vous amener droit à ce qui crée de la valeur.
+                  On identifie ensemble où ça a de l'impact — et on ne touche qu'à ça.
                 </p>
               </motion.div>
             </div>
@@ -389,7 +358,7 @@ export default function OfferIA() {
                 <span style={{ color: 'var(--primary)' }}>On est chirurgical.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.7 }}>
-                On touche uniquement là où ça a de la valeur. Le reste, on n'y touche pas.
+                On touche uniquement là où ça crée de la valeur. Le reste, on n'y touche pas.
               </p>
 
               <div className="flex flex-col gap-4">
@@ -472,7 +441,7 @@ export default function OfferIA() {
                 <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
               </h2>
               <p className="mb-12" style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.7 }}>
-                Vous me dites ce qui vous prend du temps. Je vous dis où l'IA peut aider.
+                Vous me dites où vous voulez gagner du temps. Je vous dis où l'IA peut aider.
                 On décide après.
               </p>
 

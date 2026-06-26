@@ -31,7 +31,7 @@ export default function FinalCTA() {
           </h2>
 
           <p className="mb-8" style={{ color: 'var(--muted)', fontSize: '1rem' }}>
-            Vous posez le contexte. On identifie ce qui coince vraiment.
+            Vous posez le contexte. On voit ensemble ce qu'on pourrait construire.
             Je vous dis ce que je ferais, et si je suis la bonne personne pour vous accompagner.
           </p>
 
@@ -44,7 +44,7 @@ export default function FinalCTA() {
             }}
           >
             <p className="mb-3" style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)' }}>
-              Deux conditions pour que ça fonctionne bien :
+              Deux repères pour qu'on avance bien :
             </p>
             <div className="flex items-start gap-2 mb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
               <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>→</span>
@@ -52,7 +52,7 @@ export default function FinalCTA() {
             </div>
             <div className="flex items-start gap-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.65 }}>
               <span style={{ color: 'var(--primary)', fontWeight: 700, flexShrink: 0 }}>→</span>
-              Vous êtes prêt à arrêter ce qui ne marche plus
+              Vous avez envie de faire de la place pour ce qui compte
             </div>
           </div>
 

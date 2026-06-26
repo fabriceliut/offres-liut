@@ -15,15 +15,15 @@ const fadeUp: Variants = {
 const IA_POINTS = [
   {
     icon: '⚡',
-    text: "Automatiser ce qui mange le temps de vos équipes — tris, résumés, reporting, relances.",
+    text: "Rendre du temps à vos équipes — tris, résumés, reporting, relances.",
   },
   {
     icon: '📊',
-    text: "Prendre des décisions avec des données en temps réel. Moins d'intuition, plus de lucidité.",
+    text: "Décider avec des données en temps réel — plus de lucidité.",
   },
   {
     icon: '🔒',
-    text: "Sécuriser vos flux. L'IA intégrée proprement, c'est un coffre-fort. Bricolée, c'est une passoire.",
+    text: "Une IA intégrée proprement — vos données protégées, vos flux fiables.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function IASection() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-4"
           >
-            <IndexLabel text="03C — La 3e couche de votre OS" />
+            <IndexLabel text="03C — L'accélérateur" />
           </m.div>
 
           <m.h2
@@ -59,7 +59,7 @@ export default function IASection() {
             style={{ color: 'var(--text)' }}
           >
             Et l’IA dans tout ça ?{' '}
-            <span style={{ color: 'var(--primary)' }}>Aux bons endroits, pas partout.</span>
+            <span style={{ color: 'var(--primary)' }}>Aux bons endroits.</span>
           </m.h2>
 
           <m.p
@@ -71,8 +71,8 @@ export default function IASection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            L'IA vient compléter votre OS d'entreprise — pas en plus, mais intégrée dedans.
-            Pas de gadget. Du chirurgical. On ne touche qu'à ce qui crée de la valeur.
+            L'IA accélère ce qui est déjà bien structuré. Pas de gadget. Du chirurgical.
+            On ne touche qu'à ce qui crée de la valeur.
           </m.p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-10">

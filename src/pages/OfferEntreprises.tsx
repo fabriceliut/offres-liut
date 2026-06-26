@@ -29,7 +29,7 @@ const TIMELINE = [
       'Immersion sur le terrain avec vos équipes',
       'Interviews individuelles et collectives',
       'Analyse des process et des flux réels',
-      'Identification de ce qui coince et de ce qui marche déjà',
+      'Repérage des leviers et de ce qui marche déjà',
     ],
   },
   {
@@ -72,10 +72,7 @@ const CASE_STUDIES = [
     icon: '📐',
     title: 'PME de services — 30 personnes',
     before: [
-      'Coordination entre équipes floue',
-      'Heures perdues en allers-retours',
-      'Reporting manuel et obsolète',
-      'Direction sur-sollicitée en permanence',
+      'Une coordination devenue lourde avec la croissance.',
     ],
     after: [
       '+3 185 heures récupérées par an',
@@ -92,10 +89,7 @@ const CASE_STUDIES = [
     icon: '⚙️',
     title: 'PME IT — 90 personnes',
     before: [
-      'Rôles mal définis entre les équipes',
-      'Délais de livraison en augmentation',
-      'Turn-over en hausse',
-      'Temps facturable en baisse',
+      'Forte croissance, rôles à clarifier.',
     ],
     after: [
       '+12% de temps facturable',
@@ -219,10 +213,10 @@ export default function OfferEntreprises() {
               {/* Investment breakdown */}
               <div className="card-base p-6" style={{ background: 'var(--surface2)' }}>
                 <h3 className="mb-5" style={{ color: 'var(--text)', fontSize: '1.1rem' }}>
-                  Ce que ça implique pour vous
+                  Ce que ça demande, en toute transparence
                 </h3>
                 <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
-                  Soyons clairs sur le temps que ça demande. Une structuration, ça mobilise aussi vos équipes.
+                  Une structuration mobilise aussi vos équipes :
                 </p>
 
                 <div className="mb-5 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
@@ -294,11 +288,11 @@ export default function OfferEntreprises() {
                 Comment <span style={{ color: 'var(--primary)' }}>ça marche ?</span>
               </h2>
               <p className="mb-4" style={{ color: 'var(--muted)' }}>
-                On commence par <span style={{ color: 'var(--primary)', fontWeight: 600 }}>45 minutes d'échange</span> pour comprendre votre contexte.
-                Vous me dites ce qui bloque. Je vous dis ce que je ferais, et si je suis la bonne personne.
+                On commence par <span style={{ color: 'var(--primary)', fontWeight: 600 }}>45 minutes d'échange</span>.
+                Vous me dites où vous voulez aller. Je vous dis ce que je ferais, et si je suis la bonne personne.
               </p>
               <p style={{ color: 'var(--muted)' }}>
-                Si on décide d'avancer, on attaque. Pas de paperasse inutile.
+                Si on avance, on attaque — pas de paperasse inutile.
               </p>
             </motion.div>
           </Container>
@@ -424,7 +418,7 @@ export default function OfferEntreprises() {
               className="mb-10"
               style={{ color: 'var(--text)' }}
             >
-              Exemples de <span style={{ color: 'var(--primary)' }}>transformations</span>
+              Des résultats <span style={{ color: 'var(--primary)' }}>concrets</span>
             </motion.h2>
 
             <div className="flex flex-col gap-8">
@@ -441,18 +435,14 @@ export default function OfferEntreprises() {
                   <h3 className="mb-5" style={{ color: 'var(--text)', fontSize: '1.1rem' }}>
                     {cs.icon} {cs.title}
                   </h3>
-                  <div className="grid md:grid-cols-2 gap-4 mb-5">
-                    <div className="p-4 rounded-xl" style={{ background: 'var(--surface)', borderLeft: '3px solid #ef5350' }}>
-                      <div style={{ fontWeight: 600, color: '#ef5350', fontSize: '0.9rem', marginBottom: '10px' }}>❌ Avant</div>
-                      <ul className="flex flex-col gap-1.5">
-                        {cs.before.map((item, j) => (
-                          <li key={j} style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.6 }}>→ {item}</li>
-                        ))}
-                      </ul>
+                  <div className="mb-5">
+                    <div className="p-4 rounded-xl mb-4" style={{ background: 'var(--surface)', borderLeft: '3px solid var(--border-strong)' }}>
+                      <span style={{ fontWeight: 600, color: 'var(--accent)', fontSize: '0.9rem' }}>Contexte de départ — </span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.6 }}>{cs.before.join(' ')}</span>
                     </div>
                     <div className="p-4 rounded-xl" style={{ background: 'var(--surface)', borderLeft: '3px solid var(--success)' }}>
                       <div style={{ fontWeight: 600, color: 'var(--success)', fontSize: '0.9rem', marginBottom: '10px' }}>✓ Après 6 mois</div>
-                      <ul className="flex flex-col gap-1.5">
+                      <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1.5">
                         {cs.after.map((item, j) => (
                           <li key={j} style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.6 }}>→ {item}</li>
                         ))}
@@ -536,7 +526,7 @@ export default function OfferEntreprises() {
                 <span style={{ color: 'var(--primary)' }}>45 minutes.</span>
               </h2>
               <p className="mb-8" style={{ color: 'var(--muted)' }}>
-                Vous posez le contexte. On identifie ce qui coince. Je vous dis ce que je ferais.
+                Vous posez le contexte. On voit ensemble ce qu'on peut construire. Je vous dis ce que je ferais.
               </p>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <a

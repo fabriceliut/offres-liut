@@ -69,7 +69,7 @@ export default function Hero() {
             animate="visible"
             className="mb-6"
           >
-            <span className="index-label">Associé Opérationnel & Stratégique</span>
+            <span className="index-label">Fabrice Liut — Allié opérationnel des dirigeants · Lyon</span>
           </m.div>
 
           {/* H1 */}
@@ -81,8 +81,8 @@ export default function Hero() {
             style={{ color: 'var(--text)' }}
             className="mb-6"
           >
-            Je construis avec vous{' '}
-            <span style={{ color: 'var(--primary)' }}>l'operating system de votre entreprise.</span>
+            Je donne aux dirigeants de PME & PMI{' '}
+            <span style={{ color: 'var(--primary)' }}>l'organisation qui fait grandir leur entreprise.</span>
           </m.h1>
 
           {/* Subtext */}
@@ -94,9 +94,8 @@ export default function Hero() {
             className="text-lg mb-10 max-w-xl"
             style={{ color: 'var(--muted)' }}
           >
-            Organisation, pilotage, IA intégrée — trois dimensions que j'assemble avec vous.
-            Basé à Lyon, je viens sur place, je comprends comment ça tourne vraiment.
-            On construit ensemble, on teste, on ajuste, on continue.
+            Basé à Lyon, je viens sur place. Vous me dites où vous voulez aller.
+            J'observe, je mets en place. On teste, on ajuste, on continue.
           </m.p>
 
           {/* CTAs */}

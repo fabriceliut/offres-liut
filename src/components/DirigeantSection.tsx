@@ -14,20 +14,20 @@ const fadeUp: Variants = {
 
 const PAIN_POINTS = [
   {
-    icon: '🔥',
-    text: "Sans vous, rien n'avance. Vous êtes sur le chemin critique de chaque décision.",
+    icon: '🧭',
+    text: "Voir clair — une vue d'ensemble en temps réel, à un seul endroit.",
   },
   {
-    icon: '⏱',
-    text: "70% de votre temps part dans l'opérationnel. Le reste, c'est des urgences.",
+    icon: '⚡',
+    text: "Décider vite — les bonnes infos au bon moment.",
   },
   {
-    icon: '📊',
-    text: "Vos infos sont éparpillées entre emails, carnets, fichiers et WhatsApp. Pas de vue d'ensemble.",
+    icon: '🤝',
+    text: "Déléguer sereinement — vos équipes ont ce qu'il faut pour avancer.",
   },
   {
-    icon: '🎯',
-    text: "Déléguer est compliqué. Vos collaborateurs n'ont pas les bonnes infos, alors vous reprenez la main.",
+    icon: '⏳',
+    text: "Reprendre du temps — l'opérationnel tourne, vous pilotez.",
   },
 ];
 
@@ -62,8 +62,8 @@ export default function DirigeantSection() {
             className="mb-4"
             style={{ color: 'var(--text)' }}
           >
-            C'est une situation{' '}
-            <span style={{ color: 'var(--primary)' }}>que je vois souvent.</span>
+            Votre{' '}
+            <span style={{ color: 'var(--primary)' }}>système de pilotage.</span>
           </m.h2>
 
           <m.p
@@ -75,8 +75,8 @@ export default function DirigeantSection() {
             className="text-base mb-10"
             style={{ color: 'var(--muted)', maxWidth: '580px' }}
           >
-            Au-delà de l’organisation, il y a votre système de pilotage.
-            Celui qui vous permet de voir clair, décider vite, et déléguer. Ça se structure.
+            Au-delà de l’organisation, il y a votre système de pilotage : celui qui vous fait
+            voir clair, décider vite, et déléguer sereinement. Ça se construit.
           </m.p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -110,12 +110,11 @@ export default function DirigeantSection() {
             }}
           >
             <h3 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.15rem' }}>
-              On conçoit ensemble votre pilotage en <span style={{ color: 'var(--primary)' }}>6 mois</span>
+              On structure votre pilotage en <span style={{ color: 'var(--primary)' }}>6 mois</span>
             </h3>
             <p className="mb-6" style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: '0 auto 24px' }}>
-              On construit ensemble votre cockpit de direction — pilier central de votre OS.
-              Vue d'ensemble, délégation, reporting. IA intégrée là où ça compte.
-              Vous gardez le lead, on avance ensemble.
+              Je construis votre cockpit de direction sur Notion : vue d'ensemble,
+              délégation, reporting. Vous gardez le lead, je fais le technique.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-6">
               <div className="text-center">
