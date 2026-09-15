@@ -22,7 +22,7 @@ export default function FinalCTA() {
           className="max-w-2xl mx-auto text-center"
         >
           <div className="mb-6 flex justify-center">
-            <span className="index-label">06 — Commençons</span>
+            <span className="index-label">06 — Commençons</span>
           </div>
 
           <h2 className="mb-5" style={{ color: 'var(--text)' }}>

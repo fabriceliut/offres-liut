@@ -33,7 +33,8 @@ export default function Header() {
 
   // Close mobile menu on route change
   useEffect(() => {
-    setMenuOpen(false);
+    const frame = requestAnimationFrame(() => setMenuOpen(false));
+    return () => cancelAnimationFrame(frame);
   }, [location.pathname]);
 
   // Lock body scroll when mobile menu is open

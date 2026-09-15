@@ -75,6 +75,14 @@ export default function Footer() {
             >
               Intégration IA
             </Link>
+            <span style={{ color: 'var(--border)', fontSize: '0.82rem' }} aria-hidden="true">·</span>
+            <Link
+              to="/diagnostic"
+              className="transition-colors duration-150"
+              style={{ color: 'var(--muted)', fontSize: '0.82rem', fontFamily: 'var(--font-heading)' }}
+            >
+              Diagnostic Flux &amp; Leviers
+            </Link>
           </div>
         </div>
       </Container>

@@ -39,6 +39,15 @@ const routes = [
     twitterTitle: "IA — L'IA aux bons endroits. Pas plus.",
     twitterDesc: "Intégrez l'IA là où elle crée de la valeur. Audit, déploiement, formation.",
   },
+  {
+    dir: 'diagnostic',
+    title: 'Diagnostic Flux & Leviers — Fabrice Liut | Sortez du chemin critique',
+    description: "Un diagnostic organisationnel chiffré pour rendre à votre PME l'équivalent d'un à deux temps pleins sans recruter.",
+    url: 'https://offres.liut.me/diagnostic',
+    image: 'https://offres.liut.me/og-image.png',
+    twitterTitle: 'Diagnostic Flux & Leviers — Sortez du chemin critique',
+    twitterDesc: "Cartographiez vos flux et identifiez les leviers qui rendent le plus de temps à votre entreprise.",
+  },
 ];
 
 function replaceMeta(html, route) {

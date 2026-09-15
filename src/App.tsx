@@ -5,6 +5,7 @@ import OfferPMI from './pages/OfferPMI';
 const OfferEntreprises = lazy(() => import('./pages/OfferEntreprises'));
 const OfferEntrepreneurs = lazy(() => import('./pages/OfferEntrepreneurs'));
 const OfferIA = lazy(() => import('./pages/OfferIA'));
+const OfferDiagnostic = lazy(() => import('./pages/OfferDiagnostic'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ function App() {
           <Route path="/entreprises" element={<OfferEntreprises />} />
           <Route path="/entrepreneurs" element={<OfferEntrepreneurs />} />
           <Route path="/ia" element={<OfferIA />} />
+          <Route path="/diagnostic" element={<OfferDiagnostic />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
