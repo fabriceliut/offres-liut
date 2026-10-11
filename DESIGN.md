@@ -1,227 +1,153 @@
 # DESIGN.md — offres.liut.me
 
-> Companion file — format Stitch. Source de vérité pour toute décision de design.
-> Ne pas modifier sans raison documentée.
+> Référence du système visuel actuellement présent dans l'application. Les tokens de `src/styles/tokens.css` et les styles globaux de `src/styles/globals.css` font foi en cas d'écart.
 
 ---
 
-## 1. Brand & Positioning
+## 1. Marque et positionnement
 
-**Qui** : Fabrice Liut — Associé Opérationnel & Stratégique, basé à Lyon.
+**Marque** : Fabrice Liut, allié opérationnel des dirigeants, basé à Lyon.
 
-**Ce que je suis** : Pas un consultant externe qui pond un rapport. Un associé opérationnel qui vient sur le terrain, comprend les flux de l'intérieur, et co-construit avec les équipes.
+**Rôle** : intervenir sur le terrain, comprendre les flux et le travail réel, puis construire et tester des changements avec la direction et les équipes. La promesse est opérationnelle, pas celle d'un audit qui s'arrête à un rapport.
 
-**Preuves** : +15 ans, +150 organisations, retour moyen observé x4,5.
+**Public** : dirigeants de PME et PMI françaises. Les offres couvrent plusieurs tailles : 10–90 salariés pour l'accompagnement principal, 15–50 pour l'offre d'entrée « Faire place nette ».
 
-**Audience** : Dirigeants de PME & PMI, 10–90 salariés, France.
+**Preuves utilisées sur le site** : plus de 15 ans de terrain, plus de 150 organisations accompagnées, retour moyen observé x4,5, ainsi que des résultats de missions précisés par contexte. Ces chiffres sont des résultats observés, pas une garantie attachée à chaque offre.
 
-**Territoire** : Terrain, no-BS, chaleur humaine. Pas de jargon consulting. Des phrases courtes avec des faits.
+**Voix** : directe, concrète et humaine. S'adresser au lecteur avec « vous », parler à la première personne quand Fabrice décrit son rôle, préférer les verbes d'action et les faits au jargon conseil.
 
-**Ce que le site doit faire sentir** : "Cette personne comprend mes problèmes mieux que moi. Et elle sait quoi faire."
-
----
-
-## 2. Archétype visuel
-
-**Editorial warm × Swiss precision**
-
-| Dimension | Description |
-|-----------|-------------|
-| Chaleur   | Off-white crème, terre cuite accent, typo serif italic, espaces respirants |
-| Précision | Grille 12 col stricte, hiérarchie typographique forte, numérotation de sections |
-| Éditorial | Sections numérotées 01–06, grand chiffre cinématique (x4,5), copy direct sans fioritures |
-
-**Références d'intention** (ressenti, pas copie) :
-- Notion → chaleur, lisibilité, microcopy soignée
-- Linear → grille stricte, contraste display/body, micro-animations
-- Mintlify → numérotation, sections aérées
-- Sanity.io → hiérarchie verticale forte
-
-**Interdits absolus** :
-- Gradients multicolores (purple-to-pink, blue-to-cyan)
-- Glassmorphisme / neumorphisme
-- Stock photos / Lottie cartoons
-- "Trusted by" carrousel de logos
-- Backdrop-blur partout
-- Icônes Heroicons 3×3 sans contenu
+Exemples de ton : « Je viens sur place. Vous me dites où ça bloque. On teste, on ajuste. » CTA courts comme « Prendre 45 min ».
 
 ---
 
-## 3. Voice & Tone
+## 2. Direction visuelle
 
-**Registre** : Tutoiement/vous direct, terrain, phrases courtes, verbes d'action.
+**Système actuel** : interface sombre, contrastée et opérationnelle, avec une signature violet électrique. La grille discrète des héros, les repères numérotés et les sections aérées donnent de la structure sans transformer le site en tableau de bord générique.
 
-**Anti-patterns** :
-- ❌ "Transformez votre business avec notre approche innovante"
-- ❌ CTA "En savoir plus", "Découvrir", "Get started"
-- ❌ Jargon : "synergie", "agilité", "scalable", "disruption"
+- Fonds presque noirs, surfaces légèrement différenciées et texte clair.
+- Violet utilisé pour les titres accentués, les chiffres, les liens actifs et les actions principales.
+- Vert réservé aux résultats ou états positifs ; orange aux alertes.
+- Héros fréquemment centrés ou alignés à gauche, avec une grille violette très légère en arrière-plan.
+- Sections alternant fond principal et surface, avec des bordures fines.
+- Cartes réservées aux éléments répétés ou aux contenus réellement regroupés ; rayon actuel de 18 px.
 
-**Bons exemples** :
-- ✓ "Je viens sur place. Je regarde comment ça tourne vraiment."
-- ✓ "Vous me dites ce qui bloque. J'observe, je mets en place."
-- ✓ "Prendre 45 min" (CTA direct, pas "Réserver une démo")
-
----
-
-## 4. Color System
-
-Défini en `styles/tokens.css` — `@layer tokens`.
-
-```css
-/* Principe : oklch + light-dark() native */
---bg:          light-dark(oklch(98% 0.005 80),  oklch(14% 0.01 250));   /* crème / quasi-noir */
---bg-elevated: light-dark(oklch(100% 0 0),      oklch(18% 0.015 250));  /* blanc / gris foncé */
---ink:         light-dark(oklch(18% 0.02 250),  oklch(96% 0.005 80));   /* quasi-noir / quasi-blanc */
---ink-muted:   light-dark(oklch(45% 0.015 250), oklch(70% 0.01 80));    /* gris mid */
---accent:      light-dark(oklch(55% 0.18 28),   oklch(72% 0.16 28));    /* terre cuite — signature */
---rule:        light-dark(oklch(88% 0.005 80),  oklch(28% 0.01 250));   /* séparateurs subtils */
-```
-
-**Règles** :
-- L'accent terre cuite est utilisé AVEC intention : chiffres clés, CTA, accents H1, éléments actifs
-- Pas de couleurs secondaires "pour faire beau"
-- Contraste AA minimum : 4.5:1 sur texte normal, 3:1 sur texte large
+Éviter les dégradés multicolores, les effets décoratifs sans fonction, le glassmorphisme généralisé, les visuels de stock et les carrousels de logos. Les halos violets discrets et le flou du header au défilement sont déjà employés, mais restent ponctuels.
 
 ---
 
-## 5. Typography
+## 3. Couleurs
 
-**Polices** (locales, pas de CDN) :
-- `Fraunces Variable` — display, titres H1/H2, chiffres cinématiques, italic
-- `Inter Variable` — corps, navigation, labels, CTAs
+Les valeurs de référence sont définies dans `src/styles/tokens.css` et reprises dans `tailwind.config.js`.
 
-**Échelle modulaire 1.25** (`--step-N` dans tokens.css) :
+| Token | Valeur actuelle | Usage |
+|---|---|---|
+| `--bg` | `#07070A` | Fond général |
+| `--surface` | `#0D0D14` | Sections et éléments de surface |
+| `--surface2` | `#121225` | Cartes et surfaces secondaires |
+| `--text` | `#F4F5FF` | Texte principal |
+| `--muted` | `rgba(244, 245, 255, 0.72)` | Texte secondaire |
+| `--primary` | `#766BFF` | Accent principal, CTA, états actifs |
+| `--accent` | `#A79FFF` | Accent secondaire et labels |
+| `--success` | `#39D98A` | Résultats positifs |
+| `--warning` | `#FFB020` | Alertes |
+| `--border` | `rgba(244, 245, 255, 0.10)` | Séparateurs et bordures |
+| `--border-strong` | `rgba(118, 107, 255, 0.35)` | Bordures accentuées |
 
-| Token      | Valeur clamp         | Usage |
-|------------|----------------------|-------|
-| `--step-6` | 3.81–6.31rem         | Grand chiffre héro (x4,5) |
-| `--step-5` | 3.05–4.73rem         | H1 |
-| `--step-4` | 2.44–3.55rem         | Numéros de section (01, 02…) |
-| `--step-3` | 1.95–2.66rem         | H2 sections |
-| `--step-2` | 1.56–2rem            | Stats inline héro |
-| `--step-1` | 1.25–1.5rem          | H3, sous-titres |
-| `--step-0` | 1–1.13rem            | Corps |
-| `--step--1`| 0.83–0.94rem         | Labels, légendes, CTAs |
-
-**Règles** :
-- H1 → Fraunces Variable, italic, `--step-5`, `letter-spacing: -0.03em`
-- H2, H3 → Fraunces Variable, `font-style: italic` pour H2, `normal` pour H3
-- Corps, nav, boutons → Inter Variable
-- Nombres importants : `font-variant-numeric: tabular-nums`
-- `text-wrap: balance` sur les titres, `text-wrap: pretty` sur les paragraphes
+Ne pas introduire une nouvelle couleur de marque sans modifier d'abord les tokens et leur usage dans Tailwind.
 
 ---
 
-## 6. Spacing & Grid
+## 4. Typographie
 
-**Base** : 4pt (`--s-1` = 0.25rem … `--s-32` = 8rem)
+Les piles déclarées dans les tokens sont :
 
-**Grille** :
-- Max-width : 1280px (`--max-width`)
-- Gutter : 24px (`--gutter`)
-- 12 colonnes CSS Grid (classe `.grid-12`)
-- Numéros de section : col 1–2, contenu : col 3–12
+- Titres et éléments de navigation : `Space Grotesk`, puis `ui-sans-serif` et les polices système.
+- Corps : `Inter`, puis `ui-sans-serif` et les polices système.
 
-**Breakpoints** :
-| Breakpoint | Valeur |
-|-----------|--------|
-| xs        | 375px  |
-| sm        | 640px  |
-| md        | 768px  |
-| lg        | 1024px |
-| xl        | 1280px |
-| 2xl       | 1536px |
+La feuille globale fixe le corps à 16 px / 1.6 et définit les tailles de titres suivantes :
 
-**Espacement section** : `--spacing-section-v` = 6rem (desktop), 4rem (mobile).
+| Élément | Taille CSS actuelle |
+|---|---|
+| H1 | `clamp(2.4rem, 5vw, 4rem)` |
+| H2 | `clamp(1.8rem, 3vw, 2.6rem)` |
+| H3 | `clamp(1.2rem, 2vw, 1.5rem)` |
+
+Les titres utilisent `--font-heading`, un poids semi-gras ou gras, une interligne de 1.2 et `text-wrap: balance`. Les paragraphes utilisent `--font-body`, une interligne de 1.7 et `text-wrap: pretty`. Les labels de section sont en capitales, petits et espacés.
+
+**Chargement des polices à vérifier** : les paquets Fontsource pour Fraunces, Inter et Space Grotesk sont présents dans les dépendances, mais aucun import Fontsource ni `@font-face` n'a été trouvé dans `src/` ou `index.html` lors de cette mise à jour. Les familles Space Grotesk et Inter sont donc configurées comme préférence CSS, mais leur chargement local n'est pas confirmé ; le rendu peut utiliser les polices système. Fraunces n'est pas dans la pile active.
 
 ---
 
-## 7. Motion Principles
+## 5. Mise en page et espacement
 
-**Durées** : 200–400ms (jamais > 400ms sauf cas exceptionnel).
+- Largeur maximale du composant `Container` : `1200px` via `--max-width`.
+- Gouttières du container : `20px` par défaut, `24px` à partir du breakpoint `sm`.
+- Espacement vertical des sections : `112px` par défaut et `64px` sous 768 px, via `--spacing-section-v`.
+- Les pages utilisent principalement les grilles utilitaires Tailwind (`grid-cols-*`, `md:grid-cols-*`) et des largeurs maximales (`max-w-*`), pas une grille CSS 12 colonnes dédiée.
+- Les breakpoints suivent Tailwind : `sm` 640 px, `md` 768 px, `lg` 1024 px, `xl` 1280 px, `2xl` 1536 px.
+- Les héros d'offres utilisent couramment une hauteur minimale de 70 vh, 140 px de padding supérieur et 80 px inférieur. Le héros de la page d'accueil a ses propres valeurs.
 
-**Easing principal** : `--ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1)` → accélère vite, décélère doucement.
-
-**Systèmes** :
-
-```css
-/* Scroll-driven (Progressive Enhancement) */
-@supports (animation-timeline: view()) {
-  .reveal {
-    animation: reveal-up linear both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 30%;
-  }
-}
-/* Fallback : éléments visibles par défaut si scroll-driven non supporté */
-
-/* Hero load */
-.hero-animate {
-  animation: hero-in 0.55s var(--ease-out-quart) both;
-  animation-delay: var(--delay, 0ms);
-}
-
-/* Hover cartes */
-.card-base:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s var(--ease-out-quart);
-}
-```
-
-**Règle stricte** : `prefers-reduced-motion: reduce` → TOUTES les animations désactivées (pas réduites — désactivées).
-
-**Pas de** : Framer Motion (supprimé), Lottie, animations purement décoratives.
+Les sections alternent souvent fond général et `--surface`, délimité par des bordures discrètes. Garder des largeurs de lecture mesurées dans les textes et laisser les grilles se réduire naturellement sur mobile.
 
 ---
 
-## 8. Components Inventory
+## 6. Composants et styles partagés
 
-| Composant       | Fichier                     | Description |
-|----------------|----------------------------|-------------|
-| `Header`        | `components/Header.tsx`    | Nav fixe + menu mobile CSS transition |
-| `Hero`          | `components/Hero.tsx`      | x4,5 count-up natif + hero-animate + eyebrow |
-| `ProofBand`     | `components/ProofBand.tsx` | Bande de proof horizontale |
-| `DesignOrg`     | `components/DesignOrg.tsx` | Méthode — 01 |
-| `Pillars`       | `components/Pillars.tsx`   | 3 piliers en grid — 02 |
-| `Situations`    | `components/Situations.tsx`| 4 situations en 2×2 — 03 |
-| `DirigeantSection` | `components/DirigeantSection.tsx` | Pain points dirigeant — 03B |
-| `IASection`     | `components/IASection.tsx` | Accélérateur IA — 03C |
-| `HowWeWork`     | `components/HowWeWork.tsx` | 3 étapes du déroulé — 04 |
-| `Testimonials`  | `components/Testimonials.tsx` | 3 cas résultats — 05 |
-| `FinalCTA`      | `components/FinalCTA.tsx`  | CTA final 45 min — 06 |
-| `Footer`        | `components/Footer.tsx`    | Footer minimaliste |
-| `Container`     | `components/Container.tsx` | Wrapper max-width + gutter |
-| `IndexLabel`    | `components/IndexLabel.tsx`| Petit label de section caps |
+| Élément | Fichier | Rôle actuel |
+|---|---|---|
+| `App` | `src/App.tsx` | Routes des pages d'offres et retour en haut lors d'un changement de route |
+| `Header` | `src/components/Header.tsx` | Header fixe, nav d'accueil et menu mobile ; fond flouté après défilement |
+| `Footer` | `src/components/Footer.tsx` | Liens externes et liens vers les offres |
+| `Container` | `src/components/Container.tsx` | Largeur maximale et gouttières responsives |
+| `IndexLabel` | `src/components/IndexLabel.tsx` | Repère de section en capitales |
+| `Hero`, `ProofBand`, `DesignOrg`, `Pillars`, `Situations`, `DirigeantSection`, `IASection`, `HowWeWork`, `Testimonials`, `FinalCTA` | `src/components/` | Sections de la page d'accueil `/` |
 
-**Classes CSS globales clés** :
-- `.reveal` — scroll-driven animation reveal
-- `.hero-animate` — animation au chargement
-- `.card-base` — card avec hover standardisé
-- `.btn-primary`, `.btn-secondary` — boutons
-- `.index-label` — label caps de section
-- `.scroll-progress` — indicateur de progress vertical 1px
+Pages d'offres déclarées dans `App.tsx` : `/`, `/entreprises`, `/entrepreneurs`, `/ia`, `/diagnostic` et `/place-nette`. Les pages secondaires réutilisent généralement le header, le container, le footer et les mêmes tokens, avec des sections spécifiques à leur offre.
+
+**Classes globales principales**, définies dans `src/styles/globals.css` :
+
+- `.index-label` : label violet en capitales, bordure fine et fond teinté.
+- `.card-base` : surface, bordure, rayon `--r-card` (18 px), ombre et léger déplacement au survol.
+- `.btn-primary` et `.btn-secondary` : boutons violets ou contour violet, arrondis en pilule.
+- `:focus-visible` : contour visible violet avec décalage de 3 px.
 
 ---
 
-## 9. Accessibility & Performance
+## 7. Mouvement
 
-### Accessibilité WCAG AA
+Les animations de révélation et d'entrée sont principalement réalisées avec Framer Motion. `src/main.tsx` monte `LazyMotion` avec `domAnimation`; les composants utilisent `m` ou `motion`, souvent avec une montée légère, une apparition et un délai progressif. Les transitions observées sont généralement de 0.3 à 0.6 s. Le hover des cartes est géré en CSS.
 
-- Contraste texte : 4.5:1 minimum (texte normal), 3:1 (texte large)
-- Focus visible : `outline: 2px solid var(--accent); outline-offset: 2px` sur tous les éléments interactifs
-- `prefers-reduced-motion`: toutes les animations désactivées (`animation-duration: 0.01ms`)
-- `aria-label` sur tous les SVG et éléments icône
-- Titres en hiérarchie logique (H1 → H2 → H3)
-- `lang="fr"` sur `<html>`
-- Pas de contenu uniquement par la couleur
+Le header utilise une transition de fond au défilement et un blur uniquement lorsqu'il est scrolled. Les halos et grilles de héros sont statiques et décoratifs.
 
-### Web Vitals 2026 (budgets cibles)
+**Mouvement réduit** : `src/styles/globals.css` réduit les animations et transitions CSS et coupe le smooth scroll si `prefers-reduced-motion: reduce` est actif. Les animations Framer Motion ne sont pas toutes explicitement reliées à cette préférence aujourd'hui. Pour toute nouvelle animation Motion, tenir compte de `useReducedMotion` ou d'une configuration Motion adaptée ; ne pas présenter l'accessibilité Motion comme entièrement couverte tant que ce raccord global n'existe pas.
 
-| Métrique | Cible | Note |
-|----------|-------|------|
-| LCP      | < 2.5s | Pas d'image hero → LCP = H1 text |
-| INP      | < 200ms | Handlers légers, pas de heavy JS au tap |
-| CLS      | < 0.1 | Fonts + `font-display: swap`, pas d'images sans dimensions |
-| JS initial | < 170 kB gzip | ~83 kB actuel (react 16 + main 66) ✓ |
-| CSS | < 50 kB gzip | ~4.4 kB actuel ✓ |
-| Fonts | Latin subset uniquement | 3 woff2 (Inter normal + Fraunces normal/italic) ✓ |
+Ne pas réintroduire les classes `.reveal`, `.hero-animate` ou `.scroll-progress` comme composants de système : elles ne sont pas définies dans la feuille globale actuelle.
+
+---
+
+## 8. Ton éditorial et contenu
+
+- S'adresser au dirigeant par « vous » ; utiliser « je » pour l'intervention de Fabrice et « on » pour le travail construit ensemble.
+- Écrire des phrases concrètes, ancrées dans le terrain et le fonctionnement réel des équipes.
+- Préférer les résultats et livrables précis aux promesses générales.
+- Décrire clairement le périmètre, les étapes, le prix et les engagements réciproques lorsqu'ils sont définis.
+- Utiliser des CTA explicites : « Prendre 45 min », « Réserver mon diagnostic », « Voir l'accompagnement ».
+- Éviter le jargon marketing, les superlatifs non étayés et les garanties implicites sur des résultats observés dans d'autres missions.
+- Rester cohérent avec le positionnement d'allié opérationnel : le regard peut être neuf ou extérieur, mais l'intervention se fait au contact du terrain et avec les équipes.
+
+---
+
+## 9. Accessibilité et performance
+
+### Accessibilité constatée et règles
+
+- Le document HTML utilise `lang="fr"`.
+- La hiérarchie visée est un H1 par page, puis des H2 et H3 dans l'ordre.
+- Les motifs de fond et icônes décoratives doivent être masqués aux lecteurs d'écran (`aria-hidden="true"`).
+- Les contrôles interactifs doivent conserver un focus visible ; le style global actuel utilise `--primary` et `outline-offset: 3px`.
+- Ne pas communiquer une information uniquement par la couleur. Vérifier les contrastes sur les surfaces réelles avant de revendiquer la conformité WCAG AA.
+- Respecter `prefers-reduced-motion`, y compris dans les animations JavaScript ajoutées.
+
+### Performance
+
+Les pages d'offres sont chargées à la demande avec `React.lazy` et le build Vite produit des chunks séparés. Aucun budget Web Vitals actuel ni audit de performance récent n'est défini dans ce document ; ne pas reprendre les anciens chiffres de bundle comme mesures courantes. Mesurer à nouveau avant de publier une cible chiffrée.

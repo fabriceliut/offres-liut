@@ -48,6 +48,15 @@ const routes = [
     twitterTitle: 'Diagnostic Flux & Leviers — Sortez du chemin critique',
     twitterDesc: "Cartographiez vos flux et identifiez les leviers qui rendent le plus de temps à votre entreprise.",
   },
+  {
+    dir: 'place-nette',
+    title: 'Faire place nette — Fabrice Liut | Offre d’entrée pour PME',
+    description: 'Trois semaines pour identifier ce qui freine le travail, mettre un premier changement en pratique avec vos équipes et vérifier qu’il tient. Forfait fixe de 3 400 € HT.',
+    url: 'https://offres.liut.me/place-nette',
+    image: 'https://offres.liut.me/og-image.png',
+    twitterTitle: 'Faire place nette — Un premier changement qui tient',
+    twitterDesc: 'Trois semaines, deux journées sur place, un premier changement mis en pratique. Forfait fixe de 3 400 € HT.',
+  },
 ];
 
 function replaceMeta(html, route) {
