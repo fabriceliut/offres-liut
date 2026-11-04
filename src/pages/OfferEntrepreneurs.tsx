@@ -235,7 +235,7 @@ export default function OfferEntrepreneurs() {
             >
               <h2 className="mb-3" style={{ color: 'var(--text)', fontSize: '1.5rem' }}>{"L'investissement"}</h2>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, color: 'var(--primary)', margin: '16px 0' }}>
-                {"13 000\u20ac"}
+                {"Sur cadrage"}
               </div>
               <p style={{ color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
                 {"10 jours de travail effectif sur 6 mois"}
@@ -297,7 +297,7 @@ export default function OfferEntrepreneurs() {
                     {"Un dirigeant récupère 6h/semaine → les réoriente vers le commercial."}
                     <br />{"Sur un pipe de 500k€, "}
                     <strong style={{ color: 'var(--success)' }}>{"+10% de conversion = 50 000€ de CA additionnel"}</strong>{"."}
-                    <br />{"L'investissement de 13 000€ est remboursé sur un seul contrat de plus."}
+                    <br />{"Le programme est conçu pour être remboursé sur un seul contrat de plus."}
                   </p>
                 </div>
               </div>
