@@ -12,14 +12,18 @@ const OFFERS: Array<{ key: OfferKey; label: string; to: string }> = [
 
 export default function OfferCrossNav({ current }: { current: OfferKey }) {
   return (
-    <nav className="flex flex-wrap gap-2 justify-center items-center mt-5" aria-label="Naviguer entre les offres">
-      <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>Voir aussi :</span>
+    <nav
+      className="flex flex-wrap gap-x-2 gap-y-2 justify-center items-center mt-6 mb-8 py-4"
+      style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}
+      aria-label="Naviguer entre les offres"
+    >
+      <span className="basis-full sm:basis-auto text-center sm:text-left" style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>Voir aussi :</span>
       {OFFERS.map((offer) => offer.key === current ? (
-        <span key={offer.key} aria-current="page" style={{ padding: '5px 10px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.76rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
+        <span key={offer.key} aria-current="page" style={{ minHeight: '44px', display: 'inline-flex', alignItems: 'center', padding: '8px 12px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.76rem', fontFamily: 'var(--font-heading)', fontWeight: 600, whiteSpace: 'nowrap' }}>
           {offer.label}
         </span>
       ) : (
-        <Link key={offer.key} to={offer.to} style={{ padding: '5px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.76rem', textDecoration: 'none' }}>
+        <Link key={offer.key} to={offer.to} style={{ minHeight: '44px', display: 'inline-flex', alignItems: 'center', padding: '8px 12px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.76rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
           {offer.label}
         </Link>
       ))}
