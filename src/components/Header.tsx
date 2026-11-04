@@ -85,7 +85,12 @@ export default function Header() {
           ) : (
             <nav className="hidden lg:flex items-center gap-1" aria-label="Navigation secondaire">
               <Link to="/#parcours" className="px-3 py-1.5 text-sm" style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, color: 'var(--muted)' }}>Parcours</Link>
-              <Link to="/#offres" className="px-3 py-1.5 text-sm" style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, color: 'var(--muted)' }}>Les offres</Link>
+              <details className="relative ml-1">
+                <summary className="list-none px-3 py-1.5 text-sm cursor-pointer" style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, color: 'var(--muted)' }}>Les offres <span aria-hidden="true">⌄</span></summary>
+                <div className="absolute right-0 top-full mt-3 w-64 p-2 rounded-lg" style={{ background: 'rgba(20,20,29,0.98)', border: '1px solid var(--border)', boxShadow: 'var(--sh-elevate)' }}>
+                  {OFFER_LINKS.map((link) => <Link key={link.to} to={link.to} className="block rounded-md px-3 py-2.5 transition-colors duration-150" style={{ color: 'var(--text)', fontSize: '0.82rem' }}><span style={{ display: 'block', color: 'var(--primary)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{link.group}</span>{link.label}</Link>)}
+                </div>
+              </details>
               <Link to="/" className="px-3 py-1.5 text-sm" style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, color: 'var(--muted)' }}>← Accueil</Link>
             </nav>
           )}

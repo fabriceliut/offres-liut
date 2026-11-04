@@ -4,6 +4,7 @@ import IndexLabel from '../components/IndexLabel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import OfferJourney from '../components/OfferJourney';
+import OfferCrossNav from '../components/OfferCrossNav';
 
 const CAL = 'https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true';
 
@@ -122,6 +123,7 @@ export default function OfferDiagnostic() {
                 <a href={CAL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ flexShrink: 0 }}>Réserver mon diagnostic</a>
                 <a href="#offres" className="btn-secondary" style={{ flexShrink: 0 }}>Voir l'accompagnement</a>
               </m.div>
+              <OfferCrossNav current="diagnostic" />
               <m.div custom={4} variants={fadeUp} initial="hidden" animate="visible" className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {STATS.map((s, i) => (
                   <div key={i} className="card-base p-4" style={{ background: 'var(--surface)', textAlign: 'center' }}>

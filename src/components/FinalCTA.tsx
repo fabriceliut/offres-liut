@@ -73,11 +73,11 @@ export default function FinalCTA() {
               Prendre 45 min
             </a>
             <Link
-              to="/entreprises"
+              to="/place-nette"
               className="btn-secondary"
               style={{ fontSize: '1rem', padding: '15px 28px' }}
             >
-              Découvrir le programme
+              Commencer par Faire place nette
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9.5 4.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
