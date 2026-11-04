@@ -3,6 +3,7 @@ import Container from '../components/Container';
 import IndexLabel from '../components/IndexLabel';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import OfferJourney from '../components/OfferJourney';
 
 const CAL = 'https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true';
 
@@ -252,6 +253,7 @@ export default function OfferDiagnostic() {
             </div>
           </Container>
         </section>
+        <OfferJourney current="diagnostic" />
       </main>
       <Footer />
     </>
