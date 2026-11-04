@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
+import OfferJourney from '../components/OfferJourney';
 import IndexLabel from '../components/IndexLabel';
 
 const fadeUp: Variants = {
@@ -435,6 +436,7 @@ export default function OfferEntrepreneurs() {
             </motion.div>
           </Container>
         </section>
+        <OfferJourney current="entrepreneurs" />
       </main>
       <Footer />
     </>
