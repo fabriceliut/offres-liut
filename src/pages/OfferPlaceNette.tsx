@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import OfferJourney from '../components/OfferJourney';
+import OfferCrossNav from '../components/OfferCrossNav';
 import IndexLabel from '../components/IndexLabel';
 
 const fadeUp: Variants = {
@@ -144,11 +145,7 @@ export default function OfferPlaceNette() {
               <motion.p custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-6" style={{ fontSize: '0.78rem', color: 'var(--muted)', opacity: 0.6 }}>
                 3 semaines · deux journées sur place · un premier changement utilisé sur un vrai cas
               </motion.p>
-              <motion.div custom={5} variants={fadeUp} initial="hidden" animate="visible" className="flex flex-wrap gap-2 justify-center items-center mt-4">
-                <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>Par où commencer :</span>
-                <span style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.78rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>Offre d'entrée</span>
-                <Link to="/entreprises" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>Programme Entreprises</Link>
-              </motion.div>
+              <OfferCrossNav current="place-nette" />
             </div>
           </Container>
         </section>
