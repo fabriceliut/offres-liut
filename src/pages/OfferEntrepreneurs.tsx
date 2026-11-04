@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Container from '../components/Container';
 import Footer from '../components/Footer';
 import OfferJourney from '../components/OfferJourney';
+import OfferCrossNav from '../components/OfferCrossNav';
 import IndexLabel from '../components/IndexLabel';
 
 const fadeUp: Variants = {
@@ -83,12 +84,7 @@ export default function OfferEntrepreneurs() {
                 {"Voici le système de pilotage que je mets en place pour les dirigeants qui veulent voir clair, décider vite et déléguer sereinement."}
               </motion.p>
 
-              <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible" className="flex flex-wrap gap-2 justify-center items-center mt-4">
-                <span style={{ fontSize: '0.78rem', color: 'var(--muted)' }}>OS d'entreprise :</span>
-                <span style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', background: 'var(--primary)', color: 'white', fontSize: '0.78rem', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>Pilotage dirigeant</span>
-                <Link to="/entreprises" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>Organisation</Link>
-                <Link to="/ia" style={{ padding: '3px 10px', borderRadius: 'var(--r-pill)', border: '1px solid var(--border-strong)', color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none' }}>IA intégrée</Link>
-              </motion.div>
+              <OfferCrossNav current="entrepreneurs" />
             </div>
           </Container>
         </section>
