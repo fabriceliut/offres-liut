@@ -82,7 +82,7 @@ const CASE_STUDIES = [
       'Reporting automatisé, en temps réel',
       'Direction libérée de l\'opérationnel',
     ],
-    investment: '15 000€',
+    investment: '15 000 €',
     gain: '67 500€',
     roi: 'x4,5',
     detail: 'Temps récupéré + réduction coordination + meilleure rentabilité',
@@ -99,7 +99,7 @@ const CASE_STUDIES = [
       'Turn-over en baisse',
       'Rôles clarifiés, fonctionnement fluide',
     ],
-    investment: '18 000€',
+    investment: '18 000 €',
     gain: 'Multi-levier',
     roi: 'ROI < 6 mois',
     detail: 'Temps facturable + réduction délais + baisse turn-over',
@@ -173,6 +173,9 @@ export default function OfferEntreprises() {
               <motion.p custom={4} variants={fadeUp} initial="hidden" animate="visible" className="mt-6" style={{ fontSize: '0.78rem', color: 'var(--muted)', opacity: 0.6 }}>
                 *Retour moyen observé sur les missions de structuration d'entreprises de 10 à 90 salariés
               </motion.p>
+              <p className="mt-4" style={{ fontSize: '0.85rem', color: 'var(--primary)', fontWeight: 600 }}>
+                Tarif du programme : sur cadrage, selon le périmètre retenu.
+              </p>
 
               <OfferCrossNav current="entreprises" />
             </div>
@@ -235,28 +238,28 @@ export default function OfferEntreprises() {
 
                 <div className="p-4 rounded-xl" style={{ background: 'var(--surface)', borderLeft: '3px solid var(--primary)' }}>
                   <div style={{ fontWeight: 600, color: 'var(--text)', fontSize: '0.9rem', marginBottom: '12px' }}>
-                    Exemple pour une entreprise de 10 personnes :
+                    Exemple de cas client — repère, pas tarif public :
                   </div>
                   <div className="flex flex-col gap-2">
                     <div className="flex justify-between gap-4" style={{ fontSize: '0.875rem', color: 'var(--muted)' }}>
-                      <span>Accompagnement Fabrice Liut</span>
-                      <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>15 000€</span>
+                      <span>Investissement observé — accompagnement</span>
+                      <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>15 000 €</span>
                     </div>
                     <div className="flex justify-between gap-4 pb-2" style={{ fontSize: '0.875rem', color: 'var(--muted)', borderBottom: '1px solid var(--border)' }}>
                       <span>Temps interne (10 pers. × 10h + dirigeant 25h)</span>
-                      <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>~7 500€</span>
+                      <span style={{ fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap' }}>~7 500 €</span>
                     </div>
                     <div className="flex justify-between gap-4 pt-1" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }}>
                       <span>INVESTISSEMENT TOTAL</span>
-                      <span style={{ whiteSpace: 'nowrap' }}>22 500€</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>22 500 €</span>
                     </div>
                     <div className="flex justify-between gap-4" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--success)' }}>
                       <span>Économies année 1</span>
-                      <span style={{ whiteSpace: 'nowrap' }}>40 000€</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>40 000 €</span>
                     </div>
                     <div className="flex justify-between gap-4" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--success)' }}>
                       <span>ROI NET première année</span>
-                      <span style={{ whiteSpace: 'nowrap' }}>+17 500€</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>+17 500 €</span>
                     </div>
                   </div>
                   <p style={{ fontSize: '0.75rem', color: 'var(--muted)', opacity: 0.6, marginTop: '12px' }}>
@@ -449,7 +452,7 @@ export default function OfferEntreprises() {
                   <div className="p-4 rounded-xl" style={{ background: 'var(--surface)', borderLeft: '3px solid var(--primary)' }}>
                     <div className="flex flex-wrap items-center gap-6">
                       <div>
-                        <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginBottom: '2px' }}>Investissement total</div>
+                        <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginBottom: '2px' }}>Investissement observé sur ce cas</div>
                         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text)' }}>{cs.investment}</div>
                       </div>
                       <div>
